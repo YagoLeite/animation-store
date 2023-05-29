@@ -1,4 +1,5 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import BritCard from "@/components/cards/BritCard";
+import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -38,6 +39,105 @@ const imgVariant = {
   },
 };
 
+const britData = [
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "www.github.com",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+  {
+    title: "World Cup Simulation",
+    description:
+      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
+    github: "",
+    live: "",
+    stacks: ["Next.js", "Chakra UI"],
+  },
+];
+
 const index = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -48,10 +148,11 @@ const index = () => {
       minH="100vh"
       justify="center"
       align="center"
+      bg="#0a192f"
 
       //   bg="gray.600"
     >
-      <Flex
+      {/* <Flex
         as={motion.div}
         // variants={parentVariant}
         onMouseEnter={() => setIsHovered(true)}
@@ -102,7 +203,20 @@ const index = () => {
             </Text>
           </Flex>
         </Flex>
-      </Flex>
+      </Flex> */}
+      <Grid
+        templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+        gap="20px"
+        w="100%"
+      >
+        {britData.map((item, index) => {
+          return (
+            <Flex as={motion.div} whileHover={{ y: -10 }}>
+              <BritCard key={index} data={item} />
+            </Flex>
+          );
+        })}
+      </Grid>
     </Flex>
   );
 };
