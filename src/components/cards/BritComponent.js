@@ -95,22 +95,27 @@ const BritComponent = () => {
     BackgroundColor: "#112240",
     TextColor: "#FFFFFF",
     Amount: { value: 6, min: 1, max: 20, step: 1 },
+    ContainerWidth: { value: "100%", max: "100%" },
   });
 
   return (
-    <Grid
-      templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
-      gap="20px"
-      w="100%"
-    >
-      {Array.from({ length: controler.Amount }).map((item, index) => {
-        return (
-          <Flex as={motion.div} whileHover={{ y: -10 }}>
-            <BritCard key={index} data={britData} controler={controler} />
-          </Flex>
-        );
-      })}
-    </Grid>
+    <Flex w="100%" align="center" justify="center">
+      <Flex w={controler.ContainerWidth}>
+        <Grid
+          templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+          gap="20px"
+          w="100%"
+        >
+          {Array.from({ length: controler.Amount }).map((item, index) => {
+            return (
+              <Flex as={motion.div} whileHover={{ y: -10 }}>
+                <BritCard key={index} data={britData} controler={controler} />
+              </Flex>
+            );
+          })}
+        </Grid>
+      </Flex>
+    </Flex>
   );
 };
 
