@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <Flex w="100%" h="50px">
+    <Flex w="100%" h="50px" gap="30px">
       <Text>Animation Store</Text>
       <Link href="/card">Cards</Link>
     </Flex>
