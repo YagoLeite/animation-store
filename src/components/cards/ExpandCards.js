@@ -44,7 +44,15 @@ const cardMargin = 0;
 
 const ExpandCards = () => {
   const [selectedImage, setSelectedImage] = useState(images[1]);
+  const [animating, setAnimating] = useState(false);
   const { width: windowWidth } = useWindowSize();
+
+  const handleSelectImage = (img) => {
+    if (!animating) {
+      setSelectedImage(img);
+      setAnimating(true);
+    }
+  };
 
   const controler = useControls({
     Duration: { value: 1, min: 0.1, max: 2, step: 0.1 },
@@ -52,19 +60,23 @@ const ExpandCards = () => {
       value: "easeInOut",
       options: ["easeInOut", "easeIn", "easeOut", "linear"],
     },
+    CardWidth: { value: 100, min: 80, max: 200, step: 5 },
+    CardHeight: { value: 600, min: 200, max: 1000, step: 50 },
     ContainerWidth: { value: "100%", max: "100%" },
   });
 
   const cardWidthSelected =
-    windowWidth - (images.length - 1) * (cardWidthNotSelected + cardMargin);
+    windowWidth - (images.length - 1) * (controler.CardWidth + cardMargin);
 
   const variants = {
     selected: {
       width: cardWidthSelected,
+      height: controler.CardHeight,
       transition: { duration: controler.Duration, ease: controler.Ease },
     },
     notSelected: {
-      width: cardWidthNotSelected,
+      width: controler.CardWidth,
+      height: controler.CardHeight,
       transition: { duration: controler.Duration, ease: controler.Ease },
     },
   };
@@ -74,7 +86,7 @@ const ExpandCards = () => {
       <Flex w="100%" justify="center" align="center">
         <Flex
           width={controler.ContainerWidth}
-          h="600px"
+          h="100%"
           alignItems="stretch"
           gap="10px"
           overflow="hidden"
@@ -92,11 +104,12 @@ const ExpandCards = () => {
               variants={variants}
               initial="notSelected"
               animate={selectedImage === img ? "selected" : "notSelected"}
-              height="100%"
+              // height="100%"
               bgImage={img}
               bgSize="cover"
               bgPosition="center"
-              onClick={() => setSelectedImage(img)}
+              onClick={() => handleSelectImage(img)}
+              onAnimationComplete={() => setAnimating(false)}
             >
               <Flex
                 as={motion.div}
@@ -147,7 +160,15 @@ function generateCode() {
   
   const YourComponent = () => {
     const [selectedImage, setSelectedImage] = useState(images[1]);
+    const [animating, setAnimating] = useState(false);
     const { width: windowWidth } = useWindowSize();
+  
+    const handleSelectImage = (img) => {
+      if (!animating) {
+        setSelectedImage(img);
+        setAnimating(true);
+      }
+    };
   
     const controler = useControls({
       Duration: { value: 1, min: 0.1, max: 2, step: 0.1 },
@@ -174,50 +195,51 @@ function generateCode() {
   
     return (
       <Flex direction="column">
-      <Flex w="100%" justify="center" align="center">
-        <Flex
-          width={controler.ContainerWidth}
-          h="600px"
-          alignItems="stretch"
-          gap="10px"
-          overflow="hidden"
-          justify="center"
-          align="center"
-        >
-          {images.map((img, i) => (
-            <Flex
-              as={motion.div}
-              key={i}
-              borderRadius="10px"
-              cursor="pointer"
-              align="end"
-              justify="center"
-              variants={variants}
-              initial="notSelected"
-              animate={selectedImage === img ? "selected" : "notSelected"}
-              height="100%"
-              bgImage={img}
-              bgSize="cover"
-              bgPosition="center"
-              onClick={() => setSelectedImage(img)}
-            >
+        <Flex w="100%" justify="center" align="center">
+          <Flex
+            width={controler.ContainerWidth}
+            h="600px"
+            alignItems="stretch"
+            gap="10px"
+            overflow="hidden"
+            justify="center"
+            align="center"
+          >
+            {images.map((img, i) => (
               <Flex
                 as={motion.div}
-                variants={containerVariants}
-                bg="white"
-                mb="15px"
-                align="center"
+                key={i}
+                borderRadius="10px"
+                cursor="pointer"
+                align="end"
                 justify="center"
+                variants={variants}
+                initial="notSelected"
+                animate={selectedImage === img ? "selected" : "notSelected"}
+                height="100%"
+                bgImage={img}
+                bgSize="cover"
+                bgPosition="center"
+                onClick={() => handleSelectImage(img)}
+                onAnimationComplete={() => setAnimating(false)}
               >
-                <Text as={motion.div} variants={textVariants}>
-                  Your Description
-                </Text>
+                <Flex
+                  as={motion.div}
+                  variants={containerVariants}
+                  bg="white"
+                  mb="15px"
+                  align="center"
+                  justify="center"
+                >
+                  <Text as={motion.div} variants={textVariants}>
+                    Your Description
+                  </Text>
+                </Flex>
               </Flex>
-            </Flex>
-          ))}
+            ))}
+          </Flex>
         </Flex>
       </Flex>
-    </Flex>
     );
   };
     `;
