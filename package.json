@@ -13,10 +13,12 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@next/font": "13.1.6",
+    "ace-builds": "^1.22.0",
     "framer-motion": "^9.0.2",
     "leva": "^0.9.34",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-ace": "^10.1.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
     "use-resize-observer": "^9.1.0"
