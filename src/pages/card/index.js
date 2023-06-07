@@ -1,7 +1,9 @@
-import BritCard from "@/components/cards/BritCard";
-import Dontknow from "@/components/imagesList/Dontknow";
+import BritCard from "@/components/cards/BritComponent";
+import ExpandCards from "@/components/cards/ExpandCards";
+import Header from "@/components/header/Header";
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const parentVariant = {
@@ -40,105 +42,6 @@ const imgVariant = {
   },
 };
 
-const britData = [
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "www.github.com",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-  {
-    title: "World Cup Simulation",
-    description:
-      "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
-    github: "",
-    live: "",
-    stacks: ["Next.js", "Chakra UI"],
-  },
-];
-
 const index = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -147,9 +50,7 @@ const index = () => {
       h="100%"
       minW="100vw"
       minH="100vh"
-      justify="center"
-      align="center"
-      bg="#0a192f"
+      direction="column"
 
       //   bg="gray.600"
     >
@@ -222,7 +123,14 @@ const index = () => {
         })}
       </Grid> */}
 
-      <Dontknow />
+      {/* <ExpandCards /> */}
+
+      <Header />
+      <Flex direction="column">
+        <Text>Select the cards you want to see</Text>
+        <Link href={"/card/expanding-cards"}>Expanding Cards</Link>
+        <Link href={"/card/brit"}>Brittany Card</Link>
+      </Flex>
     </Flex>
   );
 };
