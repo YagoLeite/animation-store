@@ -1,4 +1,5 @@
 import BritCard from "@/components/cards/BritCard";
+import Dontknow from "@/components/imagesList/Dontknow";
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -204,7 +205,10 @@ const index = () => {
           </Flex>
         </Flex>
       </Flex> */}
-      <Grid
+
+      {/* Brit Here */}
+
+      {/* <Grid
         templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
         gap="20px"
         w="100%"
@@ -216,7 +220,9 @@ const index = () => {
             </Flex>
           );
         })}
-      </Grid>
+      </Grid> */}
+
+      <Dontknow />
     </Flex>
   );
 };
