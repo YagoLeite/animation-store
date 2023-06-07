@@ -74,14 +74,7 @@ const BritCard = ({ data, controler }) => {
       </Flex>
       <Flex gap="5px">
         {data.stacks.map((text, index) => (
-          <Text
-            // as={motion.div}
-            // variants={textVariant}
-            // animate={isHovered ? "hovered" : "initial"}
-            fontSize="11px"
-            key={index}
-            color={controler.HighLightColor}
-          >
+          <Text fontSize="11px" key={index} color={controler.HighLightColor}>
             {text}
           </Text>
         ))}
