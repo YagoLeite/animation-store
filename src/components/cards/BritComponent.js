@@ -5,7 +5,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineFolder } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
-import CodePlayground from "./CodePlayground";
+// import CodePlayground from "./CodePlayground";
+import dynamic from 'next/dynamic';
+
+const CodePlayground = dynamic(() => import('./CodePlayground'), { ssr: false });
 
 const britData = {
   title: "World Cup Simulation",
