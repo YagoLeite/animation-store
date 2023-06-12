@@ -1,10 +1,17 @@
-import { Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Button,
+  Flex,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useControls } from "leva";
 import React, { Children, useEffect, useState } from "react";
 import useResizeObserver from "use-resize-observer";
 // import { ArrowNarrowLeftIcon, ArrowNarrowRightIcon } from "../icons";
 
-const PADDING = -30;
+const PADDING = -80;
 const NUMBER_OF_ITEMS_TO_SHOW = 5;
 export const data = [
   {
@@ -40,8 +47,8 @@ export const data = [
   },
 ];
 
-function getCarouselItemXPositions(itemWidth, containerWidth) {
-  if (!itemWidth || !containerWidth) {
+function getCarouselItemXPositions(itemWidth, containerWidth, controler) {
+  if (!controler.CardWidth || !containerWidth) {
     return {
       rightest: 0,
       right: 0,
@@ -51,11 +58,11 @@ function getCarouselItemXPositions(itemWidth, containerWidth) {
     };
   }
 
-  const right = containerWidth / 2 - itemWidth - PADDING;
-  const rightest = right * 2 - PADDING;
+  const right = containerWidth / 2 - itemWidth - controler.Padding;
+  const rightest = right * 2 - controler.Padding;
   const center = 0;
-  const left = -(containerWidth / 2) + itemWidth + PADDING;
-  const leftest = left * 2 + PADDING;
+  const left = -(containerWidth / 2) + itemWidth + controler.Padding;
+  const leftest = left * 2 + controler.Padding;
 
   return {
     rightest,
@@ -137,9 +144,13 @@ const ArrowButton = ({ handleClick, variant }) => (
   </Button>
 );
 
-const CarouselItem = ({ position, children, containerWidth }) => {
+const CarouselItem = ({ position, children, containerWidth, controler }) => {
   const { ref, width } = useResizeObserver();
-  const itemXPosition = getCarouselItemXPositions(width, containerWidth);
+  const itemXPosition = getCarouselItemXPositions(
+    width,
+    containerWidth,
+    controler
+  );
 
   console.log(width, containerWidth);
 
@@ -160,7 +171,7 @@ const CarouselItem = ({ position, children, containerWidth }) => {
   );
 };
 
-const Carousel = ({ children, isOpen, setContainerWidth }) => {
+const Carousel = ({ children, isOpen, setContainerWidth, controler }) => {
   const childrenArray = Children.toArray(children);
   const [items, setItems] = React.useState(childrenArray);
   const { ref, width } = useResizeObserver();
@@ -189,7 +200,7 @@ const Carousel = ({ children, isOpen, setContainerWidth }) => {
   return (
     <Flex
       position="relative"
-      h={["100px", "180px", "330px", "330px", "380px"]}
+      h="680px"
       w="100%"
       align="center"
       justify="center"
@@ -203,7 +214,6 @@ const Carousel = ({ children, isOpen, setContainerWidth }) => {
         overflow="hidden"
         h="100%"
         w="100%"
-        maxW="700px"
       >
         <AnimatePresence initial={false}>
           {itemsToShow.map((child, index) => (
@@ -212,6 +222,7 @@ const Carousel = ({ children, isOpen, setContainerWidth }) => {
               key={React.isValidElement(child) ? child.key : ""}
               containerWidth={width || 0}
               isOpen={isOpen}
+              controler={controler}
             >
               {child}
             </CarouselItem>
@@ -226,29 +237,33 @@ const Carousel = ({ children, isOpen, setContainerWidth }) => {
 const Test = ({ isOpen }) => {
   const [containerWidth, setContainerWidth] = useState(null);
 
-  console.log(containerWidth, containerWidth / 2 + "px");
+  const controler = useControls({
+    CardWidth: { value: 400, min: 200, max: 700, step: 50 },
+    Padding: { value: -30, min: -50, max: 50, step: 1 },
+  });
 
   return (
     <Flex w="100%" overflow="hidden">
-      <Carousel setContainerWidth={setContainerWidth} isOpen={isOpen}>
+      <Carousel
+        setContainerWidth={setContainerWidth}
+        isOpen={isOpen}
+        controler={controler}
+      >
         {data.map((item) => (
-          <Flex
-            // h={["81px", "168px", "262px", "312px", "310px", "340px"]}
-            // maxH={["81px", "168px", "262px", "312px", "310px", "340px"]}
-            // w={["80px", "150px", "120px", "400px", "400px", "500px"]}
-            w="250px"
-            // w="100%"
-            // maxW={containerWidth / 2 + "px"}
-            h="150px"
-            align="center"
-            justify="center"
-            overflow="hidden"
-            bg={item.color}
-            key={item.title}
-            borderRadius="15px"
-          >
-            <Text>olá</Text>
-          </Flex>
+          <AspectRatio ratio={16 / 9} minW="200px" w="100%" h="100%">
+            <Flex
+              w="100%"
+              h="100%"
+              align="center"
+              justify="center"
+              overflow="hidden"
+              bg={item.color}
+              key={item.title}
+              borderRadius="15px"
+            >
+              <Text>olá</Text>
+            </Flex>
+          </AspectRatio>
         ))}
       </Carousel>
     </Flex>

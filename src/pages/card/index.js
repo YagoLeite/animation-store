@@ -130,6 +130,7 @@ const index = () => {
         <Text>Select the cards you want to see</Text>
         <Link href={"/card/expanding-cards"}>Expanding Cards</Link>
         <Link href={"/card/brit"}>Brittany Card</Link>
+        <Link href={"/card/twitch"}>Twitch</Link>
       </Flex>
     </Flex>
   );
