@@ -19,7 +19,7 @@ const index = () => {
   const { query, back } = useRouter();
 
   return (
-    <Flex direction="column">
+    <Flex direction="column" bg="#0a192f">
       <Header />
       <Flex direction="column" p="30px" gap="20px">
         <Text cursor="pointer" onClick={() => back()}>

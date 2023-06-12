@@ -92,6 +92,8 @@ const ExpandCards = () => {
           overflow="hidden"
           justify="center"
           align="center"
+          border="1px solid white"
+          p="5px"
         >
           {images.map((img, i) => (
             <Flex

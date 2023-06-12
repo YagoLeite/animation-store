@@ -98,7 +98,7 @@ const BritComponent = () => {
   return (
     <Flex direction="column">
       <Flex w="100%" align="center" justify="center">
-        <Flex w={controler.ContainerWidth}>
+        <Flex w={controler.ContainerWidth} border="1px solid white" p="15px">
           <Grid
             templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
             gap="20px"
