@@ -104,9 +104,6 @@ const WavyText = () => {
     Text: { value: "Type your text" },
     FontSize: { value: 50, min: 10, max: 100, step: 1 },
     Duration: { value: 1, min: 0.1, max: 3, step: 0.1 },
-    Bounce: { value: 0.3, min: 0.1, max: 2, step: 0.1 },
-    Damping: { value: 0.3, min: 0.1, max: 2, step: 0.1 },
-    Stiffness: { value: 200, min: 20, max: 1000, step: 20 },
   });
   return (
     <Flex>
