@@ -4,13 +4,15 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { Flex } from "@chakra-ui/react";
 import Header from "@/components/header/Header";
+import Hero from "@/components/initialPage/Hero";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <Flex direction="column">
+    <Flex direction="column" bg="#0a192f">
       <Header />
+      <Hero />
     </Flex>
   );
 }

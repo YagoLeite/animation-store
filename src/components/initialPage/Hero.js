@@ -1,9 +1,40 @@
-import React, { useState } from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
-import { useControls } from "leva";
+import { useState } from "react";
 
-const SingleLetter = ({ letter, size, controler }) => {
+const Hero = () => {
+  return (
+    <Flex
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        type: "ease",
+        transition: {
+          delay: 0.7,
+          duration: 0.5,
+        },
+      }}
+      direction="column"
+      align="left"
+      justify="center"
+      h="100vh"
+      w="100vw"
+      gap="20px"
+      px="30px"
+      color="#ccd6f6"
+    >
+      <WavyText
+        text="Animation Store"
+        delayDuration={1.2}
+        fontSize={["30px", "40px", "50px", "80px"]}
+      />
+      <Text fontSize="40px">Animated components for developers</Text>
+    </Flex>
+  );
+};
+
+function SingleLetter({ letter, size }) {
   const controls = useAnimation();
   const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
 
@@ -13,7 +44,7 @@ const SingleLetter = ({ letter, size, controler }) => {
       scaleY: [1, 1.15, 0.85, 1.05, 0.9, 1],
       y: ["0px", "-8px", "4px", "-4px", "2px", "0px"],
       transition: {
-        duration: controler.Duration,
+        duration: 1,
         type: "spring",
       },
     },
@@ -22,8 +53,6 @@ const SingleLetter = ({ letter, size, controler }) => {
   return (
     <Text
       as={motion.div}
-      color="#4169E1"
-      // fontFamily="open-sans"
       fontSize={size}
       animate={controls}
       onHoverStart={() => {
@@ -37,9 +66,9 @@ const SingleLetter = ({ letter, size, controler }) => {
       {letter}
     </Text>
   );
-};
+}
 
-const TextContainer = ({ text, delayDuration, fontSize, controler }) => {
+function TextContainer({ text, delayDuration, fontSize }) {
   const container = {
     hidden: {
       opacity: 0,
@@ -86,37 +115,26 @@ const TextContainer = ({ text, delayDuration, fontSize, controler }) => {
             {letter === " " ? (
               <Text opacity={0}>aa</Text>
             ) : (
-              <SingleLetter
-                letter={letter}
-                size={fontSize}
-                controler={controler}
-              />
+              <SingleLetter letter={letter} size={fontSize} />
             )}
           </Flex>
         );
       })}
     </Flex>
   );
-};
+}
 
-const WavyText = () => {
-  const controler = useControls({
-    Text: { value: "Type your text" },
-    FontSize: { value: 50, min: 10, max: 100, step: 1 },
-    Duration: { value: 1, min: 0.1, max: 3, step: 0.1 },
-  });
-
+function WavyText({ text, delayDuration, fontSize }) {
   return (
     <Flex>
       <TextContainer
-        key={controler.Text}
-        text={controler.Text}
-        delayDuration={0.5}
-        fontSize={controler.FontSize}
-        controler={controler}
+        key={Math.random()}
+        text={text}
+        delayDuration={delayDuration}
+        fontSize={fontSize}
       />
     </Flex>
   );
-};
+}
 
-export default WavyText;
+export default Hero;
