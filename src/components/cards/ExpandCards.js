@@ -82,7 +82,7 @@ const ExpandCards = () => {
   };
 
   return (
-    <Flex direction="column">
+    <Flex direction="column" w="100%" gap="20px">
       <Flex w="100%" justify="center" align="center">
         <Flex
           width={controler.ContainerWidth}

@@ -11,7 +11,7 @@ import dynamic from 'next/dynamic';
 const CodePlayground = dynamic(() => import('./CodePlayground'), { ssr: false });
 
 const britData = {
-  title: "World Cup Simulation",
+  title: "Project Name",
   description:
     "Lore ipsiumLore ipsium  Lore ipsiumLore ipsiumLore ipsiumLore ipsium Lore ipsiumLore ipsium Lore ipsiumLore ipsium",
   github: "www.github.com",
@@ -96,7 +96,7 @@ const BritComponent = () => {
   });
 
   return (
-    <Flex direction="column">
+    <Flex direction="column" gap="20px" w="100%">
       <Flex w="100%" align="center" justify="center">
         <Flex w={controler.ContainerWidth} border="1px solid white" p="15px">
           <Grid

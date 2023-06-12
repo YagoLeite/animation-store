@@ -5,14 +5,16 @@ import styles from '@/styles/Home.module.css'
 import { Flex } from "@chakra-ui/react";
 import Header from "@/components/header/Header";
 import Hero from "@/components/initialPage/Hero";
+import LibraryDescription from "@/components/initialPage/LibraryDescription";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Flex direction="column" bg="#0a192f">
+    <Flex direction="column" bg="#0a192f" color="#ccd6f6">
       <Header />
       <Hero />
+      <LibraryDescription />
     </Flex>
   );
 }

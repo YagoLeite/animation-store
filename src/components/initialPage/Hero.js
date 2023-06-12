@@ -16,18 +16,17 @@ const Hero = () => {
         },
       }}
       direction="column"
-      align="left"
+      align="center"
       justify="center"
-      h="100vh"
+      h="calc(100vh - 80px)"
       w="100vw"
       gap="20px"
       px="30px"
-      color="#ccd6f6"
     >
       <WavyText
         text="Animation Store"
         delayDuration={1.2}
-        fontSize={["30px", "40px", "50px", "80px"]}
+        fontSize={["30px", "40px", "90px", "120px"]}
       />
       <Text fontSize="40px">Animated components for developers</Text>
     </Flex>
