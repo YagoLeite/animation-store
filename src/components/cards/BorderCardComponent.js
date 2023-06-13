@@ -71,7 +71,6 @@ export default function BorderCardComponent() {
     ShadowColor: "rgba(0, 255, 117, 0.30)",
     ColorOne: "#00ff75",
     ColorTwo: "#3700ff",
-    TextColor: "#FFFFFF",
     Amount: { value: 6, min: 1, max: 20, step: 1 },
     ContainerWidth: { value: "100%", max: "100%" },
   });
