@@ -11,10 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Flex direction="column" bg="#0a192f" color="#ccd6f6">
-      <Header />
-      <Hero />
-      <LibraryDescription />
+    <Flex direction="column" bg="#0a192f" color="#ccd6f6" align="center">
+      <Flex w="100%" maxW="1400px" direction="column" align="center">
+        <Header />
+        <Hero />
+        <LibraryDescription />
+      </Flex>
     </Flex>
   );
 }

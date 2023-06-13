@@ -1,6 +1,8 @@
+import { tags } from "@/data";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
+import TagButton from "./TagButton";
 
 const Hero = () => {
   return (
@@ -29,6 +31,14 @@ const Hero = () => {
         fontSize={["30px", "40px", "90px", "120px"]}
       />
       <Text fontSize="40px">Animated components for developers</Text>
+      {/* <Flex gap="10px">
+        {tags.map((tag, index) => {
+          return <TagButton tag={tag} key={index} />;
+        })}
+      </Flex> */}
+      <Flex w="100%" align="center" justify="center" maxW="800px">
+        <InfiniteTags tags={tags} />
+      </Flex>
     </Flex>
   );
 };
@@ -61,6 +71,7 @@ function SingleLetter({ letter, size }) {
         }
       }}
       onAnimationComplete={() => setIsAnimationPlaying(false)}
+      textShadow="5px 40px 10px rgba(0, 0, 0, 1.5)"
     >
       {letter}
     </Text>
@@ -132,6 +143,69 @@ function WavyText({ text, delayDuration, fontSize }) {
         delayDuration={delayDuration}
         fontSize={fontSize}
       />
+    </Flex>
+  );
+}
+
+const variants = {
+  animateRight: {
+    x: [0, -150, -300],
+    transition: {
+      x: {
+        repeat: Infinity,
+        duration: 4,
+        ease: "linear",
+      },
+    },
+  },
+  animateLeft: {
+    x: [-150, 0, 150],
+    transition: {
+      x: {
+        repeat: Infinity,
+        duration: 4,
+        ease: "linear",
+      },
+    },
+  },
+};
+
+export function InfiniteTags({ tags }) {
+  const doubledTags = [...tags, ...tags]; // duplicate the tags array
+
+  return (
+    <Flex
+      direction="column"
+      overflow="hidden"
+      width="100%"
+      justify="center"
+      align="center"
+      height="fit-container"
+      gap="15px"
+    >
+      <Flex
+        as={motion.div}
+        variants={variants}
+        animate="animateRight"
+        initial={{ x: 0 }}
+        gap="15px"
+      >
+        {doubledTags.map((tag, index) => (
+          <TagButton tag={tag} key={index} />
+        ))}
+      </Flex>
+
+      <Flex
+        as={motion.div}
+        variants={variants}
+        animate="animateLeft"
+        initial={{ x: -150 }}
+        gap="15px"
+      >
+        {doubledTags.map((tag, index) => (
+          <TagButton tag={tag} key={`second-${index}`} />
+        ))}
+      </Flex>
     </Flex>
   );
 }

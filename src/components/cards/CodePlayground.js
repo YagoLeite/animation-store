@@ -49,11 +49,13 @@ function CodePlayground({ code }) {
         mode="javascript"
         theme="gruvbox"
         // width="100%"
+        // height="100%"
+        // width="fit-content"
         name="code_editor"
         editorProps={{ $blockScrolling: true }}
         value={code}
         setOptions={{
-          showLineNumbers: true,
+          showLineNumbers: false, // <-- Set this to false to hide line numbers
           tabSize: 2,
         }}
         readOnly={true} // make the editor read-only
