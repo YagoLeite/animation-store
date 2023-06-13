@@ -1,3 +1,4 @@
+import BorderCardComponent from "@/components/cards/BorderCardComponent";
 import BritComponent from "@/components/cards/BritComponent";
 import ExpandCards from "@/components/cards/ExpandCards";
 import Test from "@/components/twitchtv/Test";
@@ -56,6 +57,20 @@ export const data = [
       stacks: ["card"],
     },
   },
+  {
+    name: "border-card",
+    content: <BorderCardComponent />,
+    tags: ["card", "elegant"],
+    image: "./britcard.png",
+    cardData: {
+      title: "Border Card",
+      description:
+        "Dynamic, motion-enhanced card display supporting custom color schemes, quantity, and width. Efficiently manages multiple cards using grid layout",
+      github: "www.github.com",
+      redirect: "/tags/border-card",
+      stacks: ["card"],
+    },
+  },
 ];
 
-export const tags = ["card", "fun", "typography", "image"];
+export const tags = ["card", "fun", "typography", "image", "elegant"];
