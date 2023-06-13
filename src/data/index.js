@@ -1,6 +1,7 @@
 import BorderCardComponent from "@/components/cards/BorderCardComponent";
 import BritComponent from "@/components/cards/BritComponent";
 import ExpandCards from "@/components/cards/ExpandCards";
+import FlippingCardComponent from "@/components/cards/FlippingCardComponent";
 import Test from "@/components/twitchtv/Test";
 import WavyText from "@/components/typography/WavyText";
 
@@ -68,7 +69,21 @@ export const data = [
         "Dynamic, motion-enhanced card display supporting custom color schemes, quantity, and width. Efficiently manages multiple cards using grid layout",
       github: "www.github.com",
       redirect: "/tags/border-card",
-      stacks: ["card"],
+      stacks: ["card", "elegant"],
+    },
+  },
+  {
+    name: "flip-card",
+    content: <FlippingCardComponent />,
+    tags: ["card", "fun"],
+    image: "./britcard.png",
+    cardData: {
+      title: "Flip Card",
+      description:
+        "Experience an engaging interaction with this card component. On hover, it performs a smooth flip animation, revealing additional content. Its sleek design and user-friendly interface add a modern touch to any application, providing a captivating user experience.",
+      github: "www.github.com",
+      redirect: "/tags/flip-card",
+      stacks: ["card", "fun"],
     },
   },
 ];
