@@ -48,9 +48,12 @@ function BorderCard({ controler }) {
         h="254px"
         borderRadius="20px"
         backgroundImage={`linear-gradient(163deg, ${controler.ColorOne} 0%, ${controler.ColorTwo} 100%)`}
-        variants={cardVariant}
-        initial="rest"
-        whileHover="hover"
+        initial={{ y: 0, boxShadow: "none" }}
+        whileHover={{
+          boxShadow: `0px 0px 30px 1px ${controler.ShadowColor}`,
+          y: -10,
+          transition: { duration: 0.2 },
+        }}
       >
         <Flex
           as={motion.div}
