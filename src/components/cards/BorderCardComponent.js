@@ -41,10 +41,13 @@ function BorderCard({ controler }) {
         },
       }}
       initial={{ opacity: 0 }}
+      w="100%"
+      minW="190px"
+      maxW="300px"
     >
       <Flex
         as={motion.div}
-        w="190px"
+        w="100%"
         h="254px"
         borderRadius="20px"
         backgroundImage={`linear-gradient(163deg, ${controler.ColorOne} 0%, ${controler.ColorTwo} 100%)`}
@@ -57,13 +60,15 @@ function BorderCard({ controler }) {
       >
         <Flex
           as={motion.div}
-          w="190px"
+          w="100%"
           h="254px"
           bg="#1a1a1a"
           variants={innerCardVariant}
           initial="rest"
           whileHover="hover"
-        ></Flex>
+        >
+          olá
+        </Flex>
       </Flex>
     </Flex>
   );
@@ -83,7 +88,7 @@ export default function BorderCardComponent() {
       <Flex w="100%" align="center" justify="center">
         <Flex w={controler.ContainerWidth} border="1px solid white" p="15px">
           <Grid
-            templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+            templateColumns="repeat(auto-fill, minmax(190px, 1fr))"
             gap="20px"
             w="100%"
           >
