@@ -2,6 +2,7 @@ import BorderCardComponent from "@/components/cards/BorderCardComponent";
 import BritComponent from "@/components/cards/BritComponent";
 import ExpandCards from "@/components/cards/ExpandCards";
 import FlippingCardComponent from "@/components/cards/FlippingCardComponent";
+import GlassCardComponent from "@/components/cards/GlassCardComponent";
 import Test from "@/components/twitchtv/Test";
 import WavyText from "@/components/typography/WavyText";
 
@@ -84,6 +85,20 @@ export const data = [
       github: "www.github.com",
       redirect: "/tags/flip-card",
       stacks: ["card", "fun"],
+    },
+  },
+  {
+    name: "glass-card",
+    content: <GlassCardComponent />,
+    tags: ["card", "elegant"],
+    image: "./britcard.png",
+    cardData: {
+      title: "Glass Card",
+      description:
+        "Experience an engaging interaction with this card component. On hover, it performs a smooth flip animation, revealing additional content. Its sleek design and user-friendly interface add a modern touch to any application, providing a captivating user experience.",
+      github: "www.github.com",
+      redirect: "/tags/glass-card",
+      stacks: ["card", "elegant"],
     },
   },
 ];
