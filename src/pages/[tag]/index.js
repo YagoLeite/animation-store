@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header";
 import { InfiniteTags } from "@/components/initialPage/Hero";
+import Sidebar from "@/components/sidebar/Sidebar";
 import { data, tags } from "@/data";
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -11,17 +12,14 @@ import { FiGithub } from "react-icons/fi";
 
 const index = () => {
   const { query, back } = useRouter();
+  const [isOpen, setIsOpen] = useState(true);
   // console.log(data
   //   .filter((item) => item.tags.includes(query.tag)))
   return (
-    <Flex
-      direction="column"
-      align="center"
-      bg="#0a192f"
-      color="#ccd6f6"
-      minH="100vh"
-    >
-      <Flex w="100%" maxW="1400px" direction="column">
+    <Flex direction="column" bg="#141517" color="#ccd6f6" minH="100vh">
+      <Header />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* <Flex w="100%" maxW="1400px" direction="column">
         <Header />
         <Text>{query.tag} category!</Text>
 
@@ -38,7 +36,7 @@ const index = () => {
       >
         <Text>For more tags!</Text>
         <InfiniteTags tags={tags} />
-      </Flex>
+      </Flex> */}
     </Flex>
   );
 };
