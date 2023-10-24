@@ -12,7 +12,17 @@ import React from "react";
 
 const Header = () => {
   return (
-    <Flex w="100%" h="70px" gap="30px" align="center" justify="space-between">
+    <Flex
+      w="100%"
+      position="sticky"
+      top="0"
+      h="70px"
+      zIndex={2}
+      bg="#141517"
+      gap="30px"
+      align="center"
+      justify="space-between"
+    >
       <Link href="/">Animation Store</Link>
       <Menu>
         <MenuButton>Tags</MenuButton>

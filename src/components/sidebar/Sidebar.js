@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, setIsOpen, ...rest }) => {
       as={motion.ul}
       direction="column"
       position="sticky"
-      top="0"
+      top="70px"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
       h="calc(100vh - 70px)"
