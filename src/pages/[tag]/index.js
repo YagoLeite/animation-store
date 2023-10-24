@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header";
 import { InfiniteTags } from "@/components/initialPage/Hero";
+import Showcase from "@/components/showcase/Showcase";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { data, tags } from "@/data";
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
@@ -13,33 +14,44 @@ import { FiGithub } from "react-icons/fi";
 const index = () => {
   const { query, back } = useRouter();
   const [isOpen, setIsOpen] = useState(true);
-  // console.log(data
-  //   .filter((item) => item.tags.includes(query.tag)))
   return (
-    <Flex direction="column" bg="#141517" color="#ccd6f6" minH="100vh">
+    <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
       <Header />
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      {/* <Flex w="100%" maxW="1400px" direction="column">
-        <Header />
-        <Text>{query.tag} category!</Text>
-
-        <BritComponent
-          data={data.filter((item) => item.tags.includes(query.tag))}
-        />
+      <Flex>
+        <Flex>
+          <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+        </Flex>
+        <Flex direction="column" gap="20px" px="20px" w="100%">
+          <Showcase />
+          <Showcase />
+          <Showcase />
+          <Showcase />
+          <Showcase />
+        </Flex>
       </Flex>
-      <Flex
-        w="100%"
-        align="center"
-        justify="center"
-        maxW="800px"
-        direction="column"
-      >
-        <Text>For more tags!</Text>
-        <InfiniteTags tags={tags} />
-      </Flex> */}
     </Flex>
   );
 };
+{
+  /* <Flex w="100%" maxW="1400px" direction="column">
+  <Header />
+  <Text>{query.tag} category!</Text>
+
+  <BritComponent
+    data={data.filter((item) => item.tags.includes(query.tag))}
+  />
+</Flex>
+<Flex
+  w="100%"
+  align="center"
+  justify="center"
+  maxW="800px"
+  direction="column"
+>
+  <Text>For more tags!</Text>
+  <InfiniteTags tags={tags} />
+</Flex> */
+}
 
 function BritCard({ data }) {
   const [isHovered, setIsHovered] = useState(false);
