@@ -113,41 +113,42 @@ export const data = [
   {
     name: "Flip Card",
     component: FlippingCardComponent,
-    tags: ["card", "fun"],
+    tags: ["card", "fun", "all"],
   },
   {
     name: "Glowing Card",
     component: BorderCard,
-    tags: ["card", "fun"],
+    tags: ["card", "fun", "all"],
   },
   {
     name: "Wavy Text",
     component: WavyText,
-    tags: ["typography", "fun"],
+    tags: ["typography", "fun", "all"],
   },
   {
     name: "Bumping Text",
     component: BumpingText,
-    tags: ["typography", "fun"],
+    tags: ["typography", "fun", "all"],
   },
   {
     name: "Simple Carousel",
     component: SimpleCarousel,
-    tags: ["carousel"],
+    tags: ["carousel", "all"],
   },
   {
     name: "fuck Carousel",
     component: MainBanner,
-    tags: ["carousel"],
+    tags: ["carousel", "all"],
   },
   {
     name: "Group Table",
     component: GroupTable,
-    tags: ["carousel"],
+    tags: ["carousel", "all"],
   },
 ];
 
 export const tags = [
+  "all",
   "card",
   "fun",
   "typography",

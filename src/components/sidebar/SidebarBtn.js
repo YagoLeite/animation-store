@@ -5,7 +5,10 @@ import React from "react";
 
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   return (
-    <li key={index} style={{ listStyle: "none", width: "100%" }}>
+    <li
+      key={index}
+      style={{ listStyle: "none", width: "100%", padding: "0px 20px" }}
+    >
       <Link href={url}>
         <Text
           as={motion.div}

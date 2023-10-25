@@ -3,6 +3,7 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
 import TagButton from "./TagButton";
+import ButtonPage from "./ButtonPage";
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
       align="center"
       justify="center"
       h="calc(100vh - 80px)"
-      w="100vw"
+      w="100%"
       gap="20px"
       px="30px"
     >
@@ -31,14 +32,7 @@ const Hero = () => {
         fontSize={["30px", "40px", "90px", "120px"]}
       />
       <Text fontSize="40px">Animated components for developers</Text>
-      {/* <Flex gap="10px">
-        {tags.map((tag, index) => {
-          return <TagButton tag={tag} key={index} />;
-        })}
-      </Flex> */}
-      <Flex w="100%" align="center" justify="center" maxW="800px">
-        <InfiniteTags tags={tags} />
-      </Flex>
+      <ButtonPage />
     </Flex>
   );
 };

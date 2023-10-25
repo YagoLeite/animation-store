@@ -1,14 +1,8 @@
-import { tags } from "@/data";
-import {
-  Flex,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-} from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -20,24 +14,31 @@ const Header = () => {
       zIndex={2}
       bg="#141517"
       gap="30px"
+      px="20px"
       align="center"
       justify="space-between"
     >
       <Link href="/">Animation Store</Link>
-      <Menu>
-        <MenuButton>Tags</MenuButton>
-        <MenuList>
-          {tags.map((tag, index) => {
-            return (
-              <MenuItem key={index}>
-                <Link href={`/${tag}`} style={{ width: "100%" }}>
-                  {tag}
-                </Link>
-              </MenuItem>
-            );
-          })}
-        </MenuList>
-      </Menu>
+      <Flex gap="10px" justify="center" align="center">
+        <motion.div whileHover={{ scale: 1.3, color: "pink" }}>
+          <Link passHref legacyBehavior href="https://github.com/YagoLeite">
+            <a target="_blank">
+              <AiFillGithub size="20px" />
+            </a>
+          </Link>
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.3, color: "pink" }}>
+          <Link
+            passHref
+            legacyBehavior
+            href="https://www.linkedin.com/in/yagoleite/"
+          >
+            <a target="_blank">
+              <AiFillLinkedin size="20px" />
+            </a>
+          </Link>
+        </motion.div>
+      </Flex>
     </Flex>
   );
 };
