@@ -22,7 +22,10 @@ const index = () => {
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Flex>
         <Flex direction="column" gap="20px" px="20px" w="100%">
-          <Showcase />
+          {data.map((item) => {
+            return <Showcase data={item} />;
+          })}
+          <Showcase data={data[0]} />
           <Showcase />
           <Showcase />
           <Showcase />

@@ -29,7 +29,6 @@ const Sidebar = ({ isOpen, setIsOpen, ...rest }) => {
       h="calc(100vh - 70px)"
       w="240px"
       {...rest}
-      bg="red"
       color="white"
     >
       <Flex onClick={() => setIsOpen((prev) => !prev)}>olá</Flex>
