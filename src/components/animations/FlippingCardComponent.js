@@ -101,7 +101,8 @@ const FlippingCard = ({ isCoding }) => {
 export default FlippingCard;
 
 function code() {
-  return ` <Flex
+  return ` 
+<Flex
  as={motion.div}
  initial={{ opacity: 0 }}
  whileInView={{
@@ -178,5 +179,6 @@ function code() {
      </Center>
    </Box>
  </Box>
- </Flex>`;
+ </Flex>
+ `;
 }
