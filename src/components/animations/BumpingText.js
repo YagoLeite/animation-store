@@ -80,6 +80,7 @@ const SingleLetter = ({ letter, size }) => {
 
   const bump = {
     visible: {
+      // These values may vary depending on your font size
       scaleX: [1, 0.85, 1.15, 0.9, 1.05, 1],
       scaleY: [1, 1.15, 0.85, 1.05, 0.9, 1],
       y: ["0px", "-8px", "4px", "-4px", "2px", "0px"],

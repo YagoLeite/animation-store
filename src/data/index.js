@@ -1,6 +1,7 @@
 import BorderCard from "@/components/animations/BorderCard";
 import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
+import SimpleCarousel from "@/components/animations/SimpleCarousel";
 import WavyText from "@/components/animations/WavyText";
 
 import BritComponent from "@/components/cards/BritComponent";
@@ -127,6 +128,18 @@ export const data = [
     component: BumpingText,
     tags: ["typography", "fun"],
   },
+  {
+    name: "Simple Carousel",
+    component: SimpleCarousel,
+    tags: ["carousel"],
+  },
 ];
 
-export const tags = ["card", "fun", "typography", "image", "elegant"];
+export const tags = [
+  "card",
+  "fun",
+  "typography",
+  "image",
+  "elegant",
+  "carousel",
+];

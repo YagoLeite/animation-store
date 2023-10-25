@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { InfiniteTags } from "@/components/initialPage/Hero";
 import Showcase from "@/components/showcase/Showcase";
@@ -23,14 +24,18 @@ const index = () => {
         <Flex>
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Flex>
-        <Flex direction="column" gap="20px" px="20px" w="100%">
+        <Flex
+          direction="column"
+          overflowX="hidden"
+          gap="20px"
+          px="20px"
+          pb="30px"
+          w="100%"
+        >
           {filteredData?.map((item) => {
             return <Showcase data={item} />;
           })}
-          <Showcase />
-          <Showcase />
-          <Showcase />
-          <Showcase />
+          <Footer />
         </Flex>
       </Flex>
     </Flex>
