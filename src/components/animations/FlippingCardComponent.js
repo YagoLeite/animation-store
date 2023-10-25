@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
-const CodePlayground = dynamic(() => import("../cards/CodePlayground"), {
+const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
   ssr: false,
 });
 

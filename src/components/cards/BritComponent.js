@@ -7,7 +7,9 @@ import { AiOutlineFolder } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import dynamic from 'next/dynamic';
 
-const CodePlayground = dynamic(() => import('./CodePlayground'), { ssr: false });
+const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
+  ssr: false,
+});
 
 const britData = {
   title: "Project Name",

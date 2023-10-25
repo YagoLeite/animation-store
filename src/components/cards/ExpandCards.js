@@ -6,7 +6,7 @@ import { useWindowSize } from "react-use";
 // import CodePlayground from "./CodePlayground";
 import dynamic from "next/dynamic";
 
-const CodePlayground = dynamic(() => import("./CodePlayground"), {
+const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
   ssr: false,
 });
 
