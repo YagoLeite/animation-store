@@ -1,6 +1,8 @@
 import BorderCard from "@/components/animations/BorderCard";
 import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
+import GroupTable from "@/components/animations/GroupTable";
+import MainBanner from "@/components/animations/MainBanner";
 import SimpleCarousel from "@/components/animations/SimpleCarousel";
 import WavyText from "@/components/animations/WavyText";
 
@@ -131,6 +133,16 @@ export const data = [
   {
     name: "Simple Carousel",
     component: SimpleCarousel,
+    tags: ["carousel"],
+  },
+  {
+    name: "fuck Carousel",
+    component: MainBanner,
+    tags: ["carousel"],
+  },
+  {
+    name: "Group Table",
+    component: GroupTable,
     tags: ["carousel"],
   },
 ];
