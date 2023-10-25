@@ -64,6 +64,7 @@ function SingleLetter({ letter, size }) {
           controls.start(bump.visible);
         }
       }}
+      whileHover={{ color: "#64ffda" }}
       onAnimationComplete={() => setIsAnimationPlaying(false)}
       textShadow="5px 40px 10px rgba(0, 0, 0, 1.5)"
     >

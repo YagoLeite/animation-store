@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import AceEditor from "react-ace";
 
 // import "ace-builds/src-noconflict/mode-javascript";
@@ -40,25 +40,76 @@ import "ace-builds/src-noconflict/theme-gruvbox";
 // import "ace-builds/src-noconflict/theme-twilight";
 // import "ace-builds/src-noconflict/theme-vibrant_ink";
 // import "ace-builds/src-noconflict/theme-xcode";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Button, useToast } from "@chakra-ui/react";
+import { RxCopy } from "react-icons/rx";
+import { motion } from "framer-motion";
 
 function CodePlayground({ code }) {
+  const editorRef = useRef(null);
+  const toast = useToast();
+
+  const getCodeFromEditor = () => {
+    if (editorRef.current) {
+      return editorRef.current.editor.getValue();
+    }
+    return "";
+  };
+
+  const handleCopyClick = async () => {
+    const codeToCopy = getCodeFromEditor();
+
+    try {
+      await navigator.clipboard.writeText(codeToCopy);
+      toast({
+        title: "Code copied!",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    } catch (err) {
+      toast({
+        title: "Failed to copy!",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
-    <Flex w="100%" justify="left" align="center">
+    <Flex
+      w="100%"
+      justify="center"
+      align="center"
+      direction="column"
+      position="relative"
+    >
+      <Flex
+        as={motion.div}
+        whileHover={{ scale: 1.1, color: "#64ffda" }}
+        position="absolute"
+        cursor="pointer"
+        onClick={handleCopyClick}
+        top="10"
+        right="10"
+        zIndex="2"
+        h="30px"
+        w="30px"
+      >
+        <RxCopy height="100%" width="100%" />
+      </Flex>
       <AceEditor
+        ref={editorRef}
         mode="javascript"
         theme="gruvbox"
         width="100%"
-        // h="300px"
-        // width="fit-content"
         name="code_editor"
         editorProps={{ $blockScrolling: true }}
         value={code}
         setOptions={{
-          showLineNumbers: false, // <-- Set this to false to hide line numbers
-          tabSize: 2,
+          showLineNumbers: false,
         }}
-        readOnly={true} // make the editor read-only
+        readOnly={true}
       />
     </Flex>
   );

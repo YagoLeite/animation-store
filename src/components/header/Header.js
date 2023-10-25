@@ -20,14 +20,14 @@ const Header = () => {
     >
       <Link href="/">Animation Store</Link>
       <Flex gap="10px" justify="center" align="center">
-        <motion.div whileHover={{ scale: 1.3, color: "pink" }}>
+        <motion.div whileHover={{ scale: 1.3, color: "#64ffda" }}>
           <Link passHref legacyBehavior href="https://github.com/YagoLeite">
             <a target="_blank">
               <AiFillGithub size="20px" />
             </a>
           </Link>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.3, color: "pink" }}>
+        <motion.div whileHover={{ scale: 1.3, color: "#64ffda" }}>
           <Link
             passHref
             legacyBehavior
