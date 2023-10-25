@@ -1,10 +1,15 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, Button } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
+import MobileSidebar from "../sidebar/MobileSidebar";
+import { useRouter } from "next/router";
 
-const Header = () => {
+const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
+  const query = useRouter();
+  console.log(query.route === "/");
   return (
     <Flex
       w="100%"
@@ -18,6 +23,27 @@ const Header = () => {
       align="center"
       justify="space-between"
     >
+      {query.route !== "/" && (
+        <Box display={["block", "block", "none", "none", "none"]}>
+          <Button
+            display={["block", "block", "none", "none", "none"]}
+            _hover={{ color: "gray.300" }}
+            onClick={toggleHandler}
+            variant="ghost"
+          >
+            {/* {isToggleMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />} */}
+            <FaBars size={30} color="white" />
+            {/* Tags */}
+          </Button>
+
+          {isToggleMenuOpen && (
+            <MobileSidebar
+              isOpen={isToggleMenuOpen}
+              setIsOpen={setIsToggleMenuOpen}
+            />
+          )}
+        </Box>
+      )}
       <Link href="/">Animation Store</Link>
       <Flex gap="10px" justify="center" align="center">
         <motion.div whileHover={{ scale: 1.3, color: "#64ffda" }}>

@@ -8,20 +8,28 @@ import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineFolder } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 
 const index = () => {
   const { query, back } = useRouter();
+  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
+
+  const toggleHandler = () => {
+    setIsToggleMenuOpen(!isToggleMenuOpen);
+  };
+
+  useEffect(() => {setIsToggleMenuOpen(false)}, [query.tag])
+
   console.log(query);
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
   const [isOpen, setIsOpen] = useState(true);
   return (
     <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
-      <Header />
+      <Header isToggleMenuOpen={isToggleMenuOpen} toggleHandler={toggleHandler} setIsToggleMenuOpen={setIsToggleMenuOpen}/>
       <Flex>
-        <Flex>
+        <Flex display={['none', 'none', 'flex', 'flex']}>
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Flex>
         <Flex
@@ -62,97 +70,97 @@ const index = () => {
 </Flex> */
 }
 
-function BritCard({ data }) {
-  const [isHovered, setIsHovered] = useState(false);
+// function BritCard({ data }) {
+//   const [isHovered, setIsHovered] = useState(false);
 
-  const textVariant = {
-    initial: {
-      color: "#FFFFFF",
-    },
-    hovered: {
-      color: "#64ffda",
-    },
-  };
+//   const textVariant = {
+//     initial: {
+//       color: "#FFFFFF",
+//     },
+//     hovered: {
+//       color: "#64ffda",
+//     },
+//   };
 
-  return (
-    <Link href={data.redirect}>
-      <Flex
-        direction="column"
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          type: "ease",
-          transition: {
-            duration: 0.5,
-          },
-        }}
-        gap="20px"
-        w="100%"
-        bg={"#112240"}
-        color="white"
-        p="20px"
-        borderRadius="5px"
-        cursor="pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <Flex justify="space-between" align="center">
-          <AiOutlineFolder color={"#64ffda"} size={30} />
-          <Flex as={motion.div} whileHover={{ color: "#64ffda" }}>
-            <Link href={data.github}>
-              <FiGithub />
-            </Link>
-          </Flex>
-        </Flex>
-        <Flex direction="column" gap="10px" w="100%">
-          <Text
-            fontSize="22px"
-            fontWeight="semibold"
-            as={motion.div}
-            variants={textVariant}
-            animate={isHovered ? "hovered" : "initial"}
-          >
-            {data.title}
-          </Text>
-          <Text fontSize="15px" color={"#FFFFFF"}>
-            {data.description}
-          </Text>
-        </Flex>
-        <Flex gap="5px">
-          {data.stacks.map((text, index) => (
-            <Text
-              fontSize="11px"
-              key={index}
-              color={"#64ffda"}
-              textTransform="capitalize"
-            >
-              {text}
-            </Text>
-          ))}
-        </Flex>
-      </Flex>
-    </Link>
-  );
-}
+//   return (
+//     <Link href={data.redirect}>
+//       <Flex
+//         direction="column"
+//         as={motion.div}
+//         initial={{ opacity: 0 }}
+//         whileInView={{
+//           opacity: 1,
+//           type: "ease",
+//           transition: {
+//             duration: 0.5,
+//           },
+//         }}
+//         gap="20px"
+//         w="100%"
+//         bg={"#112240"}
+//         color="white"
+//         p="20px"
+//         borderRadius="5px"
+//         cursor="pointer"
+//         onMouseEnter={() => setIsHovered(true)}
+//         onMouseLeave={() => setIsHovered(false)}
+//       >
+//         <Flex justify="space-between" align="center">
+//           <AiOutlineFolder color={"#64ffda"} size={30} />
+//           <Flex as={motion.div} whileHover={{ color: "#64ffda" }}>
+//             <Link href={data.github}>
+//               <FiGithub />
+//             </Link>
+//           </Flex>
+//         </Flex>
+//         <Flex direction="column" gap="10px" w="100%">
+//           <Text
+//             fontSize="22px"
+//             fontWeight="semibold"
+//             as={motion.div}
+//             variants={textVariant}
+//             animate={isHovered ? "hovered" : "initial"}
+//           >
+//             {data.title}
+//           </Text>
+//           <Text fontSize="15px" color={"#FFFFFF"}>
+//             {data.description}
+//           </Text>
+//         </Flex>
+//         <Flex gap="5px">
+//           {data.stacks.map((text, index) => (
+//             <Text
+//               fontSize="11px"
+//               key={index}
+//               color={"#64ffda"}
+//               textTransform="capitalize"
+//             >
+//               {text}
+//             </Text>
+//           ))}
+//         </Flex>
+//       </Flex>
+//     </Link>
+//   );
+// }
 
-function BritComponent({ data }) {
-  return (
-    <Grid
-      templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
-      gap="20px"
-      w="100%"
-      maxW="1400px"
-    >
-      {data.map((item, index) => {
-        return (
-          <Flex as={motion.div} whileHover={{ y: -10 }}>
-            <BritCard key={index} data={item.cardData} />
-          </Flex>
-        );
-      })}
-    </Grid>
-  );
-}
+// function BritComponent({ data }) {
+//   return (
+//     <Grid
+//       templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+//       gap="20px"
+//       w="100%"
+//       maxW="1400px"
+//     >
+//       {data.map((item, index) => {
+//         return (
+//           <Flex as={motion.div} whileHover={{ y: -10 }}>
+//             <BritCard key={index} data={item.cardData} />
+//           </Flex>
+//         );
+//       })}
+//     </Grid>
+//   );
+// }
 
 export default index;
