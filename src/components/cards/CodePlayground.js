@@ -44,12 +44,12 @@ import { Flex } from "@chakra-ui/react";
 
 function CodePlayground({ code }) {
   return (
-    <Flex w="100%" justify="center" align="center">
+    <Flex w="100%" justify="left" align="center">
       <AceEditor
         mode="javascript"
         theme="gruvbox"
-        // width="100%"
-        // height="100%"
+        width="100%"
+        // h="300px"
         // width="fit-content"
         name="code_editor"
         editorProps={{ $blockScrolling: true }}

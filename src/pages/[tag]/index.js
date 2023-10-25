@@ -13,6 +13,8 @@ import { FiGithub } from "react-icons/fi";
 
 const index = () => {
   const { query, back } = useRouter();
+  console.log(query);
+  const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
   const [isOpen, setIsOpen] = useState(true);
   return (
     <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
@@ -22,10 +24,9 @@ const index = () => {
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Flex>
         <Flex direction="column" gap="20px" px="20px" w="100%">
-          {data.map((item) => {
+          {filteredData?.map((item) => {
             return <Showcase data={item} />;
           })}
-          <Showcase data={data[0]} />
           <Showcase />
           <Showcase />
           <Showcase />

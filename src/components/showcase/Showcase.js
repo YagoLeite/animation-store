@@ -38,7 +38,13 @@ const Showcase = ({ data }) => {
           </Text>
         </Flex>
       </Flex>
-      <Flex justify="center" align="center" bg="rgb(62, 62, 62)" h="300px">
+      <Flex
+        justify={isCoding ? "left" : "center"}
+        align="center"
+        bg="rgb(62, 62, 62)"
+        h="fit-content"
+        p={isCoding ? "0px" : "30px"}
+      >
         {ComponentToRender && <ComponentToRender isCoding={isCoding} />}
       </Flex>
     </Flex>
@@ -46,5 +52,3 @@ const Showcase = ({ data }) => {
 };
 
 export default Showcase;
-
-// rgb(62, 62, 62)

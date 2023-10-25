@@ -1,11 +1,13 @@
+import BorderCard from "@/components/animations/BorderCard";
+import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
-import BorderCardComponent from "@/components/cards/BorderCardComponent";
+import WavyText from "@/components/animations/WavyText";
+
 import BritComponent from "@/components/cards/BritComponent";
 import ExpandCards from "@/components/cards/ExpandCards";
 
 import GlassCardComponent from "@/components/cards/GlassCardComponent";
 import Test from "@/components/twitchtv/Test";
-import WavyText from "@/components/typography/WavyText";
 
 // export const data = [
 //   {
@@ -110,11 +112,21 @@ export const data = [
     component: FlippingCardComponent,
     tags: ["card", "fun"],
   },
-  // {
-  //   name: "Brit Card",
-  //   component: BritComponent,
-  //   tags: ["card", "fun"],
-  // },
+  {
+    name: "Glowing Card",
+    component: BorderCard,
+    tags: ["card", "fun"],
+  },
+  {
+    name: "Wavy Text",
+    component: WavyText,
+    tags: ["typography", "fun"],
+  },
+  {
+    name: "Bumping Text",
+    component: BumpingText,
+    tags: ["typography", "fun"],
+  },
 ];
 
 export const tags = ["card", "fun", "typography", "image", "elegant"];
