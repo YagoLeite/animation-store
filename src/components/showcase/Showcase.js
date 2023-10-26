@@ -31,6 +31,7 @@ const Showcase = ({ data }) => {
           gap="8px"
           align="center"
           justify="center"
+          cursor="pointer"
         >
           <BsCodeSlash />
           <Text fontSize="12px" fontWeight="800">
