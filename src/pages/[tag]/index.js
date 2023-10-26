@@ -26,9 +26,13 @@ const index = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
-      <Header isToggleMenuOpen={isToggleMenuOpen} toggleHandler={toggleHandler} setIsToggleMenuOpen={setIsToggleMenuOpen}/>
+      <Header
+        isToggleMenuOpen={isToggleMenuOpen}
+        toggleHandler={toggleHandler}
+        setIsToggleMenuOpen={setIsToggleMenuOpen}
+      />
       <Flex>
-        <Flex display={['none', 'none', 'flex', 'flex']}>
+        <Flex display={["none", "none", "flex", "flex"]}>
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Flex>
         <Flex
@@ -39,8 +43,8 @@ const index = () => {
           pb="30px"
           w="100%"
         >
-          {filteredData?.map((item) => {
-            return <Showcase data={item} />;
+          {filteredData?.map((item, i) => {
+            return <Showcase data={item} key={i} />;
           })}
           <Footer />
         </Flex>

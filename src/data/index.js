@@ -4,6 +4,7 @@ import FlippingCardComponent from "@/components/animations/FlippingCardComponent
 import GroupTable from "@/components/animations/GroupTable";
 import MainBanner from "@/components/animations/MainBanner";
 import SimpleCarousel from "@/components/animations/SimpleCarousel";
+import ToggleCircularBtns from "@/components/animations/ToggleCircularBtns";
 import WavyText from "@/components/animations/WavyText";
 
 import BritComponent from "@/components/cards/BritComponent";
@@ -145,6 +146,11 @@ export const data = [
     component: GroupTable,
     tags: ["carousel", "all"],
   },
+  {
+    name: "Toggle Button",
+    component: ToggleCircularBtns,
+    tags: ["toggle", "button", "all"],
+  },
 ];
 
 export const tags = [
@@ -155,4 +161,6 @@ export const tags = [
   "image",
   "elegant",
   "carousel",
+  "button",
+  "toggle",
 ];

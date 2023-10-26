@@ -2,7 +2,7 @@ import { Box, Flex, Button } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { motion } from "framer-motion";
 import MobileSidebar from "../sidebar/MobileSidebar";
 import { useRouter } from "next/router";
