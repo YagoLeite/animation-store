@@ -56,9 +56,9 @@ const GoldenStars = () => {
         })}
       </Points>
 
-      {/* <EffectComposer>
+      <EffectComposer>
         <Bloom mipmapBlur luminanceThreshold={0.5} radius={0.7} />
-      </EffectComposer> */}
+      </EffectComposer>
     </Canvas>
   );
 };
