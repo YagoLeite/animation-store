@@ -22,7 +22,6 @@ const index = () => {
 
   useEffect(() => {setIsToggleMenuOpen(false)}, [query.tag])
 
-  console.log(query);
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
   const [isOpen, setIsOpen] = useState(true);
   return (

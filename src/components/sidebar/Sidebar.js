@@ -24,14 +24,14 @@ const Sidebar = ({ isOpen, setIsOpen, ...rest }) => {
       direction="column"
       position="sticky"
       top="70px"
+      gap="10px"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
       h="calc(100vh - 70px)"
       w="240px"
       {...rest}
-      color="white"
     >
-      <Flex onClick={() => setIsOpen((prev) => !prev)}>olá</Flex>
+      {/* <Flex onClick={() => setIsOpen((prev) => !prev)}>olá</Flex> */}
       {tags.map((tag, index) => {
         return (
           <SidebarBtn
