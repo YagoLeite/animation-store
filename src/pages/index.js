@@ -23,7 +23,7 @@ export default function Home() {
     >
       <Header />
       <Hero />
-      <Flex w="100%" maxW="1000px" align="center" justify="center">
+      <Flex w="100%" maxW="1000px" align="center" justify="center" px="20px">
         <Showcase data={data[1]} />
       </Flex>
       <Flex w="100%" justify="center" align="center" mt="30px">

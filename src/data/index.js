@@ -1,6 +1,8 @@
+import AnimSidebar from "@/components/animations/AnimSidebar";
 import BorderCard from "@/components/animations/BorderCard";
 import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
+import GoldenStars from "@/components/animations/GoldenStars";
 import GroupTable from "@/components/animations/GroupTable";
 import MainBanner from "@/components/animations/MainBanner";
 import SimpleCarousel from "@/components/animations/SimpleCarousel";
@@ -151,6 +153,16 @@ export const data = [
     component: ToggleCircularBtns,
     tags: ["toggle", "button", "all"],
   },
+  {
+    name: "Sidebar",
+    component: AnimSidebar,
+    tags: ["sidebar", "all"],
+  },
+  {
+    name: "Golden Stars",
+    component: GoldenStars,
+    tags: ["3D", "elegant", "all"],
+  },
 ];
 
 export const tags = [
@@ -163,4 +175,6 @@ export const tags = [
   "carousel",
   "button",
   "toggle",
+  "sidebar",
+  "3D",
 ];

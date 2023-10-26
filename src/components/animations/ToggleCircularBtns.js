@@ -54,7 +54,7 @@ const containerVariant = {
 const positions = topAndLeft(arrayOfPositions(findingAngles(5)));
 
 const ToggleCircularBtns = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
   return (
     <Flex
       as={motion.div}

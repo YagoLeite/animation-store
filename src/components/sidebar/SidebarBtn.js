@@ -17,7 +17,17 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
           cursor: "pointer",
         }}
       >
-        <Flex as={motion.div} whileHover={{ x: 15, scale: 1.1 }}>
+        <Flex
+          as={motion.div}
+          whileHover={{
+            x: 15,
+            scale: 1.1,
+            transition: {
+              duration: 0.2,
+              ease: "linear",
+            },
+          }}
+        >
           <Text
             as={motion.div}
             animate={isOpen ? "open" : "closed"}
