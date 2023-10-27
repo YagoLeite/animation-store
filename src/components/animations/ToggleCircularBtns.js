@@ -10,11 +10,11 @@ import {
 } from "react-icons/ai";
 
 const icons = [
-  <AiFillGithub height="40px" width="40px" />,
-  <AiFillLinkedin height="40px" width="40px" />,
-  <AiFillFacebook height="40px" width="40px" />,
-  <AiFillInstagram height="40px" width="40px" />,
-  <AiFillBehanceCircle height="40px" width="40px" />,
+  <AiFillGithub size="100%" />,
+  <AiFillLinkedin size="100%" />,
+  <AiFillFacebook size="100%" />,
+  <AiFillInstagram size="100%" />,
+  <AiFillBehanceCircle size="100%" />,
 ];
 
 const findingAngles = (number) => {
@@ -122,6 +122,7 @@ const ToggleCircularBtns = () => {
               top={`calc(${position.top}% - 20px)`}
               left={`calc(${position.left}% - 20px)`}
               key={index}
+              p="5px"
               align="center"
               justify="center"
               cursor="pointer"

@@ -120,7 +120,7 @@ function Sidebar({ isOpen, setIsOpen }) {
       gap="10px"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
-      w="240px"
+      w="100%"
       bg="#010914"
     >
       {data.map((obj, index) => {

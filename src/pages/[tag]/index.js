@@ -38,6 +38,7 @@ const index = () => {
         <Flex
           direction="column"
           overflowX="hidden"
+          minH="calc(100vh - 70px)"
           gap="20px"
           px="20px"
           pb="30px"
