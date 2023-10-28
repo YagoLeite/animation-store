@@ -16,6 +16,8 @@ import ExpandCards from "@/components/cards/ExpandCards";
 import GlassCardComponent from "@/components/cards/GlassCardComponent";
 import Test from "@/components/twitchtv/Test";
 import FlashlightCard from "@/components/animations/FlashlightCard";
+import ExpandingCard from "@/components/animations/AlakazamAnimation";
+import AlakazamAnimation from "@/components/animations/AlakazamAnimation";
 
 // export const data = [
 //   {
@@ -168,6 +170,11 @@ export const data = [
   {
     name: "Flashlight Card",
     component: FlashlightCard,
+    tags: ["card", "all", "elegant"],
+  },
+  {
+    name: "Expanding Card",
+    component: AlakazamAnimation,
     tags: ["card", "all", "elegant"],
   },
 ];
