@@ -1,4 +1,5 @@
 import AnimSidebar from "@/components/animations/AnimSidebar";
+import AnimatedCards from "@/components/animations/FlashlightCard";
 import BorderCard from "@/components/animations/BorderCard";
 import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
@@ -14,6 +15,7 @@ import ExpandCards from "@/components/cards/ExpandCards";
 
 import GlassCardComponent from "@/components/cards/GlassCardComponent";
 import Test from "@/components/twitchtv/Test";
+import FlashlightCard from "@/components/animations/FlashlightCard";
 
 // export const data = [
 //   {
@@ -162,6 +164,11 @@ export const data = [
     name: "Golden Stars",
     component: GoldenStars,
     tags: ["3D", "elegant", "all"],
+  },
+  {
+    name: "Flashlight Card",
+    component: FlashlightCard,
+    tags: ["card", "all", "elegant"],
   },
 ];
 
