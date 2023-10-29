@@ -123,6 +123,11 @@ export const data = [
     tags: ["card", "fun", "all"],
   },
   {
+    name: "Flashlight Card",
+    component: FlashlightCard,
+    tags: ["card", "all", "elegant"],
+  },
+  {
     name: "Glowing Card",
     component: BorderCard,
     tags: ["card", "fun", "all"],
@@ -166,11 +171,6 @@ export const data = [
     name: "Golden Stars",
     component: GoldenStars,
     tags: ["3D", "elegant", "all"],
-  },
-  {
-    name: "Flashlight Card",
-    component: FlashlightCard,
-    tags: ["card", "all", "elegant"],
   },
   {
     name: "Expanding Card",

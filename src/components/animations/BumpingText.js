@@ -51,11 +51,14 @@ const BumpingText = ({ isCoding }) => {
         <Flex>
           {"Animation Store".split("").map((letter, index) => {
             return (
-              <Flex key={index}>
+              <Flex key={index} py="15px">
                 {letter === " " ? (
                   <Text opacity={0}>aa</Text>
                 ) : (
-                  <SingleLetter letter={letter} size={50} />
+                  <SingleLetter
+                    letter={letter}
+                    size={["30px", "40px", "90px", "120px"]}
+                  />
                 )}
               </Flex>
             );

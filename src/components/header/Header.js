@@ -16,7 +16,7 @@ const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
       position="sticky"
       top="0"
       h="70px"
-      zIndex={2}
+      zIndex={10}
       bg="#141517"
       gap="30px"
       px="20px"

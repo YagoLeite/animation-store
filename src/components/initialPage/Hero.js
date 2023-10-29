@@ -21,7 +21,7 @@ const Hero = () => {
       direction="column"
       align="center"
       justify="center"
-      h="calc(100vh - 80px)"
+      h="calc(80vh - 80px)"
       w="100%"
       gap="20px"
       px="30px"
