@@ -53,8 +53,8 @@ function Card({ bgColor }) {
   return (
     <Box
       className="card"
-      w="300px"
-      h="260px"
+      w={["95px", "95px", "300px"]}
+      h={["75px", "75px", "260px"]}
       borderRadius="10px"
       bg="rgba(255, 255, 255, 0.1)"
       position="relative"
