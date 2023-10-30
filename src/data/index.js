@@ -173,9 +173,9 @@ export const data = [
     tags: ["3D", "elegant", "all"],
   },
   {
-    name: "Expanding Card",
+    name: "Pokemon Card",
     component: AlakazamAnimation,
-    tags: ["card", "all", "elegant"],
+    tags: ["card", "all", "fun"],
   },
 ];
 

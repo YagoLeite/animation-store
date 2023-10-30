@@ -1,13 +1,18 @@
-import { Box, Flex, Image, Text, Tag } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Tag, Progress } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const variants = {
   open: {
-    height: "fit-content",
+    height: "300px",
+    width: "400px",
     transition: { duration: 0.5, ease: "easeIn" },
   },
-  closed: { height: "100px", transition: { duration: 0.5, ease: "easeIn" } },
+  closed: {
+    height: "100px",
+    width: "200px",
+    transition: { duration: 0.5, ease: "easeIn" },
+  },
 };
 
 const textVariants = {
@@ -15,10 +20,38 @@ const textVariants = {
   closed: { opacity: 0 },
 };
 
+const imageVariants = {
+  open: {
+    height: "150px",
+    width: "150px",
+    top: "calc(0% - 75px)",
+    left: "calc(75% - 75px)",
+    transition: { duration: 0.5, ease: "linear" },
+  },
+  closed: {
+    heigth: "200px",
+    width: "200px",
+    top: "calc(0% - 100px)",
+    left: "calc(50% - 100px)",
+    transition: { duration: 0.5, ease: "linear" },
+  },
+};
+
+const stats = {
+  name: "Alakazam",
+  type: "psychic",
+  hp: 55,
+  attack: 50,
+  defense: 45,
+  spAtk: 135,
+  spDef: 95,
+  speed: 120,
+};
+
 const AlakazamAnimation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Flex w="100%" justify="center" align="center" h="600px">
+    <Flex w="100%" justify="center" align="center" h="400px">
       <Flex
         as={motion.div}
         variants={variants}
@@ -26,14 +59,18 @@ const AlakazamAnimation = () => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         position="relative"
+        border="1px solid"
         borderRadius="10px"
-        w="400px"
+        w="200px"
         h="100px"
         bg="#6f5d00"
         align="center"
         justify="center"
       >
         <Flex
+          as={motion.div}
+          variants={imageVariants}
+          animate={isOpen ? "open" : "closed"}
           w="200px"
           h="200px"
           borderRadius="10px"
@@ -49,6 +86,7 @@ const AlakazamAnimation = () => {
             borderRadius="10px"
           />
         </Flex>
+
         <Flex
           as={motion.div}
           animate={isOpen ? "open" : "closed"}
@@ -56,45 +94,43 @@ const AlakazamAnimation = () => {
           direction="column"
           justify="center"
           align="center"
-          mt="100px"
+          w="100%"
+          mt="75px"
           pb="35px"
           px="20px"
           gap="10px"
         >
-          <Text textAlign="center">
-            It has an incredibly high level of intelligence. Some say that
-            Alakazam remembers everything that ever happens to it, from birth
-            till death.
-          </Text>
-          <Box
-            w="100%"
-            border="2px"
-            borderRadius="lg"
-            padding="2"
-            boxShadow="md"
-          >
-            <Flex justifyContent="space-between">
-              <Text fontWeight="semibold">Height</Text>
-              <Text>4' 11"</Text>
+          <Flex w="80%" justify="space-between" align="center">
+            <Flex direction="column">
+              <Text>Alakazam</Text>
+              <Tag
+                colorScheme="pink"
+                justifyContent="center"
+                alignItems="center"
+              >
+                Psychic
+              </Tag>
             </Flex>
-            <Flex justifyContent="space-between">
-              <Text fontWeight="semibold">Weight</Text>
-              <Text>105.8 lbs</Text>
+            <Text>Nº 065</Text>
+          </Flex>
+          <Flex w="100%">
+            <Flex direction="column" w="100%" gap="5px">
+              <Text>Hp:</Text>
+              <Text>Attack:</Text>
+              <Text>Defense:</Text>
+              <Text>SP-Attack:</Text>
+              <Text>SP-Defense:</Text>
+              <Text>Speed:</Text>
             </Flex>
-            <Flex justifyContent="space-between">
-              <Text fontWeight="semibold">Gender</Text>
-              <Box>
-                <Text as="span" mr="2">
-                  ♂
-                </Text>
-                <Text as="span">♀</Text>
-              </Box>
+            <Flex direction="column" h="100%" w="100%" gap="5px">
+              <Progress value={55} max={262} h="24px" />
+              <Progress value={50} max={262} h="24px" />
+              <Progress value={45} max={262} h="24px" />
+              <Progress value={135} max={262} h="24px" />
+              <Progress value={95} max={262} h="24px" />
+              <Progress value={120} max={262} h="24px" />
             </Flex>
-            <Flex justifyContent="space-between" mt="2">
-              <Text fontWeight="semibold">Category</Text>
-              <Text>Psi</Text>
-            </Flex>
-          </Box>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
