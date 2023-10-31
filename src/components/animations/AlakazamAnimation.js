@@ -81,6 +81,7 @@ const AlakazamAnimation = () => {
         <Flex
           as={motion.div}
           animate={isOpen ? "open" : "closed"}
+          display={isOpen ? "flex" : "none"}
           variants={textVariants}
           direction="column"
           justify="center"
