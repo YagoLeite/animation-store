@@ -37,16 +37,6 @@ const imageVariants = {
   },
 };
 
-const stats = {
-  name: "Alakazam",
-  type: "psychic",
-  hp: 55,
-  attack: 50,
-  defense: 45,
-  spAtk: 135,
-  spDef: 95,
-  speed: 120,
-};
 
 const AlakazamAnimation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +49,8 @@ const AlakazamAnimation = () => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         position="relative"
-        border="1px solid"
+        border="1px solid black"
+        boxShadow="md"
         borderRadius="10px"
         w="200px"
         h="100px"
