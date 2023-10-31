@@ -147,13 +147,13 @@ export const data = [
     component: SimpleCarousel,
     tags: ["carousel", "all"],
   },
+  // {
+  //   name: "fuck Carousel",
+  //   component: MainBanner,
+  //   tags: ["carousel", "all"],
+  // },
   {
-    name: "fuck Carousel",
-    component: MainBanner,
-    tags: ["carousel", "all"],
-  },
-  {
-    name: "Group Table",
+    name: "Drag n Drop Table",
     component: GroupTable,
     tags: ["carousel", "all"],
   },
@@ -168,7 +168,7 @@ export const data = [
     tags: ["sidebar", "all"],
   },
   {
-    name: "Golden Stars",
+    name: "Golden Ratio Stars",
     component: GoldenStars,
     tags: ["3D", "elegant", "all"],
   },
