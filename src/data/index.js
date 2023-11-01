@@ -18,6 +18,7 @@ import Test from "@/components/twitchtv/Test";
 import FlashlightCard from "@/components/animations/FlashlightCard";
 import ExpandingCard from "@/components/animations/AlakazamAnimation";
 import AlakazamAnimation from "@/components/animations/AlakazamAnimation";
+import Slider from "@/components/animations/Slider";
 
 // export const data = [
 //   {
@@ -145,6 +146,11 @@ export const data = [
   {
     name: "Simple Carousel",
     component: SimpleCarousel,
+    tags: ["carousel", "all"],
+  },
+  {
+    name: "Slider",
+    component: Slider,
     tags: ["carousel", "all"],
   },
   // {
