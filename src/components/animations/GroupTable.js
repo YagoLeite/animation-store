@@ -84,7 +84,8 @@ const Item = ({ team, index, onDragEnd }) => {
         alignItems="center"
         borderRadius="2px"
         borderBottomWidth="5px"
-        bg="gray.700"
+        // bg="gray.700"
+        bg="rgb(20, 20, 20)"
         borderColor={index <= 1 ? "rgb(255, 176, 74)" : "gray.700"}
         cursor="grab"
         opacity={index <= 1 ? 1 : 0.5}
@@ -124,7 +125,8 @@ const GroupTable = ({ isCoding }) => {
       ) : (
         <Flex
           direction="column"
-          bg="gray.700"
+          // bg="gray.700"
+          bg="rgb(20, 20, 20)"
           py="16px"
           px="20px"
           w="100%"
