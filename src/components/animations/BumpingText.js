@@ -26,7 +26,8 @@ const SingleLetter = ({ letter, size }) => {
   return (
     <Text
       as={motion.div}
-      color="#4169E1"
+      // color="#4169E1"
+      color="#64ffda"
       fontSize={size}
       animate={controls}
       onHoverStart={() => {

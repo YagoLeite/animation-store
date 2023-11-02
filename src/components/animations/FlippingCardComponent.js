@@ -53,10 +53,10 @@ const FlippingCard = ({ isCoding }) => {
               w="100%"
               h="100%"
               boxShadow="0 8px 14px 0 rgba(0,0,0,0.2)"
-              border={`1px solid #dece3a`}
+              border={`1px solid #64ffda`}
               borderRadius="1rem"
-              bg="#4b111b"
-              color="#dece3a"
+              bg="rgb(20, 20, 20)"
+              color="#64ffda"
               style={{
                 backfaceVisibility: "hidden",
               }}
@@ -75,7 +75,7 @@ const FlippingCard = ({ isCoding }) => {
               w="100%"
               h="100%"
               boxShadow="0 8px 14px 0 rgba(0,0,0,0.2)"
-              border="1px solid #dece3a"
+              border="1px solid #64ffda"
               borderRadius="1rem"
               bg="#0a0b34"
               color="#c7dbc7"

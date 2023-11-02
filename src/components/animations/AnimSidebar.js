@@ -31,12 +31,12 @@ const textVariants = {
 };
 
 const mobileVariants = {
-    open: {
-      width: "100%",
-      transition: { duration: 0.3, ease: "easeIn" },
-    },
-    closed: { width: "65px", transition: { duration: 1, ease: "easeIn" } },
-  };
+  open: {
+    width: "100%",
+    transition: { duration: 0.5, ease: "linear" },
+  },
+  // closed: { width: "65px", transition: { duration: 1, ease: "easeIn" } },
+};
 
 const data = [
   { name: "facebook", icon: <AiFillFacebook size="100%" /> },
@@ -56,41 +56,43 @@ const AnimSidebar = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
   return (
-      <Flex w="500px" direction="column" bg="#010914" position='relative'>
+    <Flex w="500px" direction="column" bg="#010914" position="relative">
       <Flex justify="space-between" align="center" w="100%" h="70px" px="8px">
-       {isMobile && 
+        {isMobile && (
           <>
-         <Button
-            // display={["block", "block", "none", "none", "none"]}
-            _hover={{ color: "gray.300" }}
-            onClick={toggleHandler}
-            variant="ghost"
-            >
-            {/* {isToggleMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />} */}
-            <FaBars size={30} color="white" />
-            {/* Tags */}
-          </Button>
+            <Button
 
-          {isToggleMenuOpen && (
+              _hover={{ color: "gray.300" }}
+              onClick={toggleHandler}
+              variant="ghost"
+            >
+              <FaBars size={30} color="white" />
+            </Button>
+
+            {isToggleMenuOpen && (
               <AnimMobileSidebar
-              isOpen={isToggleMenuOpen}
-              setIsOpen={setIsToggleMenuOpen}
+                isOpen={isToggleMenuOpen}
+                setIsOpen={setIsToggleMenuOpen}
               />
-              )}
-              </>
-            }
-      
+            )}
+          </>
+        )}
+
         <Text>Header</Text>
-        <Text onClick={() => setIsMobile((prev) => !prev)} cursor='pointer' fontSize='13px'>
+        <Text
+          onClick={() => setIsMobile((prev) => !prev)}
+          cursor="pointer"
+          fontSize="13px"
+        >
           {isMobile ? "Desktop" : "Mobile"}
         </Text>
       </Flex>
       <Flex w="100%">
-     {!isMobile &&   <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
+        {!isMobile && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
         <Flex w="100%" p="15px" bg="#1c1c1e">
           <Flex
             w="100%"
-            minH='400px'
+            minH="400px"
             border="1px solid white"
             align="center"
             justify="center"
@@ -100,7 +102,7 @@ const AnimSidebar = () => {
             gap="20px"
           >
             <Text>{isOpen ? "Close Sidebar" : "Open Sidebar"}</Text>
-            <Text textAlign='center'>Your component goes here</Text>
+            <Text textAlign="center">Your component goes here</Text>
           </Flex>
         </Flex>
       </Flex>
@@ -168,7 +170,6 @@ function SidebarButton({ isOpen, setIsOpen, textVariants, data }) {
           as={motion.div}
           animate={isOpen ? "open" : "closed"}
           textTransform="capitalize"
-          
           variants={textVariants}
           fontSize="15px"
         >
@@ -180,53 +181,48 @@ function SidebarButton({ isOpen, setIsOpen, textVariants, data }) {
 }
 
 function AnimMobileSidebar({ isOpen, setIsOpen, ...rest }) {
-    return (
-      <Flex
-        {...rest}
-        as={motion.div}
-        position="absolute"
-        // display={["flex", "flex", "none", "none", "none"]}
-        w="200px"
-        top="0"
-        left="0"
-        animate={isOpen ? "open" : "closed"}
-        variants={mobileVariants}
-        h="100%"
-        direction="column"
-        bg="#010914"
-        color="white"
-        px="20px"
-        zIndex="6"
-      >
-        <Flex h="30px" justify={"space-between"} my="20px">
-          <Text letterSpacing={"1.5px"} color="#FFFFFF" opacity={"1"}>
-            Tags
-          </Text>
-          <Box onClick={() => setIsOpen((prev) => !prev)} cursor="pointer">
-            {/* <CloseIcon h="14px" w="14px" /> */}
-            <AiOutlineClose />
-          </Box>
-        </Flex>
-        <Divider borderColor="white" w="100%" opacity={0.15} mb="20px" />
-        <Flex direction="column" justify="space-between" h="100%" gap="10px">
-          <Flex as="ul" direction="column" gap="10px">
-            {data.map((item, index) => {
-              return <SidebarButton key={index} data={item} textVariants={textVariants} isOpen={isOpen}  />;
-            })}
-          </Flex>
-          {/* <Flex w="100%" mb="25px" className="my-first-step">
-            <SideBtn
-              Icon={HelpIcon}
-              isOpen={isOpen}
-              text="Precisa de ajuda"
-              url=""
-              onClick={() => setIsModalOpen(true)}
-            />
-  
-          </Flex> */}
+  return (
+    <Flex
+      {...rest}
+      as={motion.div}
+      position="absolute"
+      w="200px"
+      top="0"
+      left="0"
+      animate={isOpen ? "open" : "closed"}
+      variants={mobileVariants}
+      h="100%"
+      direction="column"
+      bg="#010914"
+      color="white"
+      px="20px"
+      zIndex="6"
+    >
+      <Flex h="30px" justify={"space-between"} my="20px">
+        <Text letterSpacing={"1.5px"} color="#FFFFFF" opacity={"1"}>
+          Tags
+        </Text>
+        <Box onClick={() => setIsOpen((prev) => !prev)} cursor="pointer">
+          <AiOutlineClose />
+        </Box>
+      </Flex>
+      <Divider borderColor="white" w="100%" opacity={0.15} mb="20px" />
+      <Flex direction="column" justify="space-between" h="100%" gap="10px">
+        <Flex as="ul" direction="column" gap="10px">
+          {data.map((item, index) => {
+            return (
+              <SidebarButton
+                key={index}
+                data={item}
+                textVariants={textVariants}
+                isOpen={isOpen}
+              />
+            );
+          })}
         </Flex>
       </Flex>
-    );
-  };
+    </Flex>
+  );
+};
 
 export default AnimSidebar;

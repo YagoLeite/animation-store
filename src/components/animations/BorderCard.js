@@ -56,14 +56,15 @@ export default function BorderCard({ isCoding }) {
               as={motion.div}
               w="100%"
               h="254px"
-              bg="#1e1e6c"
+              // bg="#1e1e6c"
+              bg="rgb(20, 20, 20)"
               variants={innerCardVariant}
               initial="rest"
               whileHover="hover"
               align="center"
               justify="center"
             >
-              <Text fontSize="28px" color="#53d12c">
+              <Text fontSize="28px" color="white">
                 Hover me
               </Text>
             </Flex>

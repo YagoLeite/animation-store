@@ -10,11 +10,11 @@ import {
 } from "react-icons/ai";
 
 const icons = [
-  <AiFillGithub size="100%" />,
-  <AiFillLinkedin size="100%" />,
-  <AiFillFacebook size="100%" />,
-  <AiFillInstagram size="100%" />,
-  <AiFillBehanceCircle size="100%" />,
+  <AiFillGithub size="100%" color="#64ffda" />,
+  <AiFillLinkedin size="100%" color="#64ffda" />,
+  <AiFillFacebook size="100%" color="#64ffda" />,
+  <AiFillInstagram size="100%" color="#64ffda" />,
+  <AiFillBehanceCircle size="100%" color="#64ffda" />,
 ];
 
 const findingAngles = (number) => {
@@ -116,7 +116,7 @@ const ToggleCircularBtns = () => {
               whileHover={{ scale: 1.1 }}
               h="40px"
               w="40px"
-              bg="red"
+              bg="rgb(20, 20, 20)"
               position="absolute"
               borderRadius="50%"
               top={`calc(${position.top}% - 20px)`}
@@ -135,15 +135,15 @@ const ToggleCircularBtns = () => {
 
       <Flex
         as={motion.div}
-        initial={{ x: "-50%", y: "-50%" }} // Initial transformation using x and y for translation
-        animate={{ x: "-50%", y: "-50%" }} // Animation (same as initial in this case)
-        whileHover={{ scale: 1.1, x: "-50%", y: "-50%" }} // Apply scale along with translation
+        initial={{ x: "-50%", y: "-50%" }}
+        animate={{ x: "-50%", y: "-50%" }}
+        whileHover={{ scale: 1.1, x: "-50%", y: "-50%" }}
         whileTap={{ scale: 0.9 }}
         h="60px"
         w="60px"
         borderRadius="50%"
         onClick={() => setIsToggled((prev) => !prev)}
-        bg="orange"
+        bg="rgb(20, 20, 20)"
         position="absolute"
         top="50%"
         left="50%"

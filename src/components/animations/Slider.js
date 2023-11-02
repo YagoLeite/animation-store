@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useRef, useEffect, useState } from "react";
 
@@ -33,9 +33,10 @@ const Slider = () => {
   }, []);
 
   return (
-    <Flex w="100%" overflowX="hidden" bg="blue" ref={sliderRef}>
+    <Flex w="100%" overflowX="hidden" ref={sliderRef}>
       <Flex
         gap={`${gap}px`}
+        py="15px"
         w="fit-content"
         cursor="grab"
         as={motion.div}
@@ -52,7 +53,21 @@ const Slider = () => {
 };
 
 function Card() {
-  return <Flex h="200px" w="200px" bg="pink" />;
+  return (
+    <Flex
+      as={motion.div}
+      whileHover={{ y: -10 }}
+      h="200px"
+      boxShadow="lg"
+      w="200px"
+      borderRadius="10px"
+      bg="rgb(20, 20, 20)"
+      align="center"
+      justify="center"
+    >
+      <Text>Drag us</Text>
+    </Flex>
+  );
 }
 
 export default Slider;
