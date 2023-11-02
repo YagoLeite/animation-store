@@ -1,5 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+import Pagination from "@/components/initialPage/Pagination";
 import Showcase from "@/components/showcase/Showcase";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { data } from "@/data";
@@ -42,9 +43,10 @@ const index = () => {
           pb="30px"
           w="100%"
         >
-          {filteredData?.map((item, i) => {
+          {/* {filteredData?.map((item, i) => {
             return <Showcase data={item} key={i} />;
-          })}
+          })} */}
+          <Pagination data={filteredData} />
           <Footer />
         </Flex>
       </Flex>
