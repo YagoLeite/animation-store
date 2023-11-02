@@ -82,7 +82,10 @@ const WavyText = ({ isCoding }) => {
                 {letter === " " ? (
                   <Text opacity={0}>aa</Text>
                 ) : (
-                  <Text color="#4169E1" fontSize={50}>
+                  <Text
+                    color="#64ffda"
+                    fontSize={["30px", "40px", "60px", "90px", "120px"]}
+                  >
                     {letter}
                   </Text>
                 )}

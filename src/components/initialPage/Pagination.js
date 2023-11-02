@@ -54,7 +54,7 @@ const Pagination = ({ data }) => {
             cursor="pointer"
             onClick={() => changePage(currentPage - 1)}
             disabled={currentPage === 1}
-            bg="#3633433d"
+            // bg="#3633433d"
             borderRadius="10px"
           >
             <AiOutlineLeft size="80%" />
@@ -71,7 +71,7 @@ const Pagination = ({ data }) => {
                 justify="center"
                 align="center"
                 cursor="pointer"
-                bg={currentPage === i + 1 ? "red" : "#3633433d"}
+                bg={currentPage === i + 1 ? "#363343a1" : "#3633433d"}
                 key={i}
                 onClick={() => changePage(i + 1)}
                 disabled={currentPage === i + 1}

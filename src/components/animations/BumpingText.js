@@ -58,7 +58,7 @@ const BumpingText = ({ isCoding }) => {
                 ) : (
                   <SingleLetter
                     letter={letter}
-                    size={["30px", "40px", "90px", "120px"]}
+                    size={["30px", "40px", "60px", "90px", "120px"]}
                   />
                 )}
               </Flex>
