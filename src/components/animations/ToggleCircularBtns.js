@@ -68,6 +68,14 @@ const ToggleCircularBtns = ({ isCoding }) => {
       ) : (
         <Flex
           as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
           position="relative"
           h="200px"
           w="200px"

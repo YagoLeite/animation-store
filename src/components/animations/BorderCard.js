@@ -25,7 +25,20 @@ export default function BorderCard({ isCoding }) {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Flex w="100%" minW="190px" maxW="300px">
+        <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          w="100%"
+          minW="190px"
+          maxW="300px"
+        >
           <Flex
             as={motion.div}
             w="100%"

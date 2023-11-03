@@ -3,6 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import React, { useRef } from "react";
 import dynamic from "next/dynamic";
+import { Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
   ssr: false,
@@ -37,41 +39,55 @@ const GoldenStars = ({ isCoding }) => {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Canvas
-          style={{ height: "100%", minHeight: "400px" }}
-          camera={{ position: [0, 0, -500] }}
+        <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          w="fit-content"
+          h="fit-content"
         >
-          <OrbitControls enableZoom={true} autoRotate={true} />
-          <Points>
-            {positions?.map((position, index) => {
-              return (
-                <GoldenPoint
-                  key={index}
-                  z={index}
-                  x={position.x}
-                  y={position.y}
-                  frequency={1.2 + index * 0.05}
-                />
-              );
-            })}
+          <Canvas
+            style={{ height: "100%", minHeight: "400px" }}
+            camera={{ position: [0, 0, -500] }}
+          >
+            <OrbitControls enableZoom={true} autoRotate={true} />
+            <Points>
+              {positions?.map((position, index) => {
+                return (
+                  <GoldenPoint
+                    key={index}
+                    z={index}
+                    x={position.x}
+                    y={position.y}
+                    frequency={1.2 + index * 0.05}
+                  />
+                );
+              })}
 
-            {positions?.map((position, index) => {
-              return (
-                <GoldenPoint
-                  key={index}
-                  z={-index}
-                  x={position.x}
-                  y={position.y}
-                  frequency={1.2 + index * 0.05}
-                />
-              );
-            })}
-          </Points>
+              {positions?.map((position, index) => {
+                return (
+                  <GoldenPoint
+                    key={index}
+                    z={-index}
+                    x={position.x}
+                    y={position.y}
+                    frequency={1.2 + index * 0.05}
+                  />
+                );
+              })}
+            </Points>
 
-          <EffectComposer>
-            <Bloom mipmapBlur luminanceThreshold={0.5} radius={0.7} />
-          </EffectComposer>
-        </Canvas>
+            <EffectComposer>
+              <Bloom mipmapBlur luminanceThreshold={0.5} radius={0.7} />
+            </EffectComposer>
+          </Canvas>
+        </Flex>
       )}
     </>
   );

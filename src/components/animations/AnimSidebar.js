@@ -56,12 +56,25 @@ const AnimSidebar = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
   return (
-    <Flex w="500px" direction="column" bg="#010914" position="relative">
+    <Flex
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        type: "ease",
+        transition: {
+          duration: 0.5,
+        },
+      }}
+      w="500px"
+      direction="column"
+      bg="#010914"
+      position="relative"
+    >
       <Flex justify="space-between" align="center" w="100%" h="70px" px="8px">
         {isMobile && (
           <>
             <Button
-
               _hover={{ color: "gray.300" }}
               onClick={toggleHandler}
               variant="ghost"

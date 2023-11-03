@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
   ssr: false,
@@ -42,6 +43,15 @@ const FlashlightCard = ({ isCoding }) => {
         <CodePlayground code={code()} />
       ) : (
         <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
           ref={cardsRef}
           wrap="wrap"
           gap={2}

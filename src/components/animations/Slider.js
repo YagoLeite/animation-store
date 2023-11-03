@@ -40,7 +40,20 @@ const Slider = ({ isCoding }) => {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Flex w="100%" overflowX="hidden" ref={sliderRef}>
+        <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          w="100%"
+          overflowX="hidden"
+          ref={sliderRef}
+        >
           <Flex
             gap={`${gap}px`}
             py="15px"

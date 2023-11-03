@@ -16,6 +16,15 @@ const FlippingCard = ({ isCoding }) => {
         <CodePlayground code={code()} />
       ) : (
         <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
           w="300px"
           h="254px"
           alignItems="center"

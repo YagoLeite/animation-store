@@ -49,7 +49,21 @@ const AlakazamAnimation = ({ isCoding }) => {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Flex w="100%" justify="center" align="center" h="400px">
+        <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
+          w="100%"
+          justify="center"
+          align="center"
+          h="400px"
+        >
           <Flex
             as={motion.div}
             variants={variants}

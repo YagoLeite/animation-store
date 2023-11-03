@@ -123,6 +123,15 @@ const GroupTable = ({ isCoding }) => {
         <CodePlayground code={code()} />
       ) : (
         <Flex
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            type: "ease",
+            transition: {
+              duration: 0.5,
+            },
+          }}
           direction="column"
           bg="rgb(20, 20, 20)"
           py="16px"
