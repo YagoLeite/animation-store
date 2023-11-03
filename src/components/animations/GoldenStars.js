@@ -49,11 +49,9 @@ const GoldenStars = ({ isCoding }) => {
               duration: 0.5,
             },
           }}
-          w="fit-content"
-          h="fit-content"
         >
           <Canvas
-            style={{ height: "100%", minHeight: "400px" }}
+            style={{ height: "400px", width: "100%", minHeight: "400px" }}
             camera={{ position: [0, 0, -500] }}
           >
             <OrbitControls enableZoom={true} autoRotate={true} />
