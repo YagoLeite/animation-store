@@ -40,28 +40,30 @@ const WavyText = ({ isCoding }) => {
   };
 
   useEffect(() => {
-    let isMounted = true;
+    if (!isCoding) {
+      let isMounted = true;
 
-    async function animateLoop() {
-      if (!isMounted) return;
+      async function animateLoop() {
+        if (!isMounted) return;
 
-      await controls.start("visible");
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      if (!isMounted) return;
+        await controls.start("visible");
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        if (!isMounted) return;
 
-      await controls.start("hidden");
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      if (!isMounted) return;
+        await controls.start("hidden");
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        if (!isMounted) return;
+
+        animateLoop();
+      }
 
       animateLoop();
+
+      return () => {
+        isMounted = false;
+      };
     }
-
-    animateLoop();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [controls]);
+  }, [controls, isCoding]);
 
   return (
     <>
