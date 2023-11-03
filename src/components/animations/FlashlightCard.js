@@ -64,7 +64,7 @@ const FlashlightCard = ({ isCoding }) => {
           }}
         >
           {[...Array(6)].map((_, idx) => (
-            <Card index={idx} bgColor={bgColor} />
+            <Card index={idx} key={idx} bgColor={bgColor} />
           ))}
         </Flex>
       )}

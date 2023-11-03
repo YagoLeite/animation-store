@@ -35,6 +35,7 @@ const Sidebar = ({ isOpen, setIsOpen, ...rest }) => {
       {tags.map((tag, index) => {
         return (
           <SidebarBtn
+            key={index}
             isOpen={isOpen}
             textVariants={textVariants}
             url={tag}

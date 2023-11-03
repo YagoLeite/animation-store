@@ -2,10 +2,13 @@ import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { BsCodeSlash } from "react-icons/bs";
+import NewText from "../initialPage/NewText";
 
 const Showcase = ({ data, delay }) => {
   const [isCoding, setIsCoding] = useState(false);
   const ComponentToRender = data?.component;
+  const isNew = data?.tags.includes("new");
+
   return (
     <Flex
       as={motion.div}
@@ -36,7 +39,12 @@ const Showcase = ({ data, delay }) => {
         justify="space-between"
         borderBottom="1px solid black"
       >
-        <Flex>{data?.name}</Flex>
+        <Flex gap="15px" align="center" justify="center">
+          <Text fontSize="15px" fontWeight="bold">
+            {data?.name}
+          </Text>
+          {isNew && <NewText />}
+        </Flex>
         <Flex
           onClick={() => setIsCoding((prev) => !prev)}
           gap="8px"

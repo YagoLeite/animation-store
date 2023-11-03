@@ -37,8 +37,8 @@ const Pagination = ({ data }) => {
 
   return (
     <>
-      {paginatedData?.map((item, index) => {
-        return <Showcase data={item} key={index} />;
+      {paginatedData?.map((item) => {
+        return <Showcase data={item} key={item.key} />;
       })}
       <Flex justify="center">
         <Flex justifyContent="space-between" w="80%" align="center" gap="10px">

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import NewText from "../initialPage/NewText";
 
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
@@ -27,6 +28,8 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
               ease: "linear",
             },
           }}
+          gap="10px"
+          align="center "
         >
           <Text
             as={motion.div}
@@ -41,6 +44,7 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
           >
             {url}
           </Text>
+          {url === "card" && <NewText />}
         </Flex>
       </li>
     </Link>
