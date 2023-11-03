@@ -1,4 +1,4 @@
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex, Button, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -31,9 +31,7 @@ const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
             onClick={toggleHandler}
             variant="ghost"
           >
-            {/* {isToggleMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />} */}
             <FaBars size={30} color="white" />
-            {/* Tags */}
           </Button>
 
           {isToggleMenuOpen && (
@@ -44,7 +42,17 @@ const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
           )}
         </Box>
       )}
-      <Link href="/">Animation Store</Link>
+      <Link href="/">
+        <Flex w="50px" h="50px" justify="center" align="center">
+          <Image
+            src="/Logo.svg"
+            alt="logo"
+            h="100%"
+            w="100%"
+            objectFit="cover"
+          />
+        </Flex>
+      </Link>
       <Flex gap="10px" justify="center" align="center">
         <motion.div whileHover={{ scale: 1.3, color: "#64ffda" }}>
           <Link passHref legacyBehavior href="https://github.com/YagoLeite">

@@ -26,8 +26,6 @@ const FlashlightCard = ({ isCoding }) => {
         });
       };
 
-      console.log("hello");
-
       cards.addEventListener("mousemove", handleMouseMove);
 
       return () => {
@@ -49,7 +47,7 @@ const FlashlightCard = ({ isCoding }) => {
           gap={2}
           w="calc(100% - 20px)"
           justify="center"
-          maxW="916px"
+          // maxW="916px"
           sx={{
             ":hover > .card::after": {
               opacity: 1,
@@ -69,8 +67,8 @@ function Card({ bgColor }) {
   return (
     <Box
       className="card"
-      w={["95px", "95px", "300px"]}
-      h={["75px", "75px", "260px"]}
+      w={["120px", "150px", "300px"]}
+      h={["95px", "130px", "260px"]}
       borderRadius="10px"
       bg="rgba(255, 255, 255, 0.1)"
       position="relative"
@@ -118,7 +116,7 @@ function Card({ bgColor }) {
         borderRadius="inherit"
         zIndex="2"
       >
-        <Text>Hover us!</Text>
+        <Text fontSize={["11px", "15px"]}>Hover us!</Text>
       </Flex>
     </Box>
   );

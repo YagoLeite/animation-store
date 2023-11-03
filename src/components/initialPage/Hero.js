@@ -29,9 +29,11 @@ const Hero = () => {
       <WavyText
         text="Animation Store"
         delayDuration={1.2}
-        fontSize={["30px", "40px", "90px", "120px"]}
+        fontSize={["40px", "60px", "90px", "120px"]}
       />
-      <Text fontSize="40px">Animated components for developers</Text>
+      <Text fontSize={["20px", "40px"]} textAlign="center">
+        Animated components for developers
+      </Text>
       <ButtonPage />
     </Flex>
   );
@@ -66,7 +68,10 @@ function SingleLetter({ letter, size }) {
       }}
       whileHover={{ color: "#64ffda" }}
       onAnimationComplete={() => setIsAnimationPlaying(false)}
-      textShadow="5px 40px 10px rgba(0, 0, 0, 1.5)"
+      textShadow={[
+        "5px 20px 10px rgba(0, 0, 0, 1.5)",
+        "5px 40px 10px rgba(0, 0, 0, 1.5)",
+      ]}
     >
       {letter}
     </Text>
@@ -142,67 +147,5 @@ function WavyText({ text, delayDuration, fontSize }) {
   );
 }
 
-const variants = {
-  animateRight: {
-    x: [0, -150, -300],
-    transition: {
-      x: {
-        repeat: Infinity,
-        duration: 4,
-        ease: "linear",
-      },
-    },
-  },
-  animateLeft: {
-    x: [-150, 0, 150],
-    transition: {
-      x: {
-        repeat: Infinity,
-        duration: 4,
-        ease: "linear",
-      },
-    },
-  },
-};
-
-export function InfiniteTags({ tags }) {
-  const doubledTags = [...tags, ...tags]; // duplicate the tags array
-
-  return (
-    <Flex
-      direction="column"
-      overflow="hidden"
-      width="100%"
-      justify="center"
-      align="center"
-      height="fit-container"
-      gap="15px"
-    >
-      <Flex
-        as={motion.div}
-        variants={variants}
-        animate="animateRight"
-        initial={{ x: 0 }}
-        gap="15px"
-      >
-        {doubledTags.map((tag, index) => (
-          <TagButton tag={tag} key={index} />
-        ))}
-      </Flex>
-
-      <Flex
-        as={motion.div}
-        variants={variants}
-        animate="animateLeft"
-        initial={{ x: -150 }}
-        gap="15px"
-      >
-        {doubledTags.map((tag, index) => (
-          <TagButton tag={tag} key={`second-${index}`} />
-        ))}
-      </Flex>
-    </Flex>
-  );
-}
 
 export default Hero;
