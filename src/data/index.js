@@ -148,16 +148,16 @@ export const data = [
     tags: ["typography", "fun", "all", "new"],
     key: Math.random(),
   },
-  {
-    name: "Simple Carousel",
-    component: SimpleCarousel,
-    tags: ["carousel", "all"],
-    key: Math.random(),
-  },
+  // {
+  //   name: "Simple Carousel",
+  //   component: SimpleCarousel,
+  //   tags: ["carousel", "all", 'simple'],
+  //   key: Math.random(),
+  // },
   {
     name: "Slider",
     component: Slider,
-    tags: ["carousel", "drag", "all"],
+    tags: ["carousel", "drag", "all", "simple"],
     key: Math.random(),
   },
   // {
@@ -197,6 +197,7 @@ export const tags = [
   "card",
   "fun",
   "typography",
+  "simple",
   "drag",
   "elegant",
   "carousel",
