@@ -10,27 +10,31 @@ const FlashlightCard = ({ isCoding }) => {
   const cardsRef = useRef(null);
 
   useEffect(() => {
-    const cards = cardsRef.current;
+    if (!isCoding) {
+      const cards = cardsRef.current;
 
-    const handleMouseMove = (e) => {
-      const cardElements = cards.childNodes;
+      const handleMouseMove = (e) => {
+        const cardElements = cards.childNodes;
 
-      cardElements.forEach((card) => {
-        const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+        cardElements.forEach((card) => {
+          const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
 
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-      });
-    };
+          card.style.setProperty("--mouse-x", `${x}px`);
+          card.style.setProperty("--mouse-y", `${y}px`);
+        });
+      };
 
-    cards.addEventListener("mousemove", handleMouseMove);
+      console.log("hello");
 
-    return () => {
-      cards.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+      cards.addEventListener("mousemove", handleMouseMove);
+
+      return () => {
+        cards.removeEventListener("mousemove", handleMouseMove);
+      };
+    }
+  }, [isCoding]);
 
   const bgColor = useColorModeValue("rgb(20, 20, 20)", "rgb(23, 23, 23)");
 
@@ -119,6 +123,7 @@ function Card({ bgColor }) {
     </Box>
   );
 }
+
 
 function code() {
   return `import React, { useEffect, useRef } from "react";

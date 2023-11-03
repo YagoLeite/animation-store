@@ -1,7 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Pagination from "@/components/initialPage/Pagination";
-import Showcase from "@/components/showcase/Showcase";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { data } from "@/data";
 import { Flex } from "@chakra-ui/react";
@@ -43,9 +42,6 @@ const index = () => {
           pb="30px"
           w="100%"
         >
-          {/* {filteredData?.map((item, i) => {
-            return <Showcase data={item} key={i} />;
-          })} */}
           <Pagination data={filteredData} />
           <Footer />
         </Flex>
