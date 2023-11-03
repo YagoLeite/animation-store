@@ -145,7 +145,7 @@ export const data = [
   {
     name: "Bumping Text",
     component: BumpingText,
-    tags: ["typography", "fun", "all"],
+    tags: ["typography", "fun", "all", "new"],
     key: Math.random(),
   },
   {

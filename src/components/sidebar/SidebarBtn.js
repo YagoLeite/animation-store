@@ -7,6 +7,7 @@ import NewText from "../initialPage/NewText";
 
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
+  const isNew = url === "card" || url === "typography";
   return (
     <Link href={`${url}?page=1`}>
       <li
@@ -44,7 +45,7 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
           >
             {url}
           </Text>
-          {url === "card" && <NewText />}
+          {isNew && <NewText />}
         </Flex>
       </li>
     </Link>

@@ -8,7 +8,8 @@ const ButtonPage = () => {
     <Link href={"/all?page=1"} _hover={{ textDecoration: "none" }}>
       <Flex
         as={motion.div}
-        whileHover={{ boxShadow: "0px 0px 5px #64ffda", y: -2 }}
+        whileHover={{ boxShadow: "0px 2px 5px #64ffda", y: -2 }}
+        whileTap={{ scale: 0.9 }}
         borderRadius="5px"
         border="2px #64ffda solid"
         w="130px"
