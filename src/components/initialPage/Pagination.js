@@ -3,18 +3,21 @@ import React, { useEffect, useState } from "react";
 import Showcase from "../showcase/Showcase";
 import { Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { FiArrowLeft } from "react-icons/fi";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 const ITEMS_PER_PAGE = 5;
 
 const Pagination = ({ data }) => {
-  const { query } = useRouter();
-  const [currentPage, setCurrentPage] = useState(1);
+  const { query, push } = useRouter();
   const [paginatedData, setPaginatedData] = useState([]);
 
+  const currentPage = Number(query.page);
+
   const changePage = (page) => {
-    setCurrentPage(page);
-    console.log("hi");
+    const queryParam = { ...query, page: page.toString() };
+
+    push({ pathname: query.pathname, query: queryParam }, undefined, {
+      shallow: true,
+    });
   };
 
   useEffect(() => {
@@ -22,10 +25,6 @@ const Pagination = ({ data }) => {
       window.scrollTo(0, 0);
     }
   }, [currentPage]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [query.tag]);
 
   useEffect(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;

@@ -7,7 +7,7 @@ import React from "react";
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
   return (
-    <Link href={url}>
+    <Link href={`${url}?page=1`}>
       <li
         key={index}
         style={{
