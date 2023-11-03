@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Flex } from "@chakra-ui/react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-// const test = [1, 2, 3, 4, 5, 6, 7];
 const test = [
   { n: 1, bgGradient: "linear(to-l, #7928CA, #FF0080)" },
   { n: 2, bgGradient: "linear(to-r, green.200, pink.500)" },

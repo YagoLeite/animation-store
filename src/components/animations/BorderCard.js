@@ -25,20 +25,7 @@ export default function BorderCard({ isCoding }) {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Flex
-          as={motion.div}
-          whileInView={{
-            opacity: 1,
-            type: "ease",
-            transition: {
-              duration: 0.5,
-            },
-          }}
-          initial={{ opacity: 0 }}
-          w="100%"
-          minW="190px"
-          maxW="300px"
-        >
+        <Flex w="100%" minW="190px" maxW="300px">
           <Flex
             as={motion.div}
             w="100%"
@@ -56,7 +43,6 @@ export default function BorderCard({ isCoding }) {
               as={motion.div}
               w="100%"
               h="254px"
-              // bg="#1e1e6c"
               bg="rgb(20, 20, 20)"
               variants={innerCardVariant}
               initial="rest"
@@ -95,50 +81,37 @@ function code() {
     },
   };
   return (
+    <Flex w="100%" minW="190px" maxW="300px">
     <Flex
       as={motion.div}
-      whileInView={{
-        opacity: 1,
-        type: "ease",
-        transition: {
-          duration: 0.5,
-        },
-      }}
-      initial={{ opacity: 0 }}
       w="100%"
-      minW="190px"
-      maxW="300px"
+      h="254px"
+      borderRadius="20px"
+      backgroundImage="linear-gradient(163deg, #00ff75 0%, #3700ff 100%)"
+      initial={{ y: 0, boxShadow: "none" }}
+      whileHover={{
+        boxShadow: "0px 0px 20px 1px rgba(0, 255, 117, 0.30)",
+        y: -10,
+        transition: { duration: 0.2 },
+      }}
     >
       <Flex
         as={motion.div}
         w="100%"
         h="254px"
-        borderRadius="20px"
-        backgroundImage="linear-gradient(163deg, #00ff75 0%, #3700ff 100%)"
-        initial={{ y: 0, boxShadow: "none" }}
-        whileHover={{
-          boxShadow: "0px 0px 20px 1px rgba(0, 255, 117, 0.30)",
-          y: -10,
-          transition: { duration: 0.2 },
-        }}
+        bg="rgb(20, 20, 20)"
+        variants={innerCardVariant}
+        initial="rest"
+        whileHover="hover"
+        align="center"
+        justify="center"
       >
-        <Flex
-          as={motion.div}
-          w="100%"
-          h="254px"
-          bg="#1e1e6c"
-          variants={innerCardVariant}
-          initial="rest"
-          whileHover="hover"
-          align="center"
-          justify="center"
-        >
-          <Text fontSize="28px" color="#53d12c">
-            Hover me
-          </Text>
-        </Flex>
+        <Text fontSize="28px" color="white">
+          Hover me
+        </Text>
       </Flex>
     </Flex>
+  </Flex>
   );
 }
 `;

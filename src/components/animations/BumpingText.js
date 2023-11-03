@@ -26,7 +26,6 @@ const SingleLetter = ({ letter, size }) => {
   return (
     <Text
       as={motion.div}
-      // color="#4169E1"
       color="#64ffda"
       fontSize={size}
       animate={controls}
@@ -98,7 +97,7 @@ const SingleLetter = ({ letter, size }) => {
   return (
     <Text
       as={motion.div}
-      color="#4169E1"
+      color="#64ffda"
       fontSize={size}
       animate={controls}
       onHoverStart={() => {
@@ -123,7 +122,7 @@ const BumpingText = () => {
             {letter === " " ? (
               <Text opacity={0}>aa</Text>
             ) : (
-              <SingleLetter letter={letter} size={50} />
+              <SingleLetter letter={letter} size={["30px", "40px", "60px", "90px", "120px"]} />
             )}
           </Flex>
         );

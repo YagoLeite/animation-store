@@ -84,7 +84,6 @@ const Item = ({ team, index, onDragEnd }) => {
         alignItems="center"
         borderRadius="2px"
         borderBottomWidth="5px"
-        // bg="gray.700"
         bg="rgb(20, 20, 20)"
         borderColor={index <= 1 ? "rgb(255, 176, 74)" : "gray.700"}
         cursor="grab"
@@ -125,7 +124,6 @@ const GroupTable = ({ isCoding }) => {
       ) : (
         <Flex
           direction="column"
-          // bg="gray.700"
           bg="rgb(20, 20, 20)"
           py="16px"
           px="20px"
@@ -223,43 +221,43 @@ function code() {
       const Item = ({ team, index, onDragEnd }) => {
         return (
           <Reorder.Item
-            onDragEnd={onDragEnd}
-            value={team}
-            id={team}
-            style={{ listStyle: "none" }}
+          onDragEnd={onDragEnd}
+          value={team}
+          id={team}
+          style={{ listStyle: "none" }}
+        >
+          <Flex
+            px="8px"
+            py="5px"
+            h="100%"
+            w="100%"
+            justify="space-arround"
+            alignItems="center"
+            borderRadius="2px"
+            borderBottomWidth="5px"
+            bg="rgb(20, 20, 20)"
+            borderColor={index <= 1 ? "rgb(255, 176, 74)" : "gray.700"}
+            cursor="grab"
+            opacity={index <= 1 ? 1 : 0.5}
+            gap={["24px"]}
           >
             <Flex
-              px="8px"
-              py="5px"
-              h="100%"
-              w="100%"
-              justify="space-arround"
-              alignItems="center"
-              borderRadius="2px"
-              borderBottomWidth="5px"
+              w="60px"
+              h="60px"
               bg="gray.700"
-              borderColor={index <= 1 ? "rgb(255, 176, 74)" : "gray.700"}
-              cursor="grab"
-              opacity={index <= 1 ? 1 : 0.5}
-              gap={["24px"]}
+              borderColor="#c9c5c9"
+              borderWidth="1px"
+              borderRadius="50%"
+              overflow="hidden"
+              alt="country flag"
             >
-              <Flex
-                w="60px"
-                h="60px"
-                bg="gray.700"
-                borderColor="#c9c5c9"
-                borderWidth="1px"
-                borderRadius="50%"
-                overflow="hidden"
-                alt="country flag"
-              >
-                {team.flag && (
-                  <Image objectFit="cover" alt="country flag" src={team.flag} />
-                )}
-              </Flex>
-              <Text fontSize={["24px"]}>{team.name}</Text>
+              {team.flag && (
+                <Image objectFit="cover" alt="country flag" src={team.flag} />
+              )}
             </Flex>
-          </Reorder.Item>
+            <Text fontSize={["24px"]}>{team.name}</Text>
+          </Flex>
+        </Reorder.Item>
         );
       };
       
@@ -272,62 +270,62 @@ function code() {
       
         return (
           <Flex
-            direction="column"
-            bg="gray.700"
-            py="16px"
-            px="20px"
-            w="100%"
-            gap="10px"
-            maxW="450px"
-          >
-            <Text fontSize={["32px"]}> Group A </Text>
-            <Flex gap="4px">
-              <Position />
-              <Box w="100%">
-                <Reorder.Group axis="y" onReorder={setItems} values={items}>
-                  <Flex
-                    direction="column"
-                    justify="space-between"
-                    gap="24px"
-                    alignItems="left"
-                  >
-                    {items.map((team, index) => {
-                      return (
-                        <Item
-                          onDragEnd={onDragEnd}
-                          team={team}
-                          index={index}
-                          key={team.name}
-                        />
-                      );
-                    })}
-                  </Flex>
-                </Reorder.Group>
-              </Box>
-            </Flex>
-            <Flex w="100%" justifyContent="flex-end">
-              <Flex
-                as={motion.div}
-                justify="center"
-                alignItems="center"
-                bg="#E36262"
-                cursor="pointer"
-                w={["100px", "140px"]}
-                _hover={{ bg: "#d73838" }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Text
-                  pb="2px"
-                  fontWeight="400"
-                  fontSize={["24px", "32px"]}
-                  color="white"
+          direction="column"
+          bg="rgb(20, 20, 20)"
+          py="16px"
+          px="20px"
+          w="100%"
+          gap="10px"
+          maxW="450px"
+        >
+          <Text fontSize={["32px"]}> Group A </Text>
+          <Flex gap="4px">
+            <Position />
+            <Box w="100%">
+              <Reorder.Group axis="y" onReorder={setItems} values={items}>
+                <Flex
+                  direction="column"
+                  justify="space-between"
+                  gap="24px"
+                  alignItems="left"
                 >
-                  Confirm
-                </Text>
-              </Flex>
+                  {items.map((team, index) => {
+                    return (
+                      <Item
+                        onDragEnd={onDragEnd}
+                        team={team}
+                        index={index}
+                        key={team.name}
+                      />
+                    );
+                  })}
+                </Flex>
+              </Reorder.Group>
+            </Box>
+          </Flex>
+          <Flex w="100%" justifyContent="flex-end">
+            <Flex
+              as={motion.div}
+              justify="center"
+              alignItems="center"
+              bg="#E36262"
+              cursor="pointer"
+              w={["100px", "140px"]}
+              _hover={{ bg: "#d73838" }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Text
+                pb="2px"
+                fontWeight="400"
+                fontSize={["24px", "32px"]}
+                color="white"
+              >
+                Confirm
+              </Text>
             </Flex>
           </Flex>
+        </Flex>
         );
       };
       
