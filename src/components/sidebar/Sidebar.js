@@ -6,7 +6,7 @@ import SidebarBtn from "./SidebarBtn";
 
 const variants = {
   open: {
-    width: "240px",
+    width: "200px",
     transition: { duration: 0.5, ease: "easeIn" },
   },
   closed: { width: "65px", transition: { duration: 0.5, ease: "easeIn" } },
@@ -28,7 +28,7 @@ const Sidebar = ({ isOpen, setIsOpen, ...rest }) => {
       animate={isOpen ? "open" : "closed"}
       variants={variants}
       h="calc(100vh - 70px)"
-      w="240px"
+      w="200px"
       {...rest}
     >
       {/* <Flex onClick={() => setIsOpen((prev) => !prev)}>olá</Flex> */}

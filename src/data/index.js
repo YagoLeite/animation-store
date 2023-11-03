@@ -129,14 +129,14 @@ export const data = [
     tags: ["card", "all", "elegant"],
   },
   {
-    name: "Glowing Card",
-    component: BorderCard,
-    tags: ["card", "fun", "all"],
-  },
-  {
     name: "Wavy Text",
     component: WavyText,
     tags: ["typography", "fun", "all"],
+  },
+  {
+    name: "Glowing Card",
+    component: BorderCard,
+    tags: ["card", "all"],
   },
   {
     name: "Bumping Text",
@@ -151,7 +151,7 @@ export const data = [
   {
     name: "Slider",
     component: Slider,
-    tags: ["carousel", "all"],
+    tags: ["carousel", "drag", "all"],
   },
   // {
   //   name: "fuck Carousel",
@@ -161,7 +161,7 @@ export const data = [
   {
     name: "Drag n Drop Table",
     component: GroupTable,
-    tags: ["carousel", "all"],
+    tags: ["carousel", "drag", "all"],
   },
   {
     name: "Toggle Button",
@@ -190,7 +190,7 @@ export const tags = [
   "card",
   "fun",
   "typography",
-  "image",
+  "drag",
   "elegant",
   "carousel",
   "button",

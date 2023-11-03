@@ -1,12 +1,23 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 
-const Showcase = ({ data }) => {
+const Showcase = ({ data, delay }) => {
   const [isCoding, setIsCoding] = useState(false);
   const ComponentToRender = data?.component;
   return (
     <Flex
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        type: "ease",
+        transition: {
+          delay: delay ? delay : 0,
+          duration: 0.5,
+        },
+      }}
       w="100%"
       h="fit-content"
       direction="column"
