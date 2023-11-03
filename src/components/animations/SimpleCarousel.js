@@ -119,9 +119,9 @@ const SimpleCarousel = () => {
           <AnimatePresence mode="wait">
             <Flex
               as={motion.div}
-              w={["150px", "250px", "350px", "400px"]}
+              w={["200px", "250px", "350px", "400px"]}
               borderRadius="10px"
-              h={["100px", "200px", "300px", "450px"]}
+              h={["200px", "200px", "300px", "450px"]}
               bgGradient={test[currentIndex].bgGradient}
               justify="center"
               align="center"
