@@ -47,7 +47,6 @@ const FlashlightCard = ({ isCoding }) => {
           gap={2}
           w="calc(100% - 20px)"
           justify="center"
-          // maxW="916px"
           sx={{
             ":hover > .card::after": {
               opacity: 1,
@@ -122,7 +121,6 @@ function Card({ bgColor }) {
   );
 }
 
-
 function code() {
   return `import React, { useEffect, useRef } from "react";
   import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
@@ -140,9 +138,9 @@ function code() {
           const rect = card.getBoundingClientRect(),
             x = e.clientX - rect.left,
             y = e.clientY - rect.top;
-
-          card.style.setProperty("--mouse-x", x px);
-          card.style.setProperty("--mouse-y", y px);
+          // The code below has an issue. Adjust the template literal ;)
+            card.style.setProperty("--mouse-x", {x}px );
+            card.style.setProperty("--mouse-y", {y}px );            
  
         });
       };

@@ -191,6 +191,40 @@ function code() {
     import React, { useState } from "react";
     import { Reorder, motion } from "framer-motion";
     import { Box, Flex, Text, Image } from "@chakra-ui/react";
+
+    const data = [
+      {
+        name: "Brazil",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/320px-Flag_of_Brazil.svg.png",
+        index: 0,
+        group: "A",
+      },
+      {
+        name: "Argentina",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/320px-Flag_of_Argentina.svg.png",
+        index: 3,
+        group: "A",
+      },
+      {
+        name: "Spain",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png",
+        index: 2,
+        group: "A",
+      },
+      {
+        name: "Germany",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png",
+        index: 1,
+        group: "A",
+      },
+      {
+        name: "USA",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png",
+        index: 4,
+        group: "A",
+      },
+    ];
+    
     const Position = () => {
         return (
           <Flex
