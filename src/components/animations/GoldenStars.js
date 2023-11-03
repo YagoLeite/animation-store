@@ -37,7 +37,10 @@ const GoldenStars = ({ isCoding }) => {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Canvas camera={{ position: [0, 0, -500] }}>
+        <Canvas
+          style={{ height: "100%", minHeight: "400px" }}
+          camera={{ position: [0, 0, -500] }}
+        >
           <OrbitControls enableZoom={true} autoRotate={true} />
           <Points>
             {positions?.map((position, index) => {
