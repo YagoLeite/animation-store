@@ -1,16 +1,55 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useToast } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { BsCodeSlash } from "react-icons/bs";
+import React, { useEffect, useState } from "react";
+import { BsCodeSlash, BsShare } from "react-icons/bs";
 import NewText from "../initialPage/NewText";
+import slugify from "react-slugify";
+import { useUrl } from "nextjs-current-url";
+import Link from "next/link";
 
 const Showcase = ({ data, delay }) => {
   const [isCoding, setIsCoding] = useState(false);
+  const { href: currentUrl } = useUrl() ?? {};
+  const toast = useToast();
   const ComponentToRender = data?.component;
   const isNew = data?.tags.includes("new");
 
+  const handleCopyClick = async () => {
+    const codeToCopy = `${currentUrl.split("#")[0]}#${slugify(data.name)}`;
+
+    try {
+      await navigator.clipboard.writeText(codeToCopy);
+      toast({
+        title: "Link copied!",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    } catch (err) {
+      toast({
+        title: "Failed to copy!",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1); // remove the '#' symbol
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }
+    }
+  }, []);
+
   return (
     <Flex
+      id={slugify(data.name)}
       as={motion.div}
       initial={{ opacity: 0 }}
       whileInView={{
@@ -45,17 +84,33 @@ const Showcase = ({ data, delay }) => {
           </Text>
           {isNew && <NewText />}
         </Flex>
-        <Flex
-          onClick={() => setIsCoding((prev) => !prev)}
-          gap="8px"
-          align="center"
-          justify="center"
-          cursor="pointer"
-        >
-          <BsCodeSlash />
-          <Text fontSize="12px" fontWeight="800">
-            Code
-          </Text>
+
+        <Flex gap="10px" align="center">
+          <Flex
+            gap="8px"
+            align="center"
+            justify="center"
+            cursor="pointer"
+            onClick={handleCopyClick}
+          >
+            <BsShare />
+            <Text fontSize="12px" fontWeight="800">
+              Share
+            </Text>
+          </Flex>
+
+          <Flex
+            onClick={() => setIsCoding((prev) => !prev)}
+            gap="8px"
+            align="center"
+            justify="center"
+            cursor="pointer"
+          >
+            <BsCodeSlash />
+            <Text fontSize="12px" fontWeight="800">
+              Code
+            </Text>
+          </Flex>
         </Flex>
       </Flex>
       <Flex

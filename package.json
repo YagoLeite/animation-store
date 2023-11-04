@@ -21,11 +21,13 @@
     "framer-motion": "^9.0.2",
     "leva": "^0.9.34",
     "next": "13.1.6",
+    "nextjs-current-url": "^1.0.3",
     "react": "18.2.0",
     "react-ace": "^10.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
+    "react-slugify": "^3.0.3",
     "react-use": "^17.4.0"
   },
   "devDependencies": {
