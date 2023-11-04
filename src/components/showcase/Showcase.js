@@ -6,16 +6,24 @@ import NewText from "../initialPage/NewText";
 import slugify from "react-slugify";
 import { useUrl } from "nextjs-current-url";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Showcase = ({ data, delay }) => {
   const [isCoding, setIsCoding] = useState(false);
   const { href: currentUrl } = useUrl() ?? {};
   const toast = useToast();
+  const router = useRouter();
   const ComponentToRender = data?.component;
   const isNew = data?.tags.includes("new");
 
+  function updateUrlWithFilter(currentUrl, filterName) {
+    const url = new URL(currentUrl);
+    url.searchParams.set("filter", slugify(filterName));
+    return url.href;
+  }
+
   const handleCopyClick = async () => {
-    const codeToCopy = `${currentUrl.split("#")[0]}#${slugify(data.name)}`;
+    const codeToCopy = updateUrlWithFilter(currentUrl, data.name);
 
     try {
       await navigator.clipboard.writeText(codeToCopy);
@@ -36,17 +44,27 @@ const Showcase = ({ data, delay }) => {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.location.hash) {
-        const id = window.location.hash.substring(1); // remove the '#' symbol
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView();
-        }
+    const { filter } = router.query;
+
+    if (filter) {
+      const element = document.getElementById(filter);
+      if (element) {
+        element.scrollIntoView();
       }
     }
   }, []);
 
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     if (window.location.hash) {
+  //       const id = window.location.hash.substring(1); // remove the '#' symbol
+  //       const element = document.getElementById(id);
+  //       if (element) {
+  //         element.scrollIntoView();
+  //       }
+  //     }
+  //   }
+  // }, []);
 
   return (
     <>

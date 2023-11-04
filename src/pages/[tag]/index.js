@@ -9,6 +9,7 @@ import slugify from "react-slugify";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
+
 const index = ({ ogTitle, ogDescription, ogImage }) => {
   const router = useRouter();
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
@@ -65,23 +66,21 @@ const index = ({ ogTitle, ogDescription, ogImage }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const { query, resolvedUrl } = context;
-  const hash = resolvedUrl.includes("#")
-    ? resolvedUrl.split("#")[1]
+  const { query } = context;
+  const filter = query.filter;
+
+  const ogData = filter
+    ? data.find((item) => slugify(item.name) === filter)
     : undefined;
 
-  const ogData = data.find((item) => slugify(item.name) === hash);
+  const title = ogData ? ogData.name : "Animation Store";
+  const description = ogData
+    ? ogData.description
+    : "Animated component for developers";
+  const image = ogData
+    ? ogData.image
+    : "https://animation-store.vercel.app/pokemonCardImage.png";
 
-  // Prepare the OG tags data based on the URL hash
-  const title = hash && ogData ? ogData.name : "Animation Store";
-  const description =
-    hash && ogData ? ogData.description : "Animated component for developers";
-  const image =
-    hash && ogData
-      ? ogData.image
-      : "https://animation-store.vercel.app/pokemonCardImage.png";
-
-  // Pass the OG tags data to the page via props
   return {
     props: {
       ogTitle: title,
@@ -90,5 +89,6 @@ export const getServerSideProps = async (context) => {
     },
   };
 };
+
 
 export default index;

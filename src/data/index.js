@@ -183,7 +183,7 @@ export const data = [
     component: GroupTable,
     description: "Card flipping on hover!",
     image: "https://animation-store.vercel.app/flipCardImage.png",
-    tags: ["carousel", "drag", "all"],
+    tags: ["drag", "fun", "all"],
     key: Math.random(),
   },
   {
