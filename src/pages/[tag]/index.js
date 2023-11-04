@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 
-const index = ({ ogTitle, ogDescription, ogImage }) => {
+const index = ({ ogTitle, ogDescription, ogImage, ogUrl }) => {
   const router = useRouter();
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
@@ -30,13 +30,29 @@ const index = ({ ogTitle, ogDescription, ogImage }) => {
   return (
     <>
       <Head>
-        <title>Animation Store</title>
+        <title>{ogTitle}</title>
+        {/* General OG tags */}
         <meta property="og:title" content={ogTitle} />
         <meta property="og:type" content="website" />
         <meta property="og:description" content={ogDescription} />
-        <meta name="author" content="Yago Leite"></meta>
         <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />{" "}
+        {/* You should define ogUrl in getServerSideProps */}
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@yourTwitterHandle" />{" "}
+        {/* Your Twitter handle */}
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+        <meta name="twitter:image" content={ogImage} />
+        {/* Additional tags for other purposes */}
+        <meta name="description" content={ogDescription} />
+        <meta name="author" content="Yago Leite" />
+        {/* Favicon - recommended to have one */}
+        <link rel="icon" href="/favicon.ico" />
+        {/* Additional meta tags can be added here as needed */}
       </Head>
+
       <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
         <Header
           isToggleMenuOpen={isToggleMenuOpen}
@@ -68,6 +84,7 @@ const index = ({ ogTitle, ogDescription, ogImage }) => {
 export const getServerSideProps = async (context) => {
   const { query } = context;
   const filter = query.filter;
+  const ogUrl = `https://${context.req.headers.host}${context.resolvedUrl}`;
 
   const ogData = filter
     ? data.find((item) => slugify(item.name) === filter)
@@ -86,6 +103,7 @@ export const getServerSideProps = async (context) => {
       ogTitle: title,
       ogDescription: description,
       ogImage: image,
+      ogUrl: ogUrl,
     },
   };
 };
