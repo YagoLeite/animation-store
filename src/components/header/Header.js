@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
   const query = useRouter();
-  console.log(query.route === "/");
+
   return (
     <Flex
       w="100%"
