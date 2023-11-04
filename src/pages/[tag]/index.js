@@ -22,6 +22,7 @@ const index = () => {
 
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
   const [isOpen, setIsOpen] = useState(true);
+
   return (
     <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
       <Header
