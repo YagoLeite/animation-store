@@ -50,12 +50,13 @@ const Showcase = ({ data, delay }) => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{data.title}</title>
         <meta property="og:title" content={data.title} />
+        <meta property="og:type" content="website" />
         <meta property="og:description" content={data.description} />
         <meta property="og:image" content={data.image} />
-      </Head>
+      </Head> */}
       <Flex
         id={slugify(data.name)}
         as={motion.div}
