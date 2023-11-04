@@ -31,24 +31,33 @@ const index = ({ ogTitle, ogDescription, ogImage, ogUrl }) => {
     <>
       <Head>
         <title>{ogTitle}</title>
-        {/* General OG tags */}
+        {/* Standard OG tags for all platforms including Facebook */}
         <meta property="og:title" content={ogTitle} />
         <meta property="og:type" content="website" />
         <meta property="og:description" content={ogDescription} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={ogUrl} />{" "}
-        {/* You should define ogUrl in getServerSideProps */}
+        <meta property="og:url" content={ogUrl} />
+        <meta property="og:site_name" content="Animation Store" />
+        {/* Specific Facebook tags */}
+        <meta property="fb:app_id" content="yourAppId" />{" "}
+        {/* Your Facebook app ID if you have one */}
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@yourTwitterHandle" />{" "}
-        {/* Your Twitter handle */}
+        <meta name="twitter:creator" content="@yourTwitterHandle" />
         <meta name="twitter:title" content={ogTitle} />
         <meta name="twitter:description" content={ogDescription} />
         <meta name="twitter:image" content={ogImage} />
-        {/* Additional tags for other purposes */}
+        {/* Meta tags beneficial for SEO */}
         <meta name="description" content={ogDescription} />
         <meta name="author" content="Yago Leite" />
-        {/* Favicon - recommended to have one */}
+        <meta
+          name="keywords"
+          content="Animation, Store, Web Components, etc"
+        />{" "}
+        {/* Relevant keywords */}
+        {/* Specify a canonical link if you have duplicate content across different URLs */}
+        <link rel="canonical" href={ogUrl} />
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
         {/* Additional meta tags can be added here as needed */}
       </Head>
