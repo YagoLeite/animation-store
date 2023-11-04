@@ -47,6 +47,7 @@ const Showcase = ({ data, delay }) => {
     }
   }, []);
 
+
   return (
     <>
       <Head>
@@ -54,7 +55,6 @@ const Showcase = ({ data, delay }) => {
         <meta property="og:title" content={data.title} />
         <meta property="og:description" content={data.description} />
         <meta property="og:image" content={data.image} />
-        {/* Additional OG tags as needed */}
       </Head>
       <Flex
         id={slugify(data.name)}
