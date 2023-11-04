@@ -9,7 +9,7 @@ import slugify from "react-slugify";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-const index = () => {
+const index = ({ ogTitle, ogDescription, ogImage }) => {
   const router = useRouter();
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
@@ -17,12 +17,6 @@ const index = () => {
   const filteredData = data.filter((anim) =>
     anim.tags.includes(router.query.tag)
   );
-
-  const hash = router.asPath.includes("#")
-    ? router.asPath.split("#")[1]
-    : undefined;
-
-  const ogData = filteredData.find((item) => slugify(item.name) === hash);
 
   const toggleHandler = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
@@ -36,22 +30,11 @@ const index = () => {
     <>
       <Head>
         <title>Animation Store</title>
-        <meta
-          property="og:title"
-          content={hash ? ogData.name : "Animation Store"}
-        />
+        <meta property="og:title" content={ogTitle} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content={
-            hash ? ogData.description : "Animated component for developers"
-          }
-        />
+        <meta property="og:description" content={ogDescription} />
         <meta name="author" content="Yago Leite"></meta>
-        <meta
-          property="og:image"
-          content="https://animation-store.vercel.app/pokemonCardImage.png"
-        />
+        <meta property="og:image" content={ogImage} />
       </Head>
       <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
         <Header
@@ -79,6 +62,33 @@ const index = () => {
       </Flex>
     </>
   );
+};
+
+export const getServerSideProps = async (context) => {
+  const { query, resolvedUrl } = context;
+  const hash = resolvedUrl.includes("#")
+    ? resolvedUrl.split("#")[1]
+    : undefined;
+
+  const ogData = data.find((item) => slugify(item.name) === hash);
+
+  // Prepare the OG tags data based on the URL hash
+  const title = hash && ogData ? ogData.name : "Animation Store";
+  const description =
+    hash && ogData ? ogData.description : "Animated component for developers";
+  const image =
+    hash && ogData
+      ? ogData.image
+      : "https://animation-store.vercel.app/pokemonCardImage.png";
+
+  // Pass the OG tags data to the page via props
+  return {
+    props: {
+      ogTitle: title,
+      ogDescription: description,
+      ogImage: image,
+    },
+  };
 };
 
 export default index;
