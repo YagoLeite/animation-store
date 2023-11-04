@@ -24,8 +24,6 @@ const index = () => {
 
   const ogData = filteredData.find((item) => slugify(item.name) === hash);
 
-  console.log(ogData);
-
   const toggleHandler = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
