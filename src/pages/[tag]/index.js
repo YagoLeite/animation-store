@@ -49,9 +49,10 @@ const index = () => {
             hash ? ogData.description : "Animated component for developers"
           }
         />
+        <meta name="author" content="Yago Leite"></meta>
         <meta
           property="og:image"
-          content="https://animation-store.vercel.app/flipCardImage.png"
+          content="https://animation-store.vercel.app/pokemonCardImage.png"
         />
       </Head>
       <Flex direction="column" bg="#141517" color="#ccd6f6" h="100%">
