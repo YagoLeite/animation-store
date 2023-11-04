@@ -5,13 +5,26 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import { data } from "@/data";
 import { Flex } from "@chakra-ui/react";
 import Head from "next/head";
-
+import slugify from "react-slugify";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 const index = () => {
-  const { query } = useRouter();
+  const router = useRouter();
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const filteredData = data.filter((anim) =>
+    anim.tags.includes(router.query.tag)
+  );
+
+  const hash = router.asPath.includes("#")
+    ? router.asPath.split("#")[1]
+    : undefined;
+
+  const ogData = filteredData.find((item) => slugify(item.name) === hash);
+
+  console.log(ogData);
 
   const toggleHandler = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
@@ -19,20 +32,22 @@ const index = () => {
 
   useEffect(() => {
     setIsToggleMenuOpen(false);
-  }, [query.tag]);
-
-  const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
-  const [isOpen, setIsOpen] = useState(true);
+  }, [router.query.tag]);
 
   return (
     <>
       <Head>
         <title>Animation Store</title>
-        <meta property="og:title" content="Animation Store" />
+        <meta
+          property="og:title"
+          content={hash ? ogData.name : "Animation Store"}
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Animated component for developers"
+          content={
+            hash ? ogData.description : "Animated component for developers"
+          }
         />
         <meta
           property="og:image"

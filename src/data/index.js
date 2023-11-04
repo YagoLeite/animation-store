@@ -121,7 +121,8 @@ export const data = [
   {
     name: "Flip Card",
     component: FlippingCardComponent,
-    description: "Card flipping on hover!",
+    description:
+      "Discover the interactive Flip Card - a visually striking card that reveals its other side with a smooth flip animation on hover. Crafted with Chakra UI and Framer Motion for a seamless user experience. Try it now!",
     image: "https://animation-store.vercel.app/flipCardImage.png",
     tags: ["card", "fun", "all"],
     key: Math.random(),
@@ -212,8 +213,9 @@ export const data = [
   {
     name: "Pokemon Card",
     component: AlakazamAnimation,
-    description: "Card flipping on hover!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
     tags: ["card", "all", "fun"],
     key: Math.random(),
   },
