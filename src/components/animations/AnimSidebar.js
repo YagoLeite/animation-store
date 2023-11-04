@@ -56,66 +56,68 @@ const AnimSidebar = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
   return (
-    <Flex
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      whileInView={{
-        opacity: 1,
-        type: "ease",
-        transition: {
-          duration: 0.5,
-        },
-      }}
-      w="500px"
-      direction="column"
-      bg="#010914"
-      position="relative"
-    >
-      <Flex justify="space-between" align="center" w="100%" h="70px" px="8px">
-        {isMobile && (
-          <>
-            <Button
-              _hover={{ color: "gray.300" }}
-              onClick={toggleHandler}
-              variant="ghost"
-            >
-              <FaBars size={30} color="white" />
-            </Button>
+    <Flex justify="center" align="center" py="20px">
+      <Flex
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          type: "ease",
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        w="500px"
+        direction="column"
+        bg="#010914"
+        position="relative"
+      >
+        <Flex justify="space-between" align="center" w="100%" h="70px" px="8px">
+          {isMobile && (
+            <>
+              <Button
+                _hover={{ color: "gray.300" }}
+                onClick={toggleHandler}
+                variant="ghost"
+              >
+                <FaBars size={30} color="white" />
+              </Button>
 
-            {isToggleMenuOpen && (
-              <AnimMobileSidebar
-                isOpen={isToggleMenuOpen}
-                setIsOpen={setIsToggleMenuOpen}
-              />
-            )}
-          </>
-        )}
+              {isToggleMenuOpen && (
+                <AnimMobileSidebar
+                  isOpen={isToggleMenuOpen}
+                  setIsOpen={setIsToggleMenuOpen}
+                />
+              )}
+            </>
+          )}
 
-        <Text>Header</Text>
-        <Text
-          onClick={() => setIsMobile((prev) => !prev)}
-          cursor="pointer"
-          fontSize="13px"
-        >
-          {isMobile ? "Desktop" : "Mobile"}
-        </Text>
-      </Flex>
-      <Flex w="100%">
-        {!isMobile && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
-        <Flex w="100%" p="15px" bg="#1c1c1e">
-          <Flex
-            w="100%"
-            minH="400px"
-            border="1px solid white"
-            align="center"
-            justify="center"
-            onClick={() => setIsOpen((prev) => !prev)}
+          <Text>Header</Text>
+          <Text
+            onClick={() => setIsMobile((prev) => !prev)}
             cursor="pointer"
-            direction="column"
-            gap="20px"
+            fontSize="13px"
           >
-            <Text>{isOpen ? "Close Sidebar" : "Open Sidebar"}</Text>
-            <Text textAlign="center">Your component goes here</Text>
+            {isMobile ? "Desktop" : "Mobile"}
+          </Text>
+        </Flex>
+        <Flex w="100%">
+          {!isMobile && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
+          <Flex w="100%" p="15px" bg="#1c1c1e">
+            <Flex
+              w="100%"
+              minH="400px"
+              border="1px solid white"
+              align="center"
+              justify="center"
+              onClick={() => setIsOpen((prev) => !prev)}
+              cursor="pointer"
+              direction="column"
+              gap="20px"
+            >
+              <Text>{isOpen ? "Close Sidebar" : "Open Sidebar"}</Text>
+              <Text textAlign="center">Your component goes here</Text>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

@@ -42,9 +42,6 @@ const Showcase = ({ data, delay }) => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView();
-          setTimeout(() => {
-            window.scrollBy(0, -20); // This will scroll 20 pixels down from the current scroll position
-          }, 0);
         }
       }
     }
@@ -119,6 +116,7 @@ const Showcase = ({ data, delay }) => {
       <Flex
         justify={isCoding ? "left" : "center"}
         align="center"
+        py="20px"
         bg="rgb(62, 62, 62)"
         h="fit-content"
         p={isCoding ? "0px" : "30px"}

@@ -36,6 +36,7 @@ export default function BorderCard({ isCoding }) {
             },
           }}
           w="100%"
+          py="20px"
           minW="190px"
           maxW="300px"
         >

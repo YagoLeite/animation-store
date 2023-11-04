@@ -66,111 +66,113 @@ const ToggleCircularBtns = ({ isCoding }) => {
       {isCoding ? (
         <CodePlayground code={code()} />
       ) : (
-        <Flex
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            type: "ease",
-            transition: {
-              duration: 0.5,
-            },
-          }}
-          position="relative"
-          h="200px"
-          w="200px"
-          align="center"
-          justify="center"
-        >
+        <Flex justify="center" align="center" py="20px">
           <Flex
             as={motion.div}
-            variants={containerVariant}
-            animate={
-              isToggled
-                ? {
-                    rotate: 360,
-                    transition: {
-                      duration: 1,
-                      ease: "linear",
-                    },
-                  }
-                : {
-                    rotate: -360,
-                    transition: {
-                      duration: 1,
-                      ease: "linear",
-                    },
-                  }
-            }
-            position="absolute"
-            h="100%"
-            w="100%"
-          >
-            {positions.map((position, index) => {
-              return (
-                <Flex
-                  as={motion.div}
-                  animate={
-                    isToggled
-                      ? {
-                          top: `calc(${position.top}% - 20px)`,
-                          left: `calc(${position.left}% - 20px)`,
-                          opacity: 1,
-                          transition: {
-                            duration: 1,
-                            ease: "linear",
-                          },
-                        }
-                      : {
-                          top: `calc(50% - 20px)`,
-                          left: `calc(50% - 20px)`,
-                          opacity: 0,
-                          transition: {
-                            duration: 1,
-                            ease: "linear",
-                          },
-                        }
-                  }
-                  whileHover={{ scale: 1.1 }}
-                  h="40px"
-                  w="40px"
-                  background="radial-gradient(circle, rgba(86,83,139,1) 0%, rgba(3,3,28,1) 100%, rgba(0,212,255,1) 100%)"
-                  position="absolute"
-                  borderRadius="50%"
-                  top={`calc(${position.top}% - 20px)`}
-                  left={`calc(${position.left}% - 20px)`}
-                  key={index}
-                  p="5px"
-                  align="center"
-                  justify="center"
-                  cursor="pointer"
-                >
-                  {icons[index]}
-                </Flex>
-              );
-            })}
-          </Flex>
-
-          <Flex
-            as={motion.div}
-            initial={{ x: "-50%", y: "-50%" }}
-            animate={{ x: "-50%", y: "-50%" }}
-            whileHover={{ scale: 1.1, x: "-50%", y: "-50%" }}
-            whileTap={{ scale: 0.9 }}
-            h="70px"
-            w="70px"
-            borderRadius="50%"
-            onClick={() => setIsToggled((prev) => !prev)}
-            background="radial-gradient(circle, rgba(86,83,139,1) 0%, rgba(3,3,28,1) 100%, rgba(0,212,255,1) 100%)"
-            position="absolute"
-            top="50%"
-            left="50%"
-            zIndex="1"
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              type: "ease",
+              transition: {
+                duration: 0.5,
+              },
+            }}
+            position="relative"
+            h="200px"
+            w="200px"
             align="center"
             justify="center"
-            cursor="pointer"
           >
-            Toggle
+            <Flex
+              as={motion.div}
+              variants={containerVariant}
+              animate={
+                isToggled
+                  ? {
+                      rotate: 360,
+                      transition: {
+                        duration: 1,
+                        ease: "linear",
+                      },
+                    }
+                  : {
+                      rotate: -360,
+                      transition: {
+                        duration: 1,
+                        ease: "linear",
+                      },
+                    }
+              }
+              position="absolute"
+              h="100%"
+              w="100%"
+            >
+              {positions.map((position, index) => {
+                return (
+                  <Flex
+                    as={motion.div}
+                    animate={
+                      isToggled
+                        ? {
+                            top: `calc(${position.top}% - 20px)`,
+                            left: `calc(${position.left}% - 20px)`,
+                            opacity: 1,
+                            transition: {
+                              duration: 1,
+                              ease: "linear",
+                            },
+                          }
+                        : {
+                            top: `calc(50% - 20px)`,
+                            left: `calc(50% - 20px)`,
+                            opacity: 0,
+                            transition: {
+                              duration: 1,
+                              ease: "linear",
+                            },
+                          }
+                    }
+                    whileHover={{ scale: 1.1 }}
+                    h="40px"
+                    w="40px"
+                    background="radial-gradient(circle, rgba(86,83,139,1) 0%, rgba(3,3,28,1) 100%, rgba(0,212,255,1) 100%)"
+                    position="absolute"
+                    borderRadius="50%"
+                    top={`calc(${position.top}% - 20px)`}
+                    left={`calc(${position.left}% - 20px)`}
+                    key={index}
+                    p="5px"
+                    align="center"
+                    justify="center"
+                    cursor="pointer"
+                  >
+                    {icons[index]}
+                  </Flex>
+                );
+              })}
+            </Flex>
+
+            <Flex
+              as={motion.div}
+              initial={{ x: "-50%", y: "-50%" }}
+              animate={{ x: "-50%", y: "-50%" }}
+              whileHover={{ scale: 1.1, x: "-50%", y: "-50%" }}
+              whileTap={{ scale: 0.9 }}
+              h="70px"
+              w="70px"
+              borderRadius="50%"
+              onClick={() => setIsToggled((prev) => !prev)}
+              background="radial-gradient(circle, rgba(86,83,139,1) 0%, rgba(3,3,28,1) 100%, rgba(0,212,255,1) 100%)"
+              position="absolute"
+              top="50%"
+              left="50%"
+              zIndex="1"
+              align="center"
+              justify="center"
+              cursor="pointer"
+            >
+              Toggle
+            </Flex>
           </Flex>
         </Flex>
       )}
@@ -180,8 +182,8 @@ const ToggleCircularBtns = ({ isCoding }) => {
 
 function code() {
   return `
-import { Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+  import { Flex } from "@chakra-ui/react";
+  import { motion } from "framer-motion";
 import React, { useState } from "react";
 import {
   AiFillGithub,
