@@ -10,12 +10,12 @@ import AceEditor from "react-ace";
 // import "ace-builds/src-noconflict/theme-cobalt";
 // import "ace-builds/src-noconflict/theme-crimson_editor";
 // import "ace-builds/src-noconflict/theme-dawn";
-// import "ace-builds/src-noconflict/theme-dracula";
+import "ace-builds/src-noconflict/theme-dracula";
 // import "ace-builds/src-noconflict/theme-dreamweaver";
 // import "ace-builds/src-noconflict/theme-eclipse";
 // import "ace-builds/src-noconflict/theme-github";
 // import "ace-builds/src-noconflict/theme-gob";
-import "ace-builds/src-noconflict/theme-gruvbox";
+// import "ace-builds/src-noconflict/theme-gruvbox";
 // import "ace-builds/src-noconflict/theme-idle_fingers";
 // import "ace-builds/src-noconflict/theme-iplastic";
 // import "ace-builds/src-noconflict/theme-katzenmilch";
@@ -101,7 +101,7 @@ function CodePlayground({ code }) {
       <AceEditor
         ref={editorRef}
         mode="javascript"
-        theme="gruvbox"
+        theme="dracula"
         width="100%"
         name="code_editor"
         editorProps={{ $blockScrolling: true }}
