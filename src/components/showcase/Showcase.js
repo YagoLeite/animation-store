@@ -5,7 +5,6 @@ import { BsCodeSlash, BsShare } from "react-icons/bs";
 import NewText from "../initialPage/NewText";
 import slugify from "react-slugify";
 import { useUrl } from "nextjs-current-url";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Showcase = ({ data, delay }) => {
@@ -54,27 +53,8 @@ const Showcase = ({ data, delay }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     if (window.location.hash) {
-  //       const id = window.location.hash.substring(1); // remove the '#' symbol
-  //       const element = document.getElementById(id);
-  //       if (element) {
-  //         element.scrollIntoView();
-  //       }
-  //     }
-  //   }
-  // }, []);
-
   return (
     <>
-      {/* <Head>
-        <title>{data.title}</title>
-        <meta property="og:title" content={data.title} />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content={data.description} />
-        <meta property="og:image" content={data.image} />
-      </Head> */}
       <Flex
         id={slugify(data.name)}
         as={motion.div}
