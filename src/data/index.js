@@ -174,7 +174,7 @@ export const data = [
     component: Slider,
     description:
       "Step into the world of smooth animations with our Slider component! Crafted with React and enhanced by Chakra UI's sleek design system, this carousel allows you to effortlessly glide through content. With intuitive drag interactions powered by Framer Motion, you can experience a seamless and responsive drag-and-drop slider that's as functional as it is stylish. Whether on desktop or mobile, engage with your content in a more dynamic and interactive way. Start dragging and watch the magic unfold!",
-    image: "https://animation-store.vercel.app/sliderImage.png",
+    image: "https://animation-store.vercel.app/flipCardImage.png",
     tags: ["carousel", "drag", "all", "simple"],
     key: Math.random(),
   },

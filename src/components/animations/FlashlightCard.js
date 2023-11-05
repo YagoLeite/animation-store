@@ -52,6 +52,7 @@ const FlashlightCard = ({ isCoding }) => {
               duration: 0.5,
             },
           }}
+          maxW="1000px"
           ref={cardsRef}
           wrap="wrap"
           gap={2}
