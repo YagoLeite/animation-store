@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import NewText from "../initialPage/NewText";
+import { useProgress } from "@/hooks/useProgress";
 
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
+  const { setIsLoading } = useProgress();
   const isNew = url === "card" || url === "typography";
   return (
-    <Link href={`${url}?page=1`}>
+    <Link href={`${url}?page=1`} onClick={() => setIsLoading(true)}>
       <li
         key={index}
         style={{

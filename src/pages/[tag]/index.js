@@ -8,12 +8,13 @@ import Head from "next/head";
 import slugify from "react-slugify";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-
+import { useProgress } from "@/hooks/useProgress";
 
 const index = ({ ogTitle, ogDescription, ogImage, ogUrl }) => {
   const router = useRouter();
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
+  const { setIsLoading } = useProgress();
 
   const filteredData = data.filter((anim) =>
     anim.tags.includes(router.query.tag)
@@ -22,6 +23,10 @@ const index = ({ ogTitle, ogDescription, ogImage, ogUrl }) => {
   const toggleHandler = () => {
     setIsToggleMenuOpen(!isToggleMenuOpen);
   };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [router.query.tag, router.query.filter, router.query.page]);
 
   useEffect(() => {
     setIsToggleMenuOpen(false);

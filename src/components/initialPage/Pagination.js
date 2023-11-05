@@ -4,11 +4,13 @@ import Showcase from "../showcase/Showcase";
 import { Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { useProgress } from "@/hooks/useProgress";
 const ITEMS_PER_PAGE = 5;
 
 const Pagination = ({ data }) => {
   const { query, push } = useRouter();
   const [paginatedData, setPaginatedData] = useState([]);
+  const { setIsLoading } = useProgress();
 
   const currentPage = Number(query.page);
 
@@ -51,7 +53,10 @@ const Pagination = ({ data }) => {
             justify="center"
             align="center"
             cursor="pointer"
-            onClick={() => changePage(currentPage - 1)}
+            onClick={() => {
+              setIsLoading(true);
+              changePage(currentPage - 1);
+            }}
             disabled={currentPage === 1}
             bg="#3633433d"
             borderRadius="10px"
@@ -72,7 +77,10 @@ const Pagination = ({ data }) => {
                 cursor="pointer"
                 bg={currentPage === i + 1 ? "#363343a1" : "#3633433d"}
                 key={i}
-                onClick={() => changePage(i + 1)}
+                onClick={() => {
+                  setIsLoading(true);
+                  changePage(i + 1);
+                }}
                 disabled={currentPage === i + 1}
               >
                 {i + 1}
@@ -88,7 +96,10 @@ const Pagination = ({ data }) => {
             cursor="pointer"
             justify="center"
             align="center"
-            onClick={() => changePage(currentPage + 1)}
+            onClick={() => {
+              setIsLoading(true);
+              changePage(currentPage + 1);
+            }}
             disabled={currentPage === pageCount}
             bg="#3633433d"
             borderRadius="10px"
