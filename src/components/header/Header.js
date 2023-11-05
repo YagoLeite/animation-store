@@ -1,4 +1,4 @@
-import { Box, Flex, Button, Image } from "@chakra-ui/react";
+import { Box, Flex, Button, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -43,14 +43,15 @@ const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
         </Box>
       )}
       <Link href="/">
-        <Flex w="50px" h="50px" justify="center" align="center">
-          <Image
+        <Flex justify="center" align="center">
+          {/* <Image
             src="/Logo.svg"
             alt="logo"
             h="100%"
             w="100%"
             objectFit="cover"
-          />
+          /> */}
+          <Text>Animation Store</Text>
         </Flex>
       </Link>
       <Flex gap="10px" justify="center" align="center">
