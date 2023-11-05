@@ -151,7 +151,7 @@ export const data = [
     description:
       "Discover interactive design at your fingertips with the Glowing Card component. This component features an elegant, responsive card that scales and adapts its rounded edges on hover, wrapped in a beautiful linear gradient. Perfect for making UI elements stand out with a subtle, yet captivating animation effect. Try hovering over to unleash its charm – experience UI that reacts to you!",
     image: "https://animation-store.vercel.app/flipCardImage.png",
-    tags: ["card", "all"],
+    tags: ["card", "all", "simple"],
     key: Math.random(),
   },
   {
@@ -223,7 +223,7 @@ export const data = [
     description:
       "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
     image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["card", "all", "fun"],
+    tags: ["card", "all", "fun", "simple"],
     key: Math.random(),
   },
 ];
