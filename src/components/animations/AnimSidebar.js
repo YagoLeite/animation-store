@@ -75,7 +75,7 @@ const AnimSidebar = ({ isCoding }) => {
                 duration: 0.5,
               },
             }}
-            w="100%"
+            w={["300px", "450px", "500px", "600px"]}
             direction="column"
             bg="#010914"
             position="relative"
@@ -326,7 +326,7 @@ const AnimSidebar = () => {
             duration: 0.5,
           },
         }}
-        w="100%"
+        w={["300px", "450px", "500px", "600px"]}
         direction="column"
         bg="#010914"
         position="relative"
