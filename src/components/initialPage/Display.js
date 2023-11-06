@@ -1,4 +1,4 @@
-import { Flex, Highlight, Text } from "@chakra-ui/react";
+import { Flex, Highlight, Text, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import Showcase from "../showcase/Showcase";
@@ -33,30 +33,35 @@ const Display = () => {
         justify="center"
         align="center"
       >
-        <Text color="white" fontWeight="semibold" fontSize="56px">
+        <Text
+          color="white"
+          fontWeight="semibold"
+          fontSize={["36px", "46px", "56px"]}
+        >
           It's really easy
         </Text>
         <Flex
           w="100%"
           // bg="green"
-          fontSize={["11px", "13px", "14px", "16px", "20px"]}
+          fontSize={["16px", "20px", "26px"]}
           align="center"
           justify="center"
         >
-          <Highlight
-            query={["code", "share"]}
-            styles={{
-              rounded: "full",
-              bgGradient: "linear(to-l, #7928CA, #FF0080)",
-              color: "white",
-              px: 1,
-              mx: 1,
-            }}
-            // fontSize="20px"
-          >
-            Enjoying the components? Toggle the code, and don't forget to share
+          <Text align="center">
+            Enjoying the components? Toggle the{" "}
+            <Box as="span" w="fit-content" display="inline-flex">
+              <Text bgGradient="linear(to-l, #67d9d3, #e1c123)" bgClip="text">
+                code
+              </Text>
+            </Box>
+            , and don't forget to{" "}
+            <Box as="span" w="fit-content" display="inline-flex">
+              <Text bgGradient="linear(to-l, #e5e542, #c17272 )" bgClip="text">
+                share
+              </Text>
+            </Box>{" "}
             with a click!
-          </Highlight>
+          </Text>
         </Flex>
       </Flex>
       <Showcase data={twitch} />

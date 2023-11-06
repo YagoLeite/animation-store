@@ -4,18 +4,24 @@ import { SiChakraui } from "react-icons/si";
 import { DiReact } from "react-icons/di";
 import { FiFramer } from "react-icons/fi";
 import { motion } from "framer-motion";
+import ButtonPage from "./ButtonPage";
 
 const Stacks = () => {
   return (
-    <Flex w="100%" direction="column" gap="20px" align="center">
-      <Text color="white" fontSize="46px" align="center" fontWeight="semibold">
+    <Flex w="100%" direction="column" gap="30px" align="center" px="20px">
+      <Text
+        color="white"
+        fontSize={["36px", "46px", "56px"]}
+        align="center"
+        fontWeight="semibold"
+      >
         What we do
       </Text>
       <Flex
         w="100%"
         maxW="1000px"
         gap="3px"
-        fontSize="20px"
+        fontSize={["16px", "20px", "26px"]}
         align="center"
         wrap="wrap"
       >
@@ -101,6 +107,9 @@ const Stacks = () => {
             </Text>
           </Box>
         </Text>
+      </Flex>
+      <Flex w="200px" h="65px" mt="10px">
+        <ButtonPage text="Start now" />
       </Flex>
     </Flex>
   );

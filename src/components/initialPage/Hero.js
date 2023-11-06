@@ -23,7 +23,7 @@ const Hero = () => {
       justify="center"
       h="calc(100vh - 80px)"
       w="100%"
-      gap="20px"
+      gap="30px"
       px="30px"
     >
       <WavyText
@@ -31,10 +31,16 @@ const Hero = () => {
         delayDuration={1.2}
         fontSize={["40px", "60px", "90px", "120px"]}
       />
-      <Text fontSize={["20px", "40px"]} textAlign="center">
+      <Text
+        fontSize={["20px", "40px"]}
+        textAlign="center"
+        fontWeight="semibold"
+      >
         Animated components for developers
       </Text>
-      <ButtonPage />
+      <Flex w="200px" h="65px" justify="center" align="center">
+        <ButtonPage text="Get started!" />
+      </Flex>
     </Flex>
   );
 };

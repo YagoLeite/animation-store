@@ -236,7 +236,7 @@ const Carousel = ({ children }) => {
       alignItems="center"
       position="relative"
       py="20px"
-      w={["200px", "400px", "500px", "1000px"]}
+      w={["200px", "400px", "600px", "1000px"]}
     >
       <ArrowButton variant="left" handleClick={handleClickPrevious} />
       <Flex h="100%" w="100%" mx="auto" align="center" overflow="hidden">

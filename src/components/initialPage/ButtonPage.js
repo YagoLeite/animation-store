@@ -1,10 +1,10 @@
 import { useProgress } from "@/hooks/useProgress";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
-const ButtonPage = () => {
+const ButtonPage = ({ text }) => {
   const { setIsLoading } = useProgress();
 
   return (
@@ -12,6 +12,7 @@ const ButtonPage = () => {
       href={"/all?page=1"}
       _hover={{ textDecoration: "none" }}
       onClick={() => setIsLoading(true)}
+      style={{ width: "100%", height: "100%" }}
     >
       <Flex
         as={motion.button}
@@ -19,13 +20,15 @@ const ButtonPage = () => {
         whileTap={{ scale: 0.9 }}
         borderRadius="5px"
         border="2px #64ffda solid"
-        w="130px"
-        h="55px"
+        w="100%"
+        h="100%"
         align="center"
         justify="center"
         bg="#050d12"
       >
-        Get started!
+        <Text fontSize="20px" fontFamily="Lekton">
+          {text}
+        </Text>
       </Flex>
     </Link>
   );
