@@ -69,6 +69,7 @@ const Showcase = ({ data, delay }) => {
         }}
         w="100%"
         h="fit-content"
+        minH="400px"
         direction="column"
         borderWidth="1px"
         borderColor="black"
@@ -125,7 +126,7 @@ const Showcase = ({ data, delay }) => {
           align="center"
           py="20px"
           bg="rgb(62, 62, 62)"
-          h="fit-content"
+          h="100%"
           p={isCoding ? "0px" : "30px"}
         >
           {ComponentToRender && <ComponentToRender isCoding={isCoding} />}

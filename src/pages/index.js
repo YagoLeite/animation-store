@@ -8,15 +8,17 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 10000);
+  const twitch = data.find((item) => item.name === "Twitch Carousel");
 
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+  //   }, 10000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <Flex
@@ -31,7 +33,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Flex w="100%" maxW="1440px" align="center" justify="center" px="20px">
-        <Showcase data={data[currentIndex]} delay={1} />
+        <Showcase data={twitch} delay={1} />
       </Flex>
       <Flex w="100%" justify="center" align="center" mt="30px">
         <Footer />

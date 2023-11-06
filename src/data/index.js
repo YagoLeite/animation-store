@@ -22,6 +22,15 @@ import TwitchCarousel from "@/components/animations/TwitchCarousel";
 
 export const data = [
   {
+    name: "Twitch Carousel",
+    component: TwitchCarousel,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["elegant", "all", "carousel"],
+    key: Math.random(),
+  },
+  {
     name: "Flip Card",
     component: FlippingCardComponent,
     description:
@@ -66,12 +75,12 @@ export const data = [
     tags: ["typography", "fun", "all", "new"],
     key: Math.random(),
   },
-  // {
-  //   name: "Simple Carousel",
-  //   component: SimpleCarousel,
-  //   tags: ["carousel", "all", 'simple'],
-  //   key: Math.random(),
-  // },
+  {
+    name: "Simple Carousel",
+    component: SimpleCarousel,
+    tags: ["carousel", "all", "simple"],
+    key: Math.random(),
+  },
   {
     name: "Slider",
     component: Slider,
@@ -138,15 +147,6 @@ export const data = [
       "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
     image: "https://animation-store.vercel.app/pokemonCardImage.png",
     tags: ["button", "all", "simple"],
-    key: Math.random(),
-  },
-  {
-    name: "Twitch Carousel",
-    component: TwitchCarousel,
-    description:
-      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-    image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["elegant", "all", "carousel"],
     key: Math.random(),
   },
 ];
