@@ -21,7 +21,7 @@ const Hero = () => {
       direction="column"
       align="center"
       justify="center"
-      h="calc(80vh - 80px)"
+      h="calc(100vh - 80px)"
       w="100%"
       gap="20px"
       px="30px"
@@ -72,6 +72,7 @@ function SingleLetter({ letter, size }) {
         "5px 20px 10px rgba(0, 0, 0, 1.5)",
         "5px 40px 10px rgba(0, 0, 0, 1.5)",
       ]}
+      fontWeight="bold"
     >
       {letter}
     </Text>
@@ -118,6 +119,7 @@ function TextContainer({ text, delayDuration, fontSize }) {
       justify="left"
       overflow="hidden"
       as={motion.div}
+      px="5px"
     >
       {text.split("").map((letter, index) => {
         return (

@@ -1,25 +1,11 @@
 import { Flex } from "@chakra-ui/react";
 import Header from "@/components/header/Header";
 import Hero from "@/components/initialPage/Hero";
-import Showcase from "@/components/showcase/Showcase";
-import { data } from "@/data";
 import Footer from "@/components/footer/Footer";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import Display from "@/components/initialPage/Display";
+import Stacks from "@/components/initialPage/Stacks";
 
 export default function Home() {
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  const twitch = data.find((item) => item.name === "Twitch Carousel");
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-  //   }, 10000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   return (
     <Flex
       direction="column"
@@ -32,8 +18,9 @@ export default function Home() {
     >
       <Header />
       <Hero />
-      <Flex w="100%" maxW="1440px" align="center" justify="center" px="20px">
-        <Showcase data={twitch} delay={1} />
+      <Flex w="100%" direction="column" gap="60px" align="center">
+        <Display />
+        <Stacks />
       </Flex>
       <Flex w="100%" justify="center" align="center" mt="30px">
         <Footer />

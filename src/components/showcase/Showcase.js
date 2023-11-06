@@ -69,7 +69,7 @@ const Showcase = ({ data, delay }) => {
         }}
         w="100%"
         h="fit-content"
-        minH="400px"
+        minH="300px"
         direction="column"
         borderWidth="1px"
         borderColor="black"
