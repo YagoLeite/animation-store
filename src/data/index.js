@@ -4,16 +4,9 @@ import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
 import GoldenStars from "@/components/animations/GoldenStars";
 import GroupTable from "@/components/animations/GroupTable";
-import MainBanner from "@/components/animations/MainBanner";
 import SimpleCarousel from "@/components/animations/SimpleCarousel";
 import ToggleCircularBtns from "@/components/animations/ToggleCircularBtns";
 import WavyText from "@/components/animations/WavyText";
-
-import BritComponent from "@/components/cards/BritComponent";
-import ExpandCards from "@/components/cards/ExpandCards";
-
-import GlassCardComponent from "@/components/cards/GlassCardComponent";
-import Test from "@/components/twitchtv/Test";
 import FlashlightCard from "@/components/animations/FlashlightCard";
 import AlakazamAnimation from "@/components/animations/AlakazamAnimation";
 import Slider from "@/components/animations/Slider";
@@ -90,11 +83,6 @@ export const data = [
     tags: ["carousel", "drag", "all", "simple"],
     key: Math.random(),
   },
-  // {
-  //   name: "fuck Carousel",
-  //   component: MainBanner,
-  //   tags: ["carousel", "all"],
-  // },
   {
     name: "Drag n Drop Table",
     component: GroupTable,
