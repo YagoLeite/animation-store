@@ -36,7 +36,7 @@ export const data = [
     component: FlashlightCard,
     description:
       "Dive into an immersive interface with FlashlightCard—a captivating, mouse-sensitive card component that reacts to your every move, creating a spotlight effect that enhances user engagement. Perfect for portfolios, interactive displays, or any project that desires a touch of sleek and responsive design. Hover over to unleash the magic!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
+    image: "https://animation-store.vercel.app/flashlightCardImage.png",
     tags: ["card", "all", "elegant", "new"],
     key: Math.random(),
   },
@@ -54,7 +54,7 @@ export const data = [
     component: BorderCard,
     description:
       "Discover interactive design at your fingertips with the Glowing Card component. This component features an elegant, responsive card that scales and adapts its rounded edges on hover, wrapped in a beautiful linear gradient. Perfect for making UI elements stand out with a subtle, yet captivating animation effect. Try hovering over to unleash its charm – experience UI that reacts to you!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
+    image: "https://animation-store.vercel.app/glowingCardImage.png",
     tags: ["card", "all", "simple"],
     key: Math.random(),
   },
@@ -99,16 +99,18 @@ export const data = [
   {
     name: "Toggle Button",
     component: ToggleCircularBtns,
-    description: "Card flipping on hover!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
+    description:
+      "Introducing the ToggleCircularBtns component, a creative and interactive React element that brings a dynamic twist to your social media icons. Built with Chakra UI and Framer Motion, this component arranges icons in a circular pattern with a central toggle button. Each icon emerges with a smooth, radial animation to form a neat orbit. Ideal for adding a visually engaging social media navigation to your website, this component is not only responsive but also offers a playful user interaction with its toggle animation effect.",
+    image: "https://animation-store.vercel.app/toggleButtonImage.png",
     tags: ["toggle", "button", "all"],
     key: Math.random(),
   },
   {
     name: "Sidebar",
     component: AnimSidebar,
-    description: "Card flipping on hover!",
-    image: "https://animation-store.vercel.app/sliderImage.png",
+    description:
+      "Enhance your React project with the AnimSidebar component, a dynamic and responsive sidebar menu powered by Chakra UI and Framer Motion. This component provides seamless animations for both desktop and mobile views, with easy toggling between open and closed states. Incorporate icons from React Icons for a polished UI/UX design. Whether for navigation or profile linking with GitHub, LinkedIn, or other social platforms, AnimSidebar is versatile and easily integrated into your codebase.",
+    image: "https://animation-store.vercel.app/sidebarImage.png",
     tags: ["sidebar", "all"],
     key: Math.random(),
   },
