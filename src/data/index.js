@@ -1,5 +1,4 @@
 import AnimSidebar from "@/components/animations/AnimSidebar";
-import AnimatedCards from "@/components/animations/FlashlightCard";
 import BorderCard from "@/components/animations/BorderCard";
 import BumpingText from "@/components/animations/BumpingText";
 import FlippingCardComponent from "@/components/animations/FlippingCardComponent";
@@ -16,10 +15,10 @@ import ExpandCards from "@/components/cards/ExpandCards";
 import GlassCardComponent from "@/components/cards/GlassCardComponent";
 import Test from "@/components/twitchtv/Test";
 import FlashlightCard from "@/components/animations/FlashlightCard";
-import ExpandingCard from "@/components/animations/AlakazamAnimation";
 import AlakazamAnimation from "@/components/animations/AlakazamAnimation";
 import Slider from "@/components/animations/Slider";
-
+import GlowingButton from "@/components/animations/GlowingButton";
+import TwitchCarousel from "@/components/animations/TwitchCarousel";
 
 export const data = [
   {
@@ -130,6 +129,24 @@ export const data = [
       "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
     image: "https://animation-store.vercel.app/pokemonCardImage.png",
     tags: ["card", "all", "fun", "simple"],
+    key: Math.random(),
+  },
+  {
+    name: "Glowing Button",
+    component: GlowingButton,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["button", "all", "simple"],
+    key: Math.random(),
+  },
+  {
+    name: "Twitch Carousel",
+    component: TwitchCarousel,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["elegant", "all", "carousel"],
     key: Math.random(),
   },
 ];

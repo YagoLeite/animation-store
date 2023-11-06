@@ -14,7 +14,7 @@ const ButtonPage = () => {
       onClick={() => setIsLoading(true)}
     >
       <Flex
-        as={motion.div}
+        as={motion.button}
         whileHover={{ boxShadow: "0px 2px 5px #64ffda", y: -2 }}
         whileTap={{ scale: 0.9 }}
         borderRadius="5px"
