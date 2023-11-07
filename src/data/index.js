@@ -12,6 +12,7 @@ import AlakazamAnimation from "@/components/animations/AlakazamAnimation";
 import Slider from "@/components/animations/Slider";
 import GlowingButton from "@/components/animations/GlowingButton";
 import TwitchCarousel from "@/components/animations/TwitchCarousel";
+import CrazyTextButton from "@/components/animations/CrazyTextButton";
 
 export const data = [
   {
@@ -135,6 +136,15 @@ export const data = [
       "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
     image: "https://animation-store.vercel.app/pokemonCardImage.png",
     tags: ["button", "all", "simple"],
+    key: Math.random(),
+  },
+  {
+    name: "Crazy Text Button",
+    component: CrazyTextButton,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["button", "all"],
     key: Math.random(),
   },
 ];

@@ -25,7 +25,7 @@ const GlowingButton = ({ isCoding }) => {
           justify="center"
           bg="#050d12"
         >
-          Welcome
+          Hover me
         </Flex>
       )}
     </>
