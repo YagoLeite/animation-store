@@ -13,7 +13,7 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/theme-dracula";
 // import "ace-builds/src-noconflict/theme-dreamweaver";
 // import "ace-builds/src-noconflict/theme-eclipse";
-// import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-github";
 // import "ace-builds/src-noconflict/theme-gob";
 // import "ace-builds/src-noconflict/theme-gruvbox";
 // import "ace-builds/src-noconflict/theme-idle_fingers";
@@ -108,6 +108,7 @@ function CodePlayground({ code }) {
         value={code}
         setOptions={{
           showLineNumbers: false,
+          useWorker: false,
         }}
         readOnly={true}
       />

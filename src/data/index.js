@@ -13,6 +13,7 @@ import Slider from "@/components/animations/Slider";
 import GlowingButton from "@/components/animations/GlowingButton";
 import TwitchCarousel from "@/components/animations/TwitchCarousel";
 import CrazyTextButton from "@/components/animations/CrazyTextButton";
+import NeumorphismButton from "@/components/animations/NeumorphismButton";
 
 export const data = [
   {
@@ -145,6 +146,15 @@ export const data = [
       "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
     image: "https://animation-store.vercel.app/pokemonCardImage.png",
     tags: ["button", "all"],
+    key: Math.random(),
+  },
+  {
+    name: "Neumorphism Button",
+    component: NeumorphismButton,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["button", "all", "elegant"],
     key: Math.random(),
   },
 ];
