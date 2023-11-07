@@ -87,7 +87,7 @@ const Stacks = () => {
               Framer Motion
             </motion.div>
           </Box>{" "}
-          to craf simple, yet powerful animated UI components. Our animations
+          to craft simple, yet powerful animated UI components. Our animations
           feature{" "}
           <Box as="span" w="fit-content" display="inline-flex">
             <Text bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
