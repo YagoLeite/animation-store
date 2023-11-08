@@ -21,7 +21,7 @@ const Stacks = () => {
         w="100%"
         maxW="1000px"
         gap="3px"
-        fontSize={["16px", "20px", "26px"]}
+        fontSize={["16px", "24px", "26px"]}
         align="center"
         wrap="wrap"
       >

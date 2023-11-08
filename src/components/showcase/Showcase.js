@@ -75,7 +75,7 @@ const Showcase = ({ data, delay }) => {
         borderColor="black"
         borderRadius="10px 10px 0px 0px"
         borderStyle="solid"
-        boxShadow="md"
+        boxShadow="lg"
         color="white"
       >
         {/* showcase header */}

@@ -56,7 +56,7 @@ const Header = ({ isToggleMenuOpen, toggleHandler, setIsToggleMenuOpen }) => {
             w="100%"
             objectFit="cover"
           /> */}
-            <Text>Animation Store</Text>
+            <Text fontSize={["17px", "20px", "24px"]}>Animation Store</Text>
           </Flex>
         </Link>
         <Flex gap="10px" justify="center" align="center">

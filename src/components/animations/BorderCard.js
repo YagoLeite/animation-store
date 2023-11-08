@@ -45,7 +45,7 @@ export default function BorderCard({ isCoding }) {
             w="100%"
             h="254px"
             borderRadius="20px"
-            backgroundImage="linear-gradient(163deg, #00ff75 0%, #3700ff 100%)"
+            backgroundImage="linear-gradient(163deg, #ec407a 0%, #ab47bc 100%)"
             initial={{ y: 0, boxShadow: "none" }}
             whileHover={{
               boxShadow: "0px 0px 20px 1px rgba(0, 255, 117, 0.30)",
