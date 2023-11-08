@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import AceEditor from "react-ace";
 
-// import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/mode-javascript";
 // import "ace-builds/src-noconflict/theme-ambiance";
 // import "ace-builds/src-noconflict/theme-chaos";
 // import "ace-builds/src-noconflict/theme-chrome";
@@ -13,7 +13,7 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/theme-dracula";
 // import "ace-builds/src-noconflict/theme-dreamweaver";
 // import "ace-builds/src-noconflict/theme-eclipse";
-import "ace-builds/src-noconflict/theme-github";
+// import "ace-builds/src-noconflict/theme-github";
 // import "ace-builds/src-noconflict/theme-gob";
 // import "ace-builds/src-noconflict/theme-gruvbox";
 // import "ace-builds/src-noconflict/theme-idle_fingers";
@@ -103,11 +103,11 @@ function CodePlayground({ code }) {
         mode="javascript"
         theme="dracula"
         width="100%"
-        name="code_editor"
+        name={Math.random()}
         editorProps={{ $blockScrolling: true }}
         value={code}
         setOptions={{
-          showLineNumbers: false,
+          // showLineNumbers: false,
           useWorker: false,
         }}
         readOnly={true}
