@@ -27,39 +27,12 @@ export const data = [
     key: Math.random(),
   },
   {
-    name: "Flip Card",
-    component: FlippingCardComponent,
-    description:
-      "Discover the interactive Flip Card - a visually striking card that reveals its other side with a smooth flip animation on hover. Crafted with Chakra UI and Framer Motion for a seamless user experience. Try it now!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
-    tags: ["card", "fun", "all"],
-    key: Math.random(),
-  },
-  {
     name: "Flashlight Card",
     component: FlashlightCard,
     description:
       "Dive into an immersive interface with FlashlightCard—a captivating, mouse-sensitive card component that reacts to your every move, creating a spotlight effect that enhances user engagement. Perfect for portfolios, interactive displays, or any project that desires a touch of sleek and responsive design. Hover over to unleash the magic!",
     image: "https://animation-store.vercel.app/flashlightCardImage.png",
     tags: ["card", "all", "elegant", "new"],
-    key: Math.random(),
-  },
-  {
-    name: "Wavy Text",
-    component: WavyText,
-    description:
-      "Step into a world where typography comes to life! The WavyText component brings a dynamic, wave-like animation to your text, captivating viewers as each character dances into place with a delightful spring effect. Ideal for grabbing attention on landing pages or adding a playful twist to your website headers. Experience text that moves with WavyText!",
-    image: "https://animation-store.vercel.app/flipCardImage.png",
-    tags: ["typography", "fun", "all"],
-    key: Math.random(),
-  },
-  {
-    name: "Glowing Card",
-    component: BorderCard,
-    description:
-      "Discover interactive design at your fingertips with the Glowing Card component. This component features an elegant, responsive card that scales and adapts its rounded edges on hover, wrapped in a beautiful linear gradient. Perfect for making UI elements stand out with a subtle, yet captivating animation effect. Try hovering over to unleash its charm – experience UI that reacts to you!",
-    image: "https://animation-store.vercel.app/glowingCardImage.png",
-    tags: ["card", "all", "simple"],
     key: Math.random(),
   },
   {
@@ -72,9 +45,54 @@ export const data = [
     key: Math.random(),
   },
   {
+    name: "Crazy Text Button",
+    component: CrazyTextButton,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["button", "all"],
+    key: Math.random(),
+  },
+  {
+    name: "Pokemon Card",
+    component: AlakazamAnimation,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["card", "all", "fun", "simple"],
+    key: Math.random(),
+  },
+  {
+    name: "Wavy Text",
+    component: WavyText,
+    description:
+      "Step into a world where typography comes to life! The WavyText component brings a dynamic, wave-like animation to your text, captivating viewers as each character dances into place with a delightful spring effect. Ideal for grabbing attention on landing pages or adding a playful twist to your website headers. Experience text that moves with WavyText!",
+    image: "https://animation-store.vercel.app/flipCardImage.png",
+    tags: ["typography", "fun", "all"],
+    key: Math.random(),
+  },
+  {
+    name: "Neumorphism Button",
+    component: NeumorphismButton,
+    description:
+      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+    image: "https://animation-store.vercel.app/pokemonCardImage.png",
+    tags: ["button", "all", "elegant"],
+    key: Math.random(),
+  },
+  {
     name: "Simple Carousel",
     component: SimpleCarousel,
     tags: ["carousel", "all", "simple"],
+    key: Math.random(),
+  },
+  {
+    name: "Flip Card",
+    component: FlippingCardComponent,
+    description:
+      "Discover the interactive Flip Card - a visually striking card that reveals its other side with a smooth flip animation on hover. Crafted with Chakra UI and Framer Motion for a seamless user experience. Try it now!",
+    image: "https://animation-store.vercel.app/flipCardImage.png",
+    tags: ["card", "fun", "all"],
     key: Math.random(),
   },
   {
@@ -123,15 +141,6 @@ export const data = [
     key: Math.random(),
   },
   {
-    name: "Pokemon Card",
-    component: AlakazamAnimation,
-    description:
-      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-    image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["card", "all", "fun", "simple"],
-    key: Math.random(),
-  },
-  {
     name: "Glowing Button",
     component: GlowingButton,
     description:
@@ -141,32 +150,23 @@ export const data = [
     key: Math.random(),
   },
   {
-    name: "Crazy Text Button",
-    component: CrazyTextButton,
+    name: "Glowing Card",
+    component: BorderCard,
     description:
-      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-    image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["button", "all"],
+      "Discover interactive design at your fingertips with the Glowing Card component. This component features an elegant, responsive card that scales and adapts its rounded edges on hover, wrapped in a beautiful linear gradient. Perfect for making UI elements stand out with a subtle, yet captivating animation effect. Try hovering over to unleash its charm – experience UI that reacts to you!",
+    image: "https://animation-store.vercel.app/glowingCardImage.png",
+    tags: ["card", "all", "simple"],
     key: Math.random(),
   },
-  {
-    name: "Neumorphism Button",
-    component: NeumorphismButton,
-    description:
-      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-    image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["button", "all", "elegant"],
-    key: Math.random(),
-  },
-  {
-    name: "Fill Up Button",
-    component: FillupButton,
-    description:
-      "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-    image: "https://animation-store.vercel.app/pokemonCardImage.png",
-    tags: ["button", "all", "elegant"],
-    key: Math.random(),
-  },
+  // {
+  //   name: "Fill Up Button",
+  //   component: FillupButton,
+  //   description:
+  //     "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+  //   image: "https://animation-store.vercel.app/pokemonCardImage.png",
+  //   tags: ["button", "all", "elegant"],
+  //   key: Math.random(),
+  // },
 ];
 
 export const tags = [
