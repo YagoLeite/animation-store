@@ -10,8 +10,15 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
   const { setIsLoading } = useProgress();
   const isNew = url === "card" || url === "typography";
+
+  const clickHandler = () => {
+    if (url === router.query.tag) {
+      return;
+    }
+    setIsLoading(true);
+  };
   return (
-    <Link href={`${url}?page=1`} onClick={() => setIsLoading(true)}>
+    <Link href={`${url}?page=1`} onClick={clickHandler}>
       <li
         key={index}
         style={{

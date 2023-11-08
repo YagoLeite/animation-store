@@ -2,6 +2,7 @@ import { useProgress } from "@/hooks/useProgress";
 import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const variants = {
@@ -29,6 +30,7 @@ const variants = {
 const ButtonPage = ({ text }) => {
   const { setIsLoading } = useProgress();
   const [isHovering, setIsHovering] = useState(false);
+  const router = useRouter();
 
   return (
     <Link

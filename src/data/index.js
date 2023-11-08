@@ -158,16 +158,16 @@ export const data = [
     tags: ["card", "all", "simple"],
     key: Math.random(),
   },
-  // {
-  //   name: "Fill Up Button",
-  //   component: FillupButton,
-  //   description:
-  //     "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
-  //   image: "https://animation-store.vercel.app/pokemonCardImage.png",
-  //   tags: ["button", "all", "elegant"],
-  //   key: Math.random(),
-  // },
 ];
+// {
+//   name: "Fill Up Button",
+//   component: FillupButton,
+//   description:
+//     "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
+//   image: "https://animation-store.vercel.app/pokemonCardImage.png",
+//   tags: ["button", "all", "elegant"],
+//   key: Math.random(),
+// },
 
 export const tags = [
   "all",
@@ -183,3 +183,37 @@ export const tags = [
   "sidebar",
   "3D",
 ];
+
+export const test = {
+  "Twitch Carousel": TwitchCarousel,
+
+  "Flashlight Card": FlashlightCard,
+
+  "Bumping Text": BumpingText,
+
+  "Crazy Text Button": CrazyTextButton,
+
+  "Pokemon Card": AlakazamAnimation,
+
+  "Wavy Text": WavyText,
+
+  "Neumorphism Button": NeumorphismButton,
+
+  "Simple Carousel": SimpleCarousel,
+
+  "Flip Card": FlippingCardComponent,
+
+  Slider: Slider,
+
+  "Drag n Drop Table": GroupTable,
+
+  "Toggle Button": ToggleCircularBtns,
+
+  Sidebar: AnimSidebar,
+
+  "Golden Ratio Stars": GoldenStars,
+
+  "Glowing Button": GlowingButton,
+
+  "Glowing Card": BorderCard,
+};

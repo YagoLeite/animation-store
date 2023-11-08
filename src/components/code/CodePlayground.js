@@ -93,8 +93,13 @@ function CodePlayground({ code }) {
         top="10"
         right="10"
         zIndex="2"
-        h="30px"
-        w="30px"
+        borderRadius="10px"
+        border="1px solid"
+        justify="center"
+        align="center"
+        color="gray.400"
+        h="40px"
+        w="40px"
       >
         <RxCopy height="100%" width="100%" />
       </Flex>
