@@ -1,17 +1,16 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
+
+const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
+  ssr: false,
+});
 
 const variants = {
   hover: {
-    backgroundPosition: ["70%", "30%", "50%", "20%", "0%"],
-    backgroundSize: [
-      "100% 300%",
-      "400% 200%",
-      "300% 300%",
-      "150% 320%",
-      "400% 400%",
-    ],
+    backgroundPosition: "0%",
+    color: "black",
     scale: 1.1,
     transition: {
       duration: 0.4,
@@ -20,13 +19,69 @@ const variants = {
   },
   initial: {
     backgroundPosition: "100%",
-    backgroundSize: [
-      "100% 300%",
-      "400% 200%",
-      "300% 300%",
-      "150% 320%",
-      "400% 400%",
-    ],
+    color: "white",
+    scale: 1,
+    transition: {
+      duration: 0.3,
+      ease: "linear",
+    },
+  },
+};
+
+const FillupButton = ({ isCoding }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  return (
+    <>
+      {isCoding ? (
+        <CodePlayground code={code()} />
+      ) : (
+        <Flex
+          as={motion.div}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          cursor="pointer"
+          justify="center"
+          whileTap={{ scale: 0.9 }}
+          align="center"
+          w="200px"
+          h="70px"
+          border="1px solid"
+          background="linear-gradient(to right, white 50%, black 50%)"
+          backgroundSize="400% 400%"
+          variants={variants}
+          initial="initial"
+          animate={isHovering ? "hover" : "initial"}
+          boxShadow="dark-lg"
+        >
+          <Text fontWeight="semibold">Hover me</Text>
+        </Flex>
+      )}
+    </>
+  );
+};
+
+export default FillupButton;
+
+function code() {
+  return `
+import { Flex, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+
+const variants = {
+  hover: {
+    backgroundPosition: "0%",
+    color: "black",
+    scale: 1.1,
+    transition: {
+      duration: 0.4,
+      ease: "linear",
+    },
+  },
+  initial: {
+    backgroundPosition: "100%",
+    color: "white",
     scale: 1,
     transition: {
       duration: 0.3,
@@ -43,17 +98,14 @@ const FillupButton = () => {
       as={motion.div}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
+      cursor="pointer"
       justify="center"
       whileTap={{ scale: 0.9 }}
       align="center"
       w="200px"
       h="70px"
-      border="1px solid black"
-      //   background="linear-gradient(to top right,   rgba(255, 117, 140, 1) 0%,
-      //   rgba(255, 126, 179, 0.6) 20%,
-      //   rgba(255, 164, 196, 0.3) 30%,
-      //   rgba(134, 227, 206, 1) 50%, darkblue 50%) right"
-      background="linear-gradient(to right, salmon, lightblue), radial-gradient(circle at top left, yellow, green 70%, blue 90%)"
+      border="1px solid"
+      background="linear-gradient(to right, white 50%, black 50%)"
       backgroundSize="400% 400%"
       variants={variants}
       initial="initial"
@@ -66,3 +118,5 @@ const FillupButton = () => {
 };
 
 export default FillupButton;
+  `;
+}

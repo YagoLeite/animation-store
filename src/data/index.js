@@ -15,6 +15,7 @@ import TwitchCarousel from "@/components/animations/TwitchCarousel";
 import CrazyTextButton from "@/components/animations/CrazyTextButton";
 import NeumorphismButton from "@/components/animations/NeumorphismButton";
 import FillupButton from "@/components/animations/FillupButton";
+import ShadowButton from "@/components/animations/ShadowButton";
 
 export const data = [
   {
@@ -216,4 +217,8 @@ export const test = {
   "Glowing Button": GlowingButton,
 
   "Glowing Card": BorderCard,
+
+  "Fill Up Button": FillupButton,
+
+  "Shadow Button": ShadowButton,
 };

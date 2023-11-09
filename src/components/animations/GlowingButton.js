@@ -19,8 +19,8 @@ const GlowingButton = ({ isCoding }) => {
           whileTap={{ scale: 0.9 }}
           borderRadius="5px"
           border="2px #64ffda solid"
-          w="130px"
-          h="55px"
+          w="200px"
+          h="70px"
           align="center"
           justify="center"
           bg="#050d12"
@@ -46,8 +46,8 @@ const GlowingButton = () => {
       whileTap={{ scale: 0.9 }}
       borderRadius="5px"
       border="2px #64ffda solid"
-      w="130px"
-      h="55px"
+      w="200px"
+      h="70px"
       align="center"
       justify="center"
       bg="#050d12"

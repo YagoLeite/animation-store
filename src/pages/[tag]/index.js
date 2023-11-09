@@ -119,7 +119,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Dive into an immersive interface with FlashlightCard—a captivating, mouse-sensitive card component that reacts to your every move, creating a spotlight effect that enhances user engagement. Perfect for portfolios, interactive displays, or any project that desires a touch of sleek and responsive design. Hover over to unleash the magic!",
       image: "https://animation-store.vercel.app/flashlightCardImage.png",
-      tags: ["card", "all", "elegant", "new"],
+      tags: ["card", "all", "elegant"],
       key: Math.random(),
     },
     {
@@ -127,7 +127,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Experience the playful bounce of each character with BumpingText—a dynamic text animation component designed for developers looking to add a touch of interactive vibrancy to their projects. Hover to animate and bring the 'Animation Store' to life on your site!",
       image: "https://animation-store.vercel.app/bumpingTextImage.png",
-      tags: ["typography", "fun", "all", "new"],
+      tags: ["typography", "fun", "all"],
       key: Math.random(),
     },
     {
@@ -229,6 +229,22 @@ export const getServerSideProps = async (context) => {
         "Discover interactive design at your fingertips with the Glowing Card component. This component features an elegant, responsive card that scales and adapts its rounded edges on hover, wrapped in a beautiful linear gradient. Perfect for making UI elements stand out with a subtle, yet captivating animation effect. Try hovering over to unleash its charm – experience UI that reacts to you!",
       image: "https://animation-store.vercel.app/glowingCardImage.png",
       tags: ["card", "all", "simple"],
+      key: Math.random(),
+    },
+    {
+      name: "Fill Up Button",
+      description:
+        "Discover the FillupButton – an interactive UI element crafted with Chakra UI and Framer Motion. This dynamic button entices with a captivating hover effect, where the background and text color shift elegantly, accompanied by a subtle scale transformation. Designed to enhance user engagement, it's perfect for developers looking for a stylish, responsive addition to their React projects. Experience seamless integration with server-side rendering disabled, thanks to Next.js dynamic imports. Elevate your application's interactivity with FillupButton.",
+      image: "https://animation-store.vercel.app/fillUpButtonImage.png",
+      tags: ["button", "all", "simple", "new"],
+      key: Math.random(),
+    },
+    {
+      name: "Shadow Button",
+      description:
+        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
+      image: "https://animation-store.vercel.app/shadowButtonImage.png",
+      tags: ["button", "all", "simple", "new"],
       key: Math.random(),
     },
   ];
