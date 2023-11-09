@@ -105,3 +105,25 @@ a {
     color-scheme: dark;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #2A2E35; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #64ffda; 
+  border-radius: 9999px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #75e8cd; 
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #64ffda #2A2E35; 
+}
+

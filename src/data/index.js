@@ -16,6 +16,7 @@ import CrazyTextButton from "@/components/animations/CrazyTextButton";
 import NeumorphismButton from "@/components/animations/NeumorphismButton";
 import FillupButton from "@/components/animations/FillupButton";
 import ShadowButton from "@/components/animations/ShadowButton";
+import MainBanner from "@/components/animations/MainBanner";
 
 export const data = [
   {
@@ -221,4 +222,6 @@ export const test = {
   "Fill Up Button": FillupButton,
 
   "Shadow Button": ShadowButton,
+
+  "Main Banner": MainBanner,
 };

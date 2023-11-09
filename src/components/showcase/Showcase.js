@@ -128,6 +128,7 @@ const Showcase = ({ data, delay }) => {
           bg="rgb(62, 62, 62)"
           h="100%"
           p={isCoding ? "0px" : "30px"}
+          overflowX="hidden"
         >
           {ComponentToRender && <ComponentToRender isCoding={isCoding} />}
         </Flex>

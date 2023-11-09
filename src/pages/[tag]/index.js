@@ -247,6 +247,14 @@ export const getServerSideProps = async (context) => {
       tags: ["button", "all", "simple", "new"],
       key: Math.random(),
     },
+    // {
+    //   name: "Main Banner",
+    //   description:
+    //     "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
+    //   image: "https://animation-store.vercel.app/shadowButtonImage.png",
+    //   tags: ["carousel", "all", "new"],
+    //   key: Math.random(),
+    // },
   ];
 
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));

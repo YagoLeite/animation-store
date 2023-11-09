@@ -50,6 +50,16 @@ export default function Home({ ogUrl, ogImage, ogDescription, ogTitle }) {
         w="100%"
         maxW="100vw"
         pb="30px"
+        sx={{
+          "::-webkit-scrollbar": {
+            width: "4px",
+            // backgroundColor: "transparent",
+          },
+          "::-webkit-scrollbar-thumb": {
+            backgroundColor: "#1078FF",
+            borderRadius: "full",
+          },
+        }}
       >
         <Header />
         <Hero />

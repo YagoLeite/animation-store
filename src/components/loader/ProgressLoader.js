@@ -15,10 +15,11 @@ const ProgressLoader = () => {
     <>
       {isLoading ? (
         <Progress
-          // position="sticky"
-          // top="0"
-          // zIndex={28}
-          // size="xs"
+          position="sticky"
+          top="0"
+          zIndex={28}
+          borderColor="#64ffda"
+          size="xs"
           h="3px"
           w="100%"
           isIndeterminate
