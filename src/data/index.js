@@ -17,6 +17,8 @@ import NeumorphismButton from "@/components/animations/NeumorphismButton";
 import FillupButton from "@/components/animations/FillupButton";
 import ShadowButton from "@/components/animations/ShadowButton";
 import MainBanner from "@/components/animations/MainBanner";
+import OverlayCard from "@/components/animations/OverlayCard";
+import TwitchCard from "@/components/animations/TwitchCard";
 
 export const data = [
   {
@@ -224,4 +226,8 @@ export const test = {
   "Shadow Button": ShadowButton,
 
   "Main Banner": MainBanner,
+
+  "Overlay Card": OverlayCard,
+
+  "Twitch Card": TwitchCard,
 };
