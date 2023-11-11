@@ -39,24 +39,24 @@ const CurvedBorderCarousel = () => {
       overflow="hidden"
     >
       <Flex
-        w="100%"
+        w="110%"
         h="100px"
         position="absolute"
         bg="rgb(62, 62, 62)"
         borderRadius="50%"
         top="0"
-        transform="translate(0%, -50%)"
+        transform="translate(-5%, -50%)"
         zIndex={1}
       />
 
       <Flex
-        w="100%"
+        w="110%"
         h="100px"
         position="absolute"
         bg="rgb(62, 62, 62)"
         borderRadius="50%"
         bottom="0"
-        transform="translate(0%, 50%)"
+        transform="translate(-5%, 50%)"
         zIndex="1"
       />
 
