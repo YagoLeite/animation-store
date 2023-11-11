@@ -35,17 +35,17 @@ const CurvedBorderCarousel = () => {
       ref={sliderRef}
       w="100%"
       position="relative"
-      h="400px"
+      h="fit-content"
       overflow="hidden"
     >
       <Flex
         w="100%"
         h="100px"
         position="absolute"
-        // same as your background
         bg="rgb(62, 62, 62)"
-        borderRadius="0 0 50% 50% / 0 0 100% 100%"
-        top="3%"
+        borderRadius="50%"
+        top="0"
+        transform="translate(0%, -50%)"
         zIndex={1}
       />
 
@@ -53,16 +53,15 @@ const CurvedBorderCarousel = () => {
         w="100%"
         h="100px"
         position="absolute"
-        // same as your background
         bg="rgb(62, 62, 62)"
-        borderRadius="50% 50% 0 0 / 100% 100% 0 0"
+        borderRadius="50%"
         bottom="0"
+        transform="translate(0%, 50%)"
         zIndex="1"
       />
 
       <Flex
         gap={`${gap}px`}
-        py="15px"
         w="fit-content"
         cursor="grab"
         as={motion.div}
@@ -83,7 +82,7 @@ function Card() {
   return (
     <Flex
       as={motion.div}
-      h="400px"
+      h="350px"
       boxShadow="lg"
       w="300px"
       align="center"
