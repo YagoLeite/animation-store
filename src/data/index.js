@@ -20,6 +20,8 @@ import MainBanner from "@/components/animations/MainBanner";
 import OverlayCard from "@/components/animations/OverlayCard";
 import TwitchCard from "@/components/animations/TwitchCard";
 import MovingBackgroundCard from "@/components/animations/MovingBackgroundCard";
+import CurvedBorderCarousel from "@/components/animations/CurvedBorderCarousel";
+import BouncingLoader from "@/components/animations/BouncingLoader";
 
 export const data = [
   {
@@ -233,4 +235,8 @@ export const test = {
   "Twitch Card": TwitchCard,
 
   "Moving Background Card": MovingBackgroundCard,
+
+  "Cuverd Border Carousel": CurvedBorderCarousel,
+
+  "Bouncing Loader": BouncingLoader,
 };

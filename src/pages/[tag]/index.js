@@ -247,38 +247,54 @@ export const getServerSideProps = async (context) => {
       tags: ["button", "all", "simple", "new"],
       key: Math.random(),
     },
-    // {
-    //   name: "Moving Background Card",
-    //   description:
-    //     "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
-    //   image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
-    //   tags: ["card", "all", "new"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Overlay Card",
-    //   description:
-    //     "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-    //   image: "https://animation-store.vercel.app/overlayCardImage.png",
-    //   tags: ["card", "all", "new"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Twitch Card",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["card", "all", "simple", "new"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Main Banner",
-    //   description:
-    //     "Step into a world of vibrant visuals with our MainBanner component, a dynamic carousel that brings your content to life. Designed with Chakra UI for flexible, responsive layouts and powered by Framer Motion for smooth, animated transitions, this carousel cycles through items with effortless navigation. Featuring auto-rotating slides with customizable colors and titles, it is optimized for both desktop and mobile interfaces. Enhance your site with our interactive MainBanner that invites users to engage with your showcased items in style.",
-    //   image: "https://animation-store.vercel.app/mainBannerImage.png",
-    //   tags: ["carousel", "all", "new"],
-    //   key: Math.random(),
-    // },
+    {
+      name: "Cuverd Border Carousel",
+      description:
+        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
+      image: "https://animation-store.vercel.app/shadowButtonImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Bouncing Loader",
+      description:
+        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
+      image: "https://animation-store.vercel.app/shadowButtonImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Moving Background Card",
+      description:
+        "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
+      image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Overlay Card",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Twitch Card",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Main Banner",
+      description:
+        "Step into a world of vibrant visuals with our MainBanner component, a dynamic carousel that brings your content to life. Designed with Chakra UI for flexible, responsive layouts and powered by Framer Motion for smooth, animated transitions, this carousel cycles through items with effortless navigation. Featuring auto-rotating slides with customizable colors and titles, it is optimized for both desktop and mobile interfaces. Enhance your site with our interactive MainBanner that invites users to engage with your showcased items in style.",
+      image: "https://animation-store.vercel.app/mainBannerImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
   ];
 
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));
