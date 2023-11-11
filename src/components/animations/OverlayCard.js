@@ -50,7 +50,6 @@ const OverlayCard = ({ isCoding }) => {
           onMouseLeave={() => setIsHovering(false)}
           position="relative"
           direction="column"
-          bg="green"
           w={["300px", "400px", "500px", "700px"]}
           h="400px"
           jusitfy="center"
@@ -84,7 +83,7 @@ const OverlayCard = ({ isCoding }) => {
             p="10px"
             gap="10px"
           >
-            <Flex w="100%" align="center" justify="center" px="10px" my="auto">
+            <Flex w="100%" align="center" justify="center" px="10px">
               <Text
                 as={motion.text}
                 variants={textVariants}
@@ -97,8 +96,7 @@ const OverlayCard = ({ isCoding }) => {
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book. It has survived
                 not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s
+                typesetting, remaining essentially unchanged
               </Text>
             </Flex>
           </Flex>
@@ -177,7 +175,6 @@ const OverlayCard = () => {
       onMouseLeave={() => setIsHovering(false)}
       position="relative"
       direction="column"
-      bg="green"
       w={["300px", "400px", "500px", "700px"]}
       h="400px"
       jusitfy="center"
@@ -211,7 +208,7 @@ const OverlayCard = () => {
         p="10px"
         gap="10px"
       >
-        <Flex w="100%" align="center" justify="center" px="10px" my="auto">
+        <Flex w="100%" align="center" justify="center" px="10px">
           <Text
             as={motion.text}
             variants={textVariants}
