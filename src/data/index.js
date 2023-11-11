@@ -19,6 +19,7 @@ import ShadowButton from "@/components/animations/ShadowButton";
 import MainBanner from "@/components/animations/MainBanner";
 import OverlayCard from "@/components/animations/OverlayCard";
 import TwitchCard from "@/components/animations/TwitchCard";
+import MovingBackgroundCard from "@/components/animations/MovingBackgroundCard";
 
 export const data = [
   {
@@ -230,4 +231,6 @@ export const test = {
   "Overlay Card": OverlayCard,
 
   "Twitch Card": TwitchCard,
+
+  "Moving Background Card": MovingBackgroundCard,
 };
