@@ -40,7 +40,7 @@ const CurvedBorderCarousel = () => {
     >
       <Flex
         w="110%"
-        h="100px"
+        h={["60px", "60px", "100px"]}
         position="absolute"
         bg="rgb(62, 62, 62)"
         borderRadius="50%"
@@ -51,7 +51,7 @@ const CurvedBorderCarousel = () => {
 
       <Flex
         w="110%"
-        h="100px"
+        h={["60px", "60px", "100px"]}
         position="absolute"
         bg="rgb(62, 62, 62)"
         borderRadius="50%"
@@ -82,9 +82,9 @@ function Card() {
   return (
     <Flex
       as={motion.div}
-      h="350px"
+      h={["250px", "350px", "350px"]}
       boxShadow="lg"
-      w="300px"
+      w={["120px", "250px", "300px"]}
       align="center"
       justify="center"
     >
