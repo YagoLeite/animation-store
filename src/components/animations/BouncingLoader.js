@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
@@ -60,6 +60,7 @@ const contentVariant = {
 const BouncingLoader = ({ isCoding }) => {
   const controls = useAnimation();
   const contentControls = useAnimation();
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     controls.start("start");
@@ -67,11 +68,18 @@ const BouncingLoader = ({ isCoding }) => {
   }, [isCoding]);
 
   const resetHandler = () => {
+    if (isAnimating) {
+      return;
+    }
+
     contentControls.start("reset");
     controls.start("start");
   };
 
   const rewindHandler = async () => {
+    if (isAnimating) {
+      return;
+    }
     contentControls.start("rewind");
     await controls.start("rewind");
     controls.start("start");
@@ -97,6 +105,8 @@ const BouncingLoader = ({ isCoding }) => {
           <Flex
             as={motion.div}
             variants={movementVariant}
+            onAnimationStart={() => setIsAnimating(true)}
+            onAnimationComplete={() => setIsAnimating(false)}
             initial="start"
             animate={controls}
             w="40px"
@@ -119,7 +129,7 @@ const BouncingLoader = ({ isCoding }) => {
             gap="20px"
           >
             <Flex
-              as={motion.div}
+              as={motion.button}
               whileHover={{ scale: 1.1, color: "black" }}
               onClick={resetHandler}
               w="150px"
@@ -155,7 +165,7 @@ function code() {
   return `
 import { Flex } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const movementVariant = {
   start: {
@@ -210,6 +220,7 @@ const contentVariant = {
 const BouncingLoader = () => {
   const controls = useAnimation();
   const contentControls = useAnimation();
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     controls.start("start");
@@ -217,11 +228,17 @@ const BouncingLoader = () => {
   }, []);
 
   const resetHandler = () => {
+    if (isAnimating) {
+        return;
+      }
     contentControls.start("reset");
     controls.start("start");
   };
 
   const rewindHandler = async () => {
+    if (isAnimating) {
+        return;
+      }
     contentControls.start("rewind");
     await controls.start("rewind");
     controls.start("start");
@@ -243,6 +260,8 @@ const BouncingLoader = () => {
       <Flex
         as={motion.div}
         variants={movementVariant}
+        onAnimationStart={() => setIsAnimating(true)}
+        onAnimationComplete={() => setIsAnimating(false)}
         initial="start"
         animate={controls}
         w="40px"
