@@ -1,10 +1,72 @@
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import useResizeObserver from "use-resize-observer";
 
-const numberOfItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numberOfItems = [
+  {
+    image:
+      "https://static.wixstatic.com/media/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png/v1/fill/w_740,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/16:9/w_1600%2Cc_limit/gettyimages-1146431497.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://wallpapers.com/images/featured-full/nature-2ygv7ssy2k0lxlzu.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://static.wixstatic.com/media/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png/v1/fill/w_740,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/16:9/w_1600%2Cc_limit/gettyimages-1146431497.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://wallpapers.com/images/featured-full/nature-2ygv7ssy2k0lxlzu.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://static.wixstatic.com/media/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png/v1/fill/w_740,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/16:9/w_1600%2Cc_limit/gettyimages-1146431497.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://wallpapers.com/images/featured-full/nature-2ygv7ssy2k0lxlzu.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://static.wixstatic.com/media/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png/v1/fill/w_740,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bb1bd6_f221ad0f4d6f4103bf1d37b68b04492e~mv2.png",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/16:9/w_1600%2Cc_limit/gettyimages-1146431497.jpg",
+    key: Math.random(),
+  },
+  {
+    image:
+      "https://wallpapers.com/images/featured-full/nature-2ygv7ssy2k0lxlzu.jpg",
+    key: Math.random(),
+  },
+];
+
 const gap = 15;
 
 const CurvedBorderCarousel = () => {
@@ -70,15 +132,15 @@ const CurvedBorderCarousel = () => {
         dragElastic={0.2}
         key={constraint}
       >
-        {numberOfItems.map((_, i) => {
-          return <Card key={i} />;
+        {numberOfItems.map((item) => {
+          return <Card key={item.key} data={item} />;
         })}
       </Flex>
     </Flex>
   );
 };
 
-function Card() {
+function Card({ data }) {
   return (
     <Flex
       as={motion.div}
@@ -89,7 +151,7 @@ function Card() {
       justify="center"
     >
       <Image
-        src="https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/16:9/w_1600%2Cc_limit/gettyimages-1146431497.jpg"
+        src={data.image}
         objectFit="cover"
         h="100%"
         w="100%"
