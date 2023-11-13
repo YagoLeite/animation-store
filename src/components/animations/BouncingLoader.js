@@ -9,32 +9,27 @@ const CodePlayground = dynamic(() => import("../code/CodePlayground"), {
 
 const movementVariant = {
   start: {
-    top: ["-5%", "50%", "45%", "50%", "45%", "50%"],
-    left: ["50%", "50%", "50%", "50%", "50%"],
-    x: ["-50%", "-50%", "-50%", "-50%", "-50%"],
-    y: ["-50%", "-50%", "-50%", "-50%", "-50%"],
-    width: ["40px", "40px", "40px", "40px", "1000px"],
-    height: ["40px", "40px", "40px", "40px", "400px"],
-    borderRadius: ["50%", "50%", "50%", "50%", "0%"],
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-      times: [0, 0.48, 0.5, 0.52, 1],
-      repeatDelay: 1,
-    },
-  },
-  rewind: {
-    top: ["50%", "45%", "50%", "-5%"],
+    top: ["-5%", "50%", "50%", "50%", "50%", "50%", "50%", "50%"],
     left: "50%",
     x: "-50%",
     y: "-50%",
-    width: ["1000px", "40px", "40px", "40px"],
-    height: ["400px", "40px", "40px", "40px"],
-    borderRadius: ["0%", "50%", "50%", "50%"],
+    scale: [1, 1, 2, 1, 2, 1, 100],
+    borderRadius: ["50%", "50%", "50%", "50%", "50%", "50%", "50%", "0%"],
     transition: {
-      duration: 1.5,
+      duration: 2,
       ease: "easeInOut",
-      times: [1, 0.52, 0, 5, 0.48, 0],
+    },
+  },
+  rewind: {
+    top: ["50%", "50%", "50%", "50%", "50%", "50%", "50%", "-5%"],
+    left: "50%",
+    x: "-50%",
+    y: "-50%",
+    borderRadius: ["0%", "50%", "50%", "50%", "50%", "50%", "50%", "50%"],
+    scale: [100, 1, 2, 1, 2, 1, 1],
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
     },
   },
 };
@@ -167,36 +162,31 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const movementVariant = {
-  start: {
-    top: ["-5%", "50%", "45%", "50%", "45%", "50%"],
-    left: ["50%", "50%", "50%", "50%", "50%"],
-    x: ["-50%", "-50%", "-50%", "-50%", "-50%"],
-    y: ["-50%", "-50%", "-50%", "-50%", "-50%"],
-    width: ["40px", "40px", "40px", "40px", "1000px"],
-    height: ["40px", "40px", "40px", "40px", "400px"],
-    borderRadius: ["50%", "50%", "50%", "50%", "0%"],
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-      times: [0, 0.48, 0.5, 0.52, 1],
-      repeatDelay: 1,
+    start: {
+      top: ["-5%", "50%", "50%", "50%", "50%", "50%", "50%", "50%"],
+      left: "50%",
+      x: "-50%",
+      y: "-50%",
+      scale: [1, 1, 2, 1, 2, 1, 100],
+      borderRadius: ["50%", "50%", "50%", "50%", "50%", "50%", "50%", "0%"],
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+      },
     },
-  },
-  rewind: {
-    top: ["50%", "45%", "50%", "-5%"],
-    left: "50%",
-    x: "-50%",
-    y: "-50%",
-    width: ["1000px", "40px", "40px", "40px"],
-    height: ["400px", "40px", "40px", "40px"],
-    borderRadius: ["0%", "50%", "50%", "50%"],
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-      times: [1, 0.52, 0, 5, 0.48, 0],
+    rewind: {
+      top: ["50%", "50%", "50%", "50%", "50%", "50%", "50%", "-5%"],
+      left: "50%",
+      x: "-50%",
+      y: "-50%",
+      borderRadius: ["0%", "50%", "50%", "50%", "50%", "50%", "50%", "50%"],
+      scale: [100, 1, 2, 1, 2, 1, 1],
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+      },
     },
-  },
-};
+  };
 
 const contentVariant = {
   initial: {
