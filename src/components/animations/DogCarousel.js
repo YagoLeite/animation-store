@@ -8,36 +8,45 @@ const data = [
     text: "GOSTOSA",
     key: Math.random(),
     bg: "orange",
+    textOne: "It may seem hard",
+    textTwo: "A everything moves",
+    textThree: "But fear not",
   },
   {
     image: "./manuImageTwo.png",
     text: "AMOR DA MINHA VIDA",
     key: Math.random(),
     bg: "white",
+    textOne: "Animation Store",
+    textTwo: "Is here for you",
+    textThree: "The dog is here for you",
   },
-  //   {
-  //     image: "./manuImageThree.png",
-  //     text: "MARAVILHOSA",
-  //     key: Math.random(),
-  //     bg: "blue",
-  //   },
   {
     image: "./manuImageFour.png",
     text: "MINHA DEUSA",
     key: Math.random(),
     bg: "salmon",
+    textOne: "Just get the code",
+    textTwo: "On two clicks",
+    textThree: "But waaaait",
   },
   {
     image: "./manuImageFive.png",
     text: "DE OLHO EM NÓS",
     key: Math.random(),
     bg: "blue.200",
+    textOne: "Do not forget",
+    textTwo: "You can also share it",
+    textThree: "With your dev friends",
   },
   {
     image: "./manuImageSix.png",
     text: "AMO VOCES TAMBÉM",
     key: Math.random(),
     bg: "red.100",
+    textOne: "Or not dev friends",
+    textTwo: "Just friends",
+    textThree: "Or not even friends",
   },
 ];
 
@@ -68,21 +77,21 @@ const containerVariant = {
   },
 };
 
-const textVariant = {
+const textVariant = (delay) => ({
   initial: {
     opacity: 0,
-    top: 0,
+    y: 20,
   },
   visible: {
     opacity: [0, 0, 1, 1, 1, 1],
-    top: "50%",
+    y: 0,
     transition: {
-      delay: 0.5,
+      delay: delay,
       duration: 1,
       ease: "easeInOut",
     },
   },
-};
+});
 
 const scaleVariant = (delay) => ({
   scaling: {
@@ -104,7 +113,7 @@ const DogCarousel = () => {
     const timeout = setInterval(() => {
       setPosition((prev) => prev + 1);
       controls.start("scaling");
-    }, 2000);
+    }, 5000);
     return () => clearInterval(timeout);
   }, []);
 
@@ -137,32 +146,73 @@ const DogCarousel = () => {
           bg={data[circularIndex(position)].bg}
           key={data[circularIndex(position)].key}
         >
-          <Image
-            src={data[circularIndex(position)].image}
-            alt="dog image"
-            h="250px"
-            w="250px"
-            objectFit="contain"
-            zIndex={1}
-          />
-          <AnimatePresence>
-            <Flex
-              as={motion.div}
-              variants={textVariant}
-              initial="initial"
-              animate="visible"
-              w="100%"
-              left="50%"
-              position="absolute"
-              transform="translate(-50%,-50%)"
-              justify="center"
-              align="center"
-            >
-              <Text fontSize="60px" fontWeight="bold" color="black">
-                {data[circularIndex(position)].text}
-              </Text>
-            </Flex>
-          </AnimatePresence>
+          <Flex
+            w="100%"
+            h="100%"
+            position="relative"
+            justify="center"
+            align="center"
+          >
+            <Image
+              src={data[circularIndex(position)].image}
+              alt="dog image"
+              h="250px"
+              w="250px"
+              opacity="0.7"
+              objectFit="contain"
+              zIndex={1}
+            />
+            <AnimatePresence>
+              <Flex
+                as={motion.div}
+                variants={textVariant(0.5)}
+                initial="initial"
+                animate="visible"
+                w="100%"
+                top="0%"
+                position="absolute"
+                // transform="translate(-50%,-50%)"
+                justify="center"
+                align="center"
+              >
+                <Text fontSize="60px" fontWeight="bold" color="black">
+                  {data[circularIndex(position)].textOne}
+                </Text>
+              </Flex>
+              <Flex
+                as={motion.div}
+                variants={textVariant(1.6)}
+                initial="initial"
+                animate="visible"
+                w="100%"
+                // top="0%"
+                position="absolute"
+                // transform="translate(-50%,-50%)"
+                justify="center"
+                align="center"
+              >
+                <Text fontSize="60px" fontWeight="bold" color="black">
+                  {data[circularIndex(position)].textTwo}
+                </Text>
+              </Flex>
+              <Flex
+                as={motion.div}
+                variants={textVariant(2.9)}
+                initial="initial"
+                animate="visible"
+                w="100%"
+                top="80%"
+                position="absolute"
+                // transform="translate(-50%,-50%)"
+                justify="center"
+                align="center"
+              >
+                <Text fontSize="60px" fontWeight="bold" color="black">
+                  {data[circularIndex(position)].textThree}
+                </Text>
+              </Flex>
+            </AnimatePresence>
+          </Flex>
         </Flex>
       </AnimatePresence>
       <Flex
