@@ -24,6 +24,7 @@ import CurvedBorderCarousel from "@/components/animations/CurvedBorderCarousel";
 import BouncingLoader from "@/components/animations/BouncingLoader";
 import Spotlight from "@/components/animations/Spotlight";
 import WatchBackground from "@/components/animations/WatchBackground";
+import DogCarousel from "@/components/animations/DogCarousel";
 
 export const data = [
   {
@@ -245,4 +246,6 @@ export const test = {
   Spotlight: Spotlight,
 
   "Watch Background": WatchBackground,
+
+  "Dog Carousel": DogCarousel,
 };

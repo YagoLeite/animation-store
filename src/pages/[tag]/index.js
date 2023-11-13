@@ -287,6 +287,14 @@ export const getServerSideProps = async (context) => {
       tags: ["hidden"],
       key: Math.random(),
     },
+    {
+      name: "Dog Carousel",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
     // {
     //   name: "Spotlight",
     //   description:
