@@ -17,7 +17,7 @@ const movementVariant = {
     height: ["40px", "40px", "40px", "40px", "400px"],
     borderRadius: ["50%", "50%", "50%", "50%", "0%"],
     transition: {
-      duration: 2,
+      duration: 1.5,
       ease: "easeInOut",
       times: [0, 0.48, 0.5, 0.52, 1],
       repeatDelay: 1,
@@ -32,7 +32,7 @@ const movementVariant = {
     height: ["400px", "40px", "40px", "40px"],
     borderRadius: ["0%", "50%", "50%", "50%"],
     transition: {
-      duration: 2,
+      duration: 1.5,
       ease: "easeInOut",
       times: [1, 0.52, 0, 5, 0.48, 0],
     },
@@ -46,11 +46,11 @@ const contentVariant = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 2, duration: 1 },
+    transition: { delay: 1.5, duration: 1 },
   },
   reset: {
     opacity: [0, 0, 1],
-    transition: { duration: 1, delay: 2, times: [0, 0, 1] },
+    transition: { duration: 1, delay: 1.5, times: [0, 0, 1] },
   },
   rewind: {
     opacity: 0,
@@ -96,7 +96,6 @@ const BouncingLoader = ({ isCoding }) => {
           maxW="1000px"
           h="100%"
           minH="400px"
-          bg="pink"
           position="relative"
           overflow="hidden"
           align="center"
@@ -177,7 +176,7 @@ const movementVariant = {
     height: ["40px", "40px", "40px", "40px", "400px"],
     borderRadius: ["50%", "50%", "50%", "50%", "0%"],
     transition: {
-      duration: 2,
+      duration: 1.5,
       ease: "easeInOut",
       times: [0, 0.48, 0.5, 0.52, 1],
       repeatDelay: 1,
@@ -192,7 +191,7 @@ const movementVariant = {
     height: ["400px", "40px", "40px", "40px"],
     borderRadius: ["0%", "50%", "50%", "50%"],
     transition: {
-      duration: 2,
+      duration: 1.5,
       ease: "easeInOut",
       times: [1, 0.52, 0, 5, 0.48, 0],
     },
@@ -206,11 +205,11 @@ const contentVariant = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 2, duration: 1 },
+    transition: { delay: 1.5, duration: 1 },
   },
   reset: {
     opacity: [0, 0, 1],
-    transition: { duration: 1, delay: 2, times: [0, 0, 1] },
+    transition: { duration: 1, delay: 1.5, times: [0, 0, 1] },
   },
   rewind: {
     opacity: 0,
@@ -251,7 +250,6 @@ const BouncingLoader = () => {
       maxW="1000px"
       h="100%"
       minH="400px"
-      bg="pink"
       position="relative"
       overflow="hidden"
       align="center"

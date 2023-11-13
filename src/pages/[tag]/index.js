@@ -123,6 +123,14 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Bouncing Loader",
+      description:
+        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
+      image: "https://animation-store.vercel.app/shadowButtonImage.png",
+      tags: ["card", "new", "fun"],
+      key: Math.random(),
+    },
+    {
       name: "Bumping Text",
       description:
         "Experience the playful bounce of each character with BumpingText—a dynamic text animation component designed for developers looking to add a touch of interactive vibrancy to their projects. Hover to animate and bring the 'Animation Store' to life on your site!",
@@ -249,14 +257,6 @@ export const getServerSideProps = async (context) => {
     },
     {
       name: "Cuverd Border Carousel",
-      description:
-        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
-      image: "https://animation-store.vercel.app/shadowButtonImage.png",
-      tags: ["hidden"],
-      key: Math.random(),
-    },
-    {
-      name: "Bouncing Loader",
       description:
         "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
       image: "https://animation-store.vercel.app/shadowButtonImage.png",
