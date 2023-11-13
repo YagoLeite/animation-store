@@ -176,7 +176,7 @@ const DogCarousel = () => {
         h="20px"
         w="20px"
         borderRadius="50%"
-        bg="pink"
+        bg="gray.500"
       />
       <Flex
         as={motion.div}
@@ -189,7 +189,7 @@ const DogCarousel = () => {
         h="20px"
         w="20px"
         borderRadius="50%"
-        bg="pink"
+        bg="gray.900"
       />
       <Flex
         as={motion.div}
