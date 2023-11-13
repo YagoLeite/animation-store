@@ -22,6 +22,8 @@ import TwitchCard from "@/components/animations/TwitchCard";
 import MovingBackgroundCard from "@/components/animations/MovingBackgroundCard";
 import CurvedBorderCarousel from "@/components/animations/CurvedBorderCarousel";
 import BouncingLoader from "@/components/animations/BouncingLoader";
+import Spotlight from "@/components/animations/Spotlight";
+import WatchBackground from "@/components/animations/WatchBackground";
 
 export const data = [
   {
@@ -239,4 +241,8 @@ export const test = {
   "Cuverd Border Carousel": CurvedBorderCarousel,
 
   "Bouncing Loader": BouncingLoader,
+
+  Spotlight: Spotlight,
+
+  "Watch Background": WatchBackground,
 };
