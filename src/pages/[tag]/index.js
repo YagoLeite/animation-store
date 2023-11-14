@@ -123,10 +123,18 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Cuverd Border Carousel",
+      description:
+        "Explore the dynamic and responsive CurvedBorderCarousel component for modern web applications. Built with Chakra UI and Framer Motion, this carousel features curved borders and seamless drag interactions, optimized for both desktop and mobile experiences. Effortlessly integrate into your React project with SSR support and enjoy the added flexibility of a resizable observer for real-time layout adjustments. Ideal for showcasing images or content in a visually appealing and interactive format",
+      image: "https://animation-store.vercel.app/curvedCarouselImage.png",
+      tags: ["all", "carousel", "elegant", "new"],
+      key: Math.random(),
+    },
+    {
       name: "Bouncing Loader",
       description:
-        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
-      image: "https://animation-store.vercel.app/shadowButtonImage.png",
+        "Enhance your application's loading experience with the BouncingLoader, a React component utilizing Chakra UI for styling and Framer Motion for fluid animations. This loader provides an engaging visual cue with its bounce and scale animations, which are controlled through a sophisticated variant system. The loader’s interactive features, including reset and rewind controls, engage users during wait times. Its responsive design ensures compatibility across devices, making it an excellent choice for developers aiming to maintain user interest and minimize perceived wait durations.",
+      image: "https://animation-store.vercel.app/bouncingLoadereImage.png",
       tags: ["card", "new", "all", "fun"],
       key: Math.random(),
     },
@@ -253,14 +261,6 @@ export const getServerSideProps = async (context) => {
         "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
       image: "https://animation-store.vercel.app/shadowButtonImage.png",
       tags: ["button", "all", "simple", "new"],
-      key: Math.random(),
-    },
-    {
-      name: "Cuverd Border Carousel",
-      description:
-        "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
-      image: "https://animation-store.vercel.app/shadowButtonImage.png",
-      tags: ["hidden"],
       key: Math.random(),
     },
     {
