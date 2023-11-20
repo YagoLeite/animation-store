@@ -115,6 +115,14 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Moving Background Card",
+      description:
+        "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
+      image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
+      tags: ["card", "fun", "all", "new"],
+      key: Math.random(),
+    },
+    {
       name: "Flashlight Card",
       description:
         "Dive into an immersive interface with FlashlightCard—a captivating, mouse-sensitive card component that reacts to your every move, creating a spotlight effect that enhances user engagement. Perfect for portfolios, interactive displays, or any project that desires a touch of sleek and responsive design. Hover over to unleash the magic!",
@@ -252,7 +260,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Discover the FillupButton – an interactive UI element crafted with Chakra UI and Framer Motion. This dynamic button entices with a captivating hover effect, where the background and text color shift elegantly, accompanied by a subtle scale transformation. Designed to enhance user engagement, it's perfect for developers looking for a stylish, responsive addition to their React projects. Experience seamless integration with server-side rendering disabled, thanks to Next.js dynamic imports. Elevate your application's interactivity with FillupButton.",
       image: "https://animation-store.vercel.app/fillUpButtonImage.png",
-      tags: ["button", "all", "simple", "new"],
+      tags: ["button", "all", "simple"],
       key: Math.random(),
     },
     {
@@ -260,15 +268,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Unleash the power of interactive UI with our ShadowButton component, a sleek and responsive button designed using Chakra UI and Framer Motion. This button is not just a static element; it's a gateway to a dynamic coding playground. With its quick and responsive hover and press animations, it provides an engaging user experience. The ShadowButton is perfectly integrated into React applications with server-side rendering off for a seamless, client-side interactive experience. Ideal for developers who value design and functionality, this button toggles between a live code editor and a stylish call-to-action, making it a versatile component for any modern web project.",
       image: "https://animation-store.vercel.app/shadowButtonImage.png",
-      tags: ["button", "all", "simple", "new"],
-      key: Math.random(),
-    },
-    {
-      name: "Moving Background Card",
-      description:
-        "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
-      image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
-      tags: ["hidden"],
+      tags: ["button", "all", "simple"],
       key: Math.random(),
     },
     {
