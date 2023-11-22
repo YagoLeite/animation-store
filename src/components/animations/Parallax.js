@@ -1,5 +1,5 @@
 "use client";
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { CiWifiOn, CiBatteryFull, CiLock } from "react-icons/ci";
 import { RxLetterCaseToggle, RxReload } from "react-icons/rx";
 import {
@@ -15,7 +15,6 @@ const veiwPortHeight = "370px";
 const Parallax = () => {
   const containerRef = useRef(null);
 
-  console.log(containerRef, "containerRef");
   return (
     <Flex
       maxW="330px"
@@ -25,15 +24,15 @@ const Parallax = () => {
       p="2px"
       borderRadius="22px"
       overflowY="hidden"
-      bg="black"
+      bg="white"
     >
       <Flex
         w="100%"
         h="100%"
         direction="column"
         borderRadius="20px"
-        bg="gray.300"
-        color="black"
+        bg="black"
+        color="white"
         gap="20px"
       >
         {/* Time, camera, wifi and battery */}
@@ -157,9 +156,53 @@ const Parallax = () => {
 };
 
 function FirstSection({ containerRef }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    container: containerRef,
+    offset: ["start start", "end end"],
+    layoutEffect: false,
+  });
+
+  const YBackground = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const YText = useTransform(scrollYProgress, [0, 1], ["0%", "900%"]);
+
   return (
-    <Flex w="100%" h={veiwPortHeight} align="center" justify="center">
-      <Text fontSize="50px" fontWeight="bold">
+    <Flex
+      w="100%"
+      h={"550px"}
+      overflow="hidden"
+      align="center"
+      position="relative"
+      justify="center"
+      bg="green"
+    >
+      <Box
+        as={motion.div}
+        position="absolute"
+        h="100%"
+        inset="0"
+        backgroundImage={`url(/parallaxBgImage.png)`}
+        backgroundSize="cover"
+        backgroundPosition="bottom"
+        style={{ y: YBackground }}
+      />
+      <Box
+        position="absolute"
+        zIndex={2}
+        inset="0"
+        backgroundImage={`url(/croppedParallaxBgImage.png)`}
+        backgroundSize="cover"
+        backgroundPosition="bottom"
+      />
+      <Text
+        as={motion.div}
+        fontSize="50px"
+        // position="relative"
+        zIndex={1}
+        fontWeight="bold"
+        style={{ y: YText }}
+      >
         Scroll Down
       </Text>
     </Flex>
@@ -174,8 +217,6 @@ function SecondSection({ containerRef }) {
     offset: ["start end", "end end"],
     layoutEffect: false,
   });
-
-  console.log(containerRef, "second");
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
@@ -208,7 +249,7 @@ function ThirdSection({ containerRef }) {
     layoutEffect: false,
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [1, 20]);
+  const scaleProgress = useTransform(scrollYProgress, [0.3, 1], [1, 20]);
 
   return (
     <Flex ref={ref} h="600px" align="center" justify="center" overflow="hidden">
@@ -216,9 +257,9 @@ function ThirdSection({ containerRef }) {
         as={motion.div}
         w="40px"
         h="40px"
-        bg="black"
+        bg="#07022d"
         borderRadius="50%"
-        style={{ scale: scaleProgress, opacity: scaleProgress }}
+        style={{ scale: scaleProgress }}
       />
     </Flex>
   );
@@ -251,10 +292,10 @@ function FourthSection({ containerRef }) {
         justify="space-between"
         zIndex={2}
       >
-        <Flex w="100%" bg="gray.800" h="110px" />
-        <Flex w="100%" bg="gray.800" h="110px" />
-        <Flex w="100%" bg="gray.800" h="110px" />
-        <Flex w="100%" bg="gray.800" h="110px" />
+        <Flex w="100%" bg="white" h="110px" boxShadow="md" />
+        <Flex w="100%" bg="white" h="110px" boxShadow="md" />
+        <Flex w="100%" bg="white" h="110px" boxShadow="md" />
+        <Flex w="100%" bg="white" h="110px" boxShadow="md" />
       </Flex>
       <Flex
         as={motion.div}
@@ -312,7 +353,7 @@ function FifthSection({ containerRef }) {
         position="absolute"
         justify="center"
         align="center"
-        bg="orange"
+        bg="white"
         top="0"
         // left="-100px"
         style={{
@@ -323,8 +364,20 @@ function FifthSection({ containerRef }) {
           rotate: rotateProgress,
         }}
       >
-        <Flex as={motion.div} style={{ opacity: opacityProgress }}>
-          <Text fontWeight="bold">Get this code for free!</Text>
+        <Flex
+          as={motion.div}
+          style={{ opacity: opacityProgress }}
+          justify="center"
+          align="center"
+          direction="column"
+          gap="10px"
+          color="black"
+          fontWeight="bold"
+        >
+          <Text>Animation Store</Text>
+          <Text fontSize="14px" textAlign="center">
+            Get this code for free!
+          </Text>
         </Flex>
       </Flex>
     </Flex>
