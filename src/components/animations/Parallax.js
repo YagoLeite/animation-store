@@ -172,7 +172,10 @@ function SecondSection({ containerRef }) {
     target: ref,
     container: containerRef,
     offset: ["start end", "end end"],
+    layoutEffect: false,
   });
+
+  console.log(containerRef, "second");
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
@@ -202,6 +205,7 @@ function ThirdSection({ containerRef }) {
     target: ref,
     container: containerRef,
     offset: ["start end", "end end"],
+    layoutEffect: false,
   });
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [1, 20]);
@@ -226,6 +230,7 @@ function FourthSection({ containerRef }) {
     target: ref,
     container: containerRef,
     offset: ["start end", "end end"],
+    layoutEffect: false,
   });
 
   const yProgress = useTransform(scrollYProgress, [0, 1], ["0px", "690px"]);
@@ -275,6 +280,7 @@ function FifthSection({ containerRef }) {
     target: ref,
     container: containerRef,
     offset: ["start end", "end end"],
+    layoutEffect: false,
   });
 
   const yProgress = useTransform(scrollYProgress, [0, 0.8], ["0px", "800px"]);
