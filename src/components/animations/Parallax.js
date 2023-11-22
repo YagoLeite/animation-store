@@ -175,7 +175,6 @@ function FirstSection({ containerRef }) {
       align="center"
       position="relative"
       justify="center"
-      bg="green"
     >
       <Box
         as={motion.div}
