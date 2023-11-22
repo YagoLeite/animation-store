@@ -218,7 +218,7 @@ function SecondSection({ containerRef }) {
     layoutEffect: false,
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
   return (
     <Flex as={motion.div} ref={ref} h={veiwPortHeight} align="end">
