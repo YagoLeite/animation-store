@@ -107,6 +107,14 @@ export const getServerSideProps = async (context) => {
 
   const data = [
     {
+      name: "Parallax",
+      description:
+        "The Parallax component encapsulates a visually engaging, scroll-activated animation sequence crafted with Chakra UI and Framer Motion. It offers a multi-layered parallax effect that brings a dynamic depth to the user interface. With meticulously timed motion effects, the component presents an immersive experience where elements such as text and images move at different speeds, creating a sense of depth and focus. It's an ideal feature for modern web applications that aim to capture user attention and convey content in a memorable, interactive format.",
+      image: "https://animation-store.vercel.app/parallaxImage.png",
+      tags: ["hidden", "all", "parallax", "elegant", "new"],
+      key: Math.random(),
+    },
+    {
       name: "Twitch Carousel",
       description:
         "Experience the magic of Pokémon with our interactive Alakazam card. Hover to see Alakazam in action, showcasing dynamic stats with Chakra UI progress bars and smooth Framer Motion animations. Collect and explore more in our immersive gallery.",
@@ -114,6 +122,7 @@ export const getServerSideProps = async (context) => {
       tags: ["elegant", "all", "carousel"],
       key: Math.random(),
     },
+
     {
       name: "Moving Background Card",
       description:
@@ -271,70 +280,63 @@ export const getServerSideProps = async (context) => {
       tags: ["button", "all", "simple"],
       key: Math.random(),
     },
+
     {
-      name: "Parallax",
+      name: "Overlay Card",
       description:
-        "The Parallax component encapsulates a visually engaging, scroll-activated animation sequence crafted with Chakra UI and Framer Motion. It offers a multi-layered parallax effect that brings a dynamic depth to the user interface. With meticulously timed motion effects, the component presents an immersive experience where elements such as text and images move at different speeds, creating a sense of depth and focus. It's an ideal feature for modern web applications that aim to capture user attention and convey content in a memorable, interactive format.",
-      image: "https://animation-store.vercel.app/parallaxImage.png",
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
       tags: ["hidden"],
       key: Math.random(),
     },
-    // {
-    //   name: "Overlay Card",
-    //   description:
-    //     "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-    //   image: "https://animation-store.vercel.app/overlayCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Wavy Fill Circle",
-    //   description:
-    //     "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-    //   image: "https://animation-store.vercel.app/overlayCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Twitch Card",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Dog Carousel",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Spotlight",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Watch Background",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
-    // {
-    //   name: "Main Banner",
-    //   description:
-    //     "Step into a world of vibrant visuals with our MainBanner component, a dynamic carousel that brings your content to life. Designed with Chakra UI for flexible, responsive layouts and powered by Framer Motion for smooth, animated transitions, this carousel cycles through items with effortless navigation. Featuring auto-rotating slides with customizable colors and titles, it is optimized for both desktop and mobile interfaces. Enhance your site with our interactive MainBanner that invites users to engage with your showcased items in style.",
-    //   image: "https://animation-store.vercel.app/mainBannerImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
+    {
+      name: "Wavy Fill Circle",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Twitch Card",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Dog Carousel",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Spotlight",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Watch Background",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
+      name: "Main Banner",
+      description:
+        "Step into a world of vibrant visuals with our MainBanner component, a dynamic carousel that brings your content to life. Designed with Chakra UI for flexible, responsive layouts and powered by Framer Motion for smooth, animated transitions, this carousel cycles through items with effortless navigation. Featuring auto-rotating slides with customizable colors and titles, it is optimized for both desktop and mobile interfaces. Enhance your site with our interactive MainBanner that invites users to engage with your showcased items in style.",
+      image: "https://animation-store.vercel.app/mainBannerImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
   ];
 
   const filteredData = data.filter((anim) => anim.tags.includes(query.tag));

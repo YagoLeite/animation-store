@@ -204,6 +204,7 @@ export const tags = [
   "toggle",
   "sidebar",
   "3D",
+  "parallax",
 ];
 
 export const test = {
