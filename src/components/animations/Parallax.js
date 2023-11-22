@@ -1,3 +1,4 @@
+"use-client";
 import { Flex, Box, Text } from "@chakra-ui/react";
 import { CiWifiOn, CiBatteryFull, CiLock } from "react-icons/ci";
 import { RxLetterCaseToggle, RxReload } from "react-icons/rx";
