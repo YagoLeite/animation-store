@@ -13,7 +13,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const veiwPortHeight = "370px";
 
 const Parallax = () => {
-  const containerRef = useRef();
+  const containerRef = useRef(null);
 
   console.log(containerRef, "containerRef");
   return (
