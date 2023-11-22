@@ -28,6 +28,16 @@ import DogCarousel from "@/components/animations/DogCarousel";
 import WavyFillCircle from "@/components/animations/WavyFillCircle";
 import Parallax from "@/components/animations/Parallax";
 
+
+import dynamic from "next/dynamic";
+
+const ParallaxNoSSR = dynamic(
+  () => import("@/components/animations/Parallax"),
+  {
+    ssr: false,
+  }
+);
+
 export const data = [
   {
     name: "Twitch Carousel",
@@ -253,5 +263,5 @@ export const test = {
 
   "Wavy Fill Circle": WavyFillCircle,
 
-  Parallax: Parallax,
+  Parallax: ParallaxNoSSR,
 };
