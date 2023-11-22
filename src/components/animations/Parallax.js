@@ -256,7 +256,8 @@ function ThirdSection({ containerRef }) {
         as={motion.div}
         w="40px"
         h="40px"
-        bg="#07022d"
+        // bg="#07022d"
+        bg="white"
         borderRadius="50%"
         style={{ scale: scaleProgress }}
       />
