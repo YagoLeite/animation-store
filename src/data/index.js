@@ -25,6 +25,8 @@ import BouncingLoader from "@/components/animations/BouncingLoader";
 import Spotlight from "@/components/animations/Spotlight";
 import WatchBackground from "@/components/animations/WatchBackground";
 import DogCarousel from "@/components/animations/DogCarousel";
+import WavyFillCircle from "@/components/animations/WavyFillCircle";
+import Parallax from "@/components/animations/Parallax";
 
 export const data = [
   {
@@ -248,4 +250,8 @@ export const test = {
   "Watch Background": WatchBackground,
 
   "Dog Carousel": DogCarousel,
+
+  "Wavy Fill Circle": WavyFillCircle,
+
+  Parallax: Parallax,
 };

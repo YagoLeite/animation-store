@@ -272,6 +272,14 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Parallax",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
+    {
       name: "Overlay Card",
       description:
         "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
@@ -279,6 +287,14 @@ export const getServerSideProps = async (context) => {
       tags: ["hidden"],
       key: Math.random(),
     },
+    // {
+    //   name: "Wavy Fill Circle",
+    //   description:
+    //     "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+    //   image: "https://animation-store.vercel.app/overlayCardImage.png",
+    //   tags: ["hidden"],
+    //   key: Math.random(),
+    // },
     {
       name: "Twitch Card",
       description:
@@ -303,14 +319,14 @@ export const getServerSideProps = async (context) => {
     //   tags: ["hidden"],
     //   key: Math.random(),
     // },
-    // {
-    //   name: "Watch Background",
-    //   description:
-    //     "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
-    //   image: "https://animation-store.vercel.app/twitchCardImage.png",
-    //   tags: ["hidden"],
-    //   key: Math.random(),
-    // },
+    {
+      name: "Watch Background",
+      description:
+        "Introducing the TwitchCard – a lively and interactive showcase for streamers designed to capture the essence of live gaming action. This card incorporates a sleek hover effect, signaling activity and engagement for viewers. It features a prominent 'LIVE' badge, real-time viewer count, and customizable sections for streamer details and game information, all wrapped in a stylish and responsive design using Chakra UI and Framer Motion. Perfect for embedding into gaming sites or streamer platforms, the TwitchCard is your go-to component for attracting audiences to live Twitch content.",
+      image: "https://animation-store.vercel.app/twitchCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
     {
       name: "Main Banner",
       description:

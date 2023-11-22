@@ -20,7 +20,7 @@
     "@react-three/postprocessing": "^2.15.8",
     "@vercel/analytics": "^1.1.1",
     "ace-builds": "^1.22.0",
-    "framer-motion": "^9.0.2",
+    "framer-motion": "^9.1.7",
     "leva": "^0.9.34",
     "next": "13.1.6",
     "nextjs-current-url": "^1.0.3",
