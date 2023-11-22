@@ -14,6 +14,8 @@ const veiwPortHeight = "370px";
 
 const Parallax = () => {
   const containerRef = useRef();
+
+  console.log(containerRef, "containerRef");
   return (
     <Flex
       maxW="330px"
