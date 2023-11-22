@@ -29,14 +29,14 @@ import WavyFillCircle from "@/components/animations/WavyFillCircle";
 import Parallax from "@/components/animations/Parallax";
 
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const ParallaxNoSSR = dynamic(
-  () => import("@/components/animations/Parallax"),
-  {
-    ssr: false,
-  }
-);
+// const ParallaxNoSSR = dynamic(
+//   () => import("@/components/animations/Parallax"),
+//   {
+//     ssr: false,
+//   }
+// );
 
 export const data = [
   {
@@ -263,5 +263,5 @@ export const test = {
 
   "Wavy Fill Circle": WavyFillCircle,
 
-  Parallax: ParallaxNoSSR,
+  Parallax: Parallax,
 };
