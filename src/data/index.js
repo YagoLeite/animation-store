@@ -27,7 +27,7 @@ import WatchBackground from "@/components/animations/WatchBackground";
 import DogCarousel from "@/components/animations/DogCarousel";
 import WavyFillCircle from "@/components/animations/WavyFillCircle";
 import Parallax from "@/components/animations/Parallax";
-
+import BackgroundStars from "@/components/animations/BackgroundStars";
 
 // import dynamic from "next/dynamic";
 
@@ -265,4 +265,6 @@ export const test = {
   "Wavy Fill Circle": WavyFillCircle,
 
   Parallax: Parallax,
+
+  "Background Stars": BackgroundStars,
 };

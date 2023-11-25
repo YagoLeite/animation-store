@@ -111,7 +111,7 @@ export const getServerSideProps = async (context) => {
       description:
         "The Parallax component encapsulates a visually engaging, scroll-activated animation sequence crafted with Chakra UI and Framer Motion. It offers a multi-layered parallax effect that brings a dynamic depth to the user interface. With meticulously timed motion effects, the component presents an immersive experience where elements such as text and images move at different speeds, creating a sense of depth and focus. It's an ideal feature for modern web applications that aim to capture user attention and convey content in a memorable, interactive format.",
       image: "https://animation-store.vercel.app/parallaxImage.png",
-      tags: ["hidden", "all", "parallax", "elegant", "new"],
+      tags: ["all", "parallax", "elegant", "new"],
       key: Math.random(),
     },
     {
@@ -280,7 +280,14 @@ export const getServerSideProps = async (context) => {
       tags: ["button", "all", "simple"],
       key: Math.random(),
     },
-
+    {
+      name: "Background Stars",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["hidden"],
+      key: Math.random(),
+    },
     {
       name: "Overlay Card",
       description:
