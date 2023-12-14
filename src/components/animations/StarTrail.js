@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoIosStar } from "react-icons/io";
@@ -93,13 +93,22 @@ const StarTrail = () => {
   return (
     <Flex
       ref={containerRef}
+      // className="cursor"
       w="100%"
       h="400px"
       overflow="hidden"
       background="linear-gradient(to bottom, #0f0c29, #302b63, #24243e)"
       position="relative"
+      align="center"
+      justify="center"
+      sx={{
+        // Replace 'cursorImage.png' with the actual path to your cursor image
+        cursor: `url('/wandcursor.png'), pointer`,
+        // Add other styles as needed
+      }}
       onMouseMove={handleMouseMove}
     >
+      <Moon />
       {stars.map((star) => (
         <Star
           key={star.id}
@@ -114,6 +123,169 @@ const StarTrail = () => {
     </Flex>
   );
 };
+
+const moonVariants = {
+  eyes: {
+    top: [
+      "45%", // Starting position - bottom left
+      "30%", // Move up (bottom to top)
+      "20%", // Top left
+      "10%", // Top center
+      "30%", // Top right
+      "40%", // Move down (top to bottom)
+      "45%", // Bottom right
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "30%",
+      "10%",
+      "40%",
+      "70%",
+      "80%",
+      "60%",
+      "45%",
+      "45%", // Back to starting position (straight line)
+    ],
+    left: [
+      "5%", // Starting position - left
+      "10%", // Stay left
+      "27.5%", // Center left
+      "50%", // Center
+      "68%", // Center right
+      "70%", // Right
+      "80%", // Stay right
+      "80%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+      "45%",
+
+      "5%", // Back to starting position (straight line)
+    ],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "linear", // Linear easing for smoother transition
+    },
+  },
+
+  leftEyebrow: {
+    y: [0, 0, -10, -10, -10, 0, 0, 0, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0],
+    rotate: [
+      0, 0, -10, -10, -10, 0, 0, 0, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0,
+    ],
+
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "linear", // Linear easing for smoother transition
+    },
+  },
+  rightEyebrow: {
+    y: [0, 0, -10, -10, -10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 0, 0],
+    rotate: [0, 0, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10, -10, -10, 0, 0],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "linear", // Linear easing for smoother transition
+    },
+  },
+};
+
+function Moon() {
+  return (
+    <Flex
+      w="300px"
+      h="300px"
+      borderRadius="50%"
+      bg="gray.300"
+      position="relative"
+      justifyContent="center"
+      alignItems="center"
+    >
+      {/* Left Eye */}
+      <Box
+        position="absolute"
+        top="30%" // Adjusted for better appearance
+        left="25%" // Adjusted for better appearance
+        w="50px"
+        h="50px"
+        bg="white"
+        borderRadius="50% 65%"
+      >
+        <Box
+          as={motion.div}
+          variants={moonVariants}
+          animate="eyes"
+          position="absolute"
+          // top="30%"
+          w="13px"
+          h="13px"
+          bg="black"
+          borderRadius="50%"
+        />
+      </Box>
+
+      {/* Right Eye */}
+      <Box
+        position="absolute"
+        top="30%" // Adjusted for better appearance
+        left="55%" // Adjusted for better appearance
+        w="50px"
+        h="50px"
+        bg="white"
+        borderRadius="65% 50%"
+      >
+        <Box
+          as={motion.div}
+          variants={moonVariants}
+          animate="eyes"
+          position="absolute"
+          // top="30%"
+          w="13px"
+          h="13px"
+          bg="black"
+          borderRadius="50%"
+        />
+      </Box>
+
+      {/* Left Eyebrow */}
+      <Box
+        as={motion.div}
+        variants={moonVariants}
+        animate="leftEyebrow"
+        position="absolute"
+        top="25%" // Adjusted to align with the eyes
+        left="25%" // Adjusted to align with the eyes
+        w="50px"
+        h="5px"
+        bg="black"
+        borderRadius="10px"
+      />
+
+      {/* Right Eyebrow */}
+      <Box
+        as={motion.div}
+        variants={moonVariants}
+        animate="rightEyebrow"
+        position="absolute"
+        top="25%" // Adjusted to align with the eyes
+        left="55%" // Adjusted to align with the eyes
+        w="50px"
+        h="5px"
+        bg="black"
+        borderRadius="10px"
+      />
+    </Flex>
+  );
+}
 
 function Star({ x, y, id, color, animationType, removeStar }) {
   const variants = {
