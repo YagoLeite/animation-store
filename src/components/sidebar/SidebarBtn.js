@@ -9,8 +9,7 @@ import { useProgress } from "@/hooks/useProgress";
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
   const { setIsLoading } = useProgress();
-  const isNew =
-    url === "card" || url === "fun" || url === "carousel" || url === "parallax";
+  const isNew = url === "elegant";
 
   const clickHandler = () => {
     if (url === router.query.tag) {
@@ -51,6 +50,7 @@ const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
             fontWeight={router.query.tag === url ? 600 : 400}
             //para remover o texto rapidamente quando a sidebar fecha \/\/\/\/
             display={isOpen ? "flex" : "none"}
+            whileHover={{ color: "white" }}
             color={router.query.tag === url ? "white" : "#ffffffa4"}
           >
             {url}

@@ -111,7 +111,7 @@ export const getServerSideProps = async (context) => {
       description:
         "The Parallax component encapsulates a visually engaging, scroll-activated animation sequence crafted with Chakra UI and Framer Motion. It offers a multi-layered parallax effect that brings a dynamic depth to the user interface. With meticulously timed motion effects, the component presents an immersive experience where elements such as text and images move at different speeds, creating a sense of depth and focus. It's an ideal feature for modern web applications that aim to capture user attention and convey content in a memorable, interactive format.",
       image: "https://animation-store.vercel.app/parallaxImage.png",
-      tags: ["all", "parallax", "elegant", "new"],
+      tags: ["all", "parallax", "elegant"],
       key: Math.random(),
     },
     {
@@ -122,13 +122,21 @@ export const getServerSideProps = async (context) => {
       tags: ["elegant", "all", "carousel"],
       key: Math.random(),
     },
+    {
+      name: "Arched Walls",
+      description:
+        "Experience the dynamic interplay of motion and interaction with our ArchedWalls component. This unique UI element brings your digital environment to life through an array of animations including scaling and positional shifts. Tailored to engage and delight, the component features customizable variants for 'start' and 'rewind' animations, adding a layer of depth and interaction to your web page. 'Start' initiates a captivating scale transformation, expanding from a subtle presence to an engaging focal point, while 'rewind' reverses the journey, offering a different perspective. Integrated with Chakra UI and Framer Motion for a seamless and responsive user experience, ArchedWalls is perfect for sites seeking to create an immersive and visually striking interface. Whether greeting visitors with a welcoming message or adding a dynamic layer to your site, this component is designed to captivate and engage.",
+      image: "https://animation-store.vercel.app/archedWallBackground.png",
+      tags: ["all", "elegant", "new"],
+      key: Math.random(),
+    },
 
     {
       name: "Moving Background Card",
       description:
         "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
       image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
-      tags: ["card", "fun", "all", "new"],
+      tags: ["card", "fun", "all"],
       key: Math.random(),
     },
     {
@@ -144,7 +152,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Explore the dynamic and responsive CurvedBorderCarousel component for modern web applications. Built with Chakra UI and Framer Motion, this carousel features curved borders and seamless drag interactions, optimized for both desktop and mobile experiences. Effortlessly integrate into your React project with SSR support and enjoy the added flexibility of a resizable observer for real-time layout adjustments. Ideal for showcasing images or content in a visually appealing and interactive format",
       image: "https://animation-store.vercel.app/curvedCarouselImage.png",
-      tags: ["all", "carousel", "elegant", "new"],
+      tags: ["all", "carousel", "elegant"],
       key: Math.random(),
     },
     {
@@ -152,7 +160,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Enhance your application's loading experience with the BouncingLoader, a React component utilizing Chakra UI for styling and Framer Motion for fluid animations. This loader provides an engaging visual cue with its bounce and scale animations, which are controlled through a sophisticated variant system. The loader’s interactive features, including reset and rewind controls, engage users during wait times. Its responsive design ensures compatibility across devices, making it an excellent choice for developers aiming to maintain user interest and minimize perceived wait durations.",
       image: "https://animation-store.vercel.app/bouncingLoadereImage.png",
-      tags: ["card", "new", "all", "fun"],
+      tags: ["card", "all", "fun"],
       key: Math.random(),
     },
     {

@@ -28,6 +28,7 @@ import DogCarousel from "@/components/animations/DogCarousel";
 import WavyFillCircle from "@/components/animations/WavyFillCircle";
 import Parallax from "@/components/animations/Parallax";
 import StarTrail from "@/components/animations/StarTrail";
+import ArchedWalls from "@/components/animations/ArchedWalls";
 
 // import dynamic from "next/dynamic";
 
@@ -267,4 +268,6 @@ export const test = {
   Parallax: Parallax,
 
   "Star Trail": StarTrail,
+
+  "Arched Walls": ArchedWalls,
 };
