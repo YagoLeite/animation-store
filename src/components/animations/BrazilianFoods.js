@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Flex, Image, Text } from "@chakra-ui/react";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
@@ -167,7 +168,7 @@ const BrazilianFoods = () => {
             </AnimatePresence>
           </Flex>
           <Flex
-            w={["90%", "70%", "70%"]}
+            w={["90%", "90%", "70%"]}
             overflow="hidden"
             h="100%"
             minH={["110px", "100px", "90px"]}
@@ -192,11 +193,12 @@ const BrazilianFoods = () => {
       <Flex w="100%" h="100%" overflow="hidden">
         <Flex
           as={motion.div}
+          w="100%"
           variants={imageContainerVariants}
           initial={false}
           animate={controls}
           custom={currentIndex}
-          w={`${itemWidth * data.length + gapSize * (data.length - 1)}px`}
+          //   w={`${itemWidth * data.length + gapSize * (data.length - 1)}px`}
           h="100%"
           ref={ref}
           gap={`${gapSize}px`}
