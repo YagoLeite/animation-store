@@ -29,6 +29,8 @@ import WavyFillCircle from "@/components/animations/WavyFillCircle";
 import Parallax from "@/components/animations/Parallax";
 import StarTrail from "@/components/animations/StarTrail";
 import ArchedWalls from "@/components/animations/ArchedWalls";
+import ScrollAway from "@/components/animations/ScrollAway";
+import BrazilianFoods from "@/components/animations/BrazilianFoods";
 
 // import dynamic from "next/dynamic";
 
@@ -270,4 +272,8 @@ export const test = {
   "Star Trail": StarTrail,
 
   "Arched Walls": ArchedWalls,
+
+  "Scroll Away": ScrollAway,
+
+  "Brazilian Foods": BrazilianFoods,
 };

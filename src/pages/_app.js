@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/theme/theme";
 import "@fontsource/inter";
 import "@fontsource/lekton";
+import "@fontsource/playfair-display";
 import { ProgressProvider } from "@/context/ProgressContext";
 import { Analytics } from "@vercel/analytics/react";
 
