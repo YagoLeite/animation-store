@@ -293,36 +293,42 @@ const data = [
     description:
       "Classic Brazilian Feijoada: Slow-cooked black bean and pork stew, accompanied by sautéed collard greens and ripe banana slices.",
     image: "/feijoadaImage.png",
+    key: Math.random(),
   },
   {
     name: "Chicken with Pequi",
     description:
       "Roasted Chicken with Pequi: Succulent chicken delicately flavored with the unique taste of pequi fruit, a Brazilian culinary treasure.",
     image: "/galinhaComPequiImage.png",
+    key: Math.random(),
   },
   {
     name: "Vatapa",
     description:
       "Vatapá Delight: A creamy, spicy Brazilian stew blending shrimp, bread, coconut milk, finely ground peanuts, and palm oil, garnished with fresh herbs.",
     image: "/vatapaImage.png",
+    key: Math.random(),
   },
   {
     name: "Feijoada",
     description:
       "Classic Brazilian Feijoada: Slow-cooked black bean and pork stew, accompanied by sautéed collard greens and ripe banana slices.",
     image: "/feijoadaImage.png",
+    key: Math.random(),
   },
   {
     name: "Chicken with Pequi",
     description:
       "Roasted Chicken with Pequi: Succulent chicken delicately flavored with the unique taste of pequi fruit, a Brazilian culinary treasure.",
     image: "/galinhaComPequiImage.png",
+    key: Math.random(),
   },
   {
     name: "Vatapa",
     description:
       "Vatapá Delight: A creamy, spicy Brazilian stew blending shrimp, bread, coconut milk, finely ground peanuts, and palm oil, garnished with fresh herbs.",
     image: "/vatapaImage.png",
+    key: Math.random(),
   },
 ];
 
