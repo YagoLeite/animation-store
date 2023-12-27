@@ -1,28 +1,23 @@
-import { useProgress } from "@/hooks/useProgress";
+import React, { useState, useRef } from "react";
 import { Flex, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import { useProgress } from "@/hooks/useProgress";
 
-const variants = {
-  hover: {
-    backgroundPosition: "0%",
-    // boxShadow: "0px 2px 5px #64ffda",
-    scale: 1.1,
-    y: -2,
+const circleVariants = {
+  initial: { scale: 1 },
+  animate: {
+    scale: 30,
     transition: {
-      duration: 0.2,
-      ease: "linear",
+      duration: 0.4,
+      type: "easeOut",
     },
   },
-  initial: {
-    backgroundPosition: "100%",
-    y: 0,
-    scale: 1,
+  exit: {
+    scale: 0,
     transition: {
-      duration: 0.2,
-      ease: "linear",
+      duration: 0.4,
+      type: "easeIn",
     },
   },
 };
@@ -30,7 +25,18 @@ const variants = {
 const ButtonPage = ({ text }) => {
   const { setIsLoading } = useProgress();
   const [isHovering, setIsHovering] = useState(false);
-  const router = useRouter();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const buttonRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
 
   return (
     <Link
@@ -40,13 +46,12 @@ const ButtonPage = ({ text }) => {
       style={{ width: "100%", height: "100%" }}
     >
       <Flex
+        ref={buttonRef}
         as={motion.div}
-        variants={variants}
-        initial="initial"
-        animate={isHovering ? "hover" : "initial"}
-        whileHover={{ boxShadow: "0px 2px 5px #64ffda", y: -2 }}
+        whileHover={{ boxShadow: "0px 2px 5px #64ffda", y: -2, color: "black" }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
+        onMouseMove={handleMouseMove}
         whileTap={{ scale: 0.9 }}
         borderRadius="5px"
         border="2px #64ffda solid"
@@ -54,11 +59,30 @@ const ButtonPage = ({ text }) => {
         h="100%"
         align="center"
         justify="center"
-        // bg="#050d12"
-        background="linear-gradient(to right, #081117 50%, #050d12 50%)"
-        backgroundSize="200%"
+        position="relative"
+        overflow="hidden"
       >
-        <Text fontSize="20px" fontFamily="Lekton">
+        <AnimatePresence>
+          {isHovering && (
+            <motion.div
+              variants={circleVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              style={{
+                position: "absolute",
+                left: `${mousePosition.x - 7.5}px`,
+                top: `${mousePosition.y - 7.5}px`,
+                width: "15px",
+                height: "15px",
+                borderRadius: "50%",
+                backgroundColor: "#64ffda",
+                pointerEvents: "none",
+              }}
+            />
+          )}
+        </AnimatePresence>
+        <Text fontSize="20px" fontFamily="Lekton" zIndex={1}>
           {text}
         </Text>
       </Flex>
