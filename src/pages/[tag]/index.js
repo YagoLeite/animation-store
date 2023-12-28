@@ -123,6 +123,14 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Brazilian Foods",
+      description:
+        "Explore the rich flavors of Brazil with our interactive BrazilianFoods component, featuring a captivating showcase of traditional dishes, complete with stunning visuals and engaging animations.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["all", "carousel", "new", "elegant"],
+      key: Math.random(),
+    },
+    {
       name: "Arched Walls",
       description:
         "Experience the dynamic interplay of motion and interaction with our ArchedWalls component. This unique UI element brings your digital environment to life through an array of animations including scaling and positional shifts. Tailored to engage and delight, the component features customizable variants for 'start' and 'rewind' animations, adding a layer of depth and interaction to your web page. 'Start' initiates a captivating scale transformation, expanding from a subtle presence to an engaging focal point, while 'rewind' reverses the journey, offering a different perspective. Integrated with Chakra UI and Framer Motion for a seamless and responsive user experience, ArchedWalls is perfect for sites seeking to create an immersive and visually striking interface. Whether greeting visitors with a welcoming message or adding a dynamic layer to your site, this component is designed to captivate and engage.",
@@ -289,14 +297,6 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
 
-    {
-      name: "Brazilian Foods",
-      description:
-        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-      image: "https://animation-store.vercel.app/overlayCardImage.png",
-      tags: ["hidden"],
-      key: Math.random(),
-    },
     {
       name: "Star Trail",
       description:

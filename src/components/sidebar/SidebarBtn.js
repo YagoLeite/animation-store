@@ -9,7 +9,7 @@ import { useProgress } from "@/hooks/useProgress";
 const SidebarBtn = ({ url, isOpen, textVariants, index }) => {
   const router = useRouter();
   const { setIsLoading } = useProgress();
-  const isNew = url === "elegant";
+  const isNew = url === "elegant" || url === "carousel";
 
   const clickHandler = () => {
     if (url === router.query.tag) {
