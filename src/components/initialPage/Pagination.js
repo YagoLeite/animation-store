@@ -43,7 +43,7 @@ const Pagination = ({ data }) => {
         return <Showcase data={item} key={item.key} />;
       })}
       <Flex justify="center">
-        <Flex justifyContent="space-between" w="80%" align="center" gap="10px">
+        <Flex justifyContent="space-between" w="100%" align="center" gap="10px">
           <Flex
             as={motion.button}
             whileHover={{ scale: 1.3 }}

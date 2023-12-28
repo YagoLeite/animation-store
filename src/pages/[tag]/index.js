@@ -139,15 +139,6 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
-      name: "Arched Walls",
-      description:
-        "Experience the dynamic interplay of motion and interaction with our ArchedWalls component. This unique UI element brings your digital environment to life through an array of animations including scaling and positional shifts. Tailored to engage and delight, the component features customizable variants for 'start' and 'rewind' animations, adding a layer of depth and interaction to your web page. 'Start' initiates a captivating scale transformation, expanding from a subtle presence to an engaging focal point, while 'rewind' reverses the journey, offering a different perspective. Integrated with Chakra UI and Framer Motion for a seamless and responsive user experience, ArchedWalls is perfect for sites seeking to create an immersive and visually striking interface. Whether greeting visitors with a welcoming message or adding a dynamic layer to your site, this component is designed to captivate and engage.",
-      image: "https://animation-store.vercel.app/archedWallBackground.png",
-      tags: ["all", "elegant", "new"],
-      key: Math.random(),
-    },
-
-    {
       name: "Moving Background Card",
       description:
         "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
@@ -155,6 +146,15 @@ export const getServerSideProps = async (context) => {
       tags: ["card", "fun", "all"],
       key: Math.random(),
     },
+    {
+      name: "Arched Walls",
+      description:
+        "Experience the dynamic interplay of motion and interaction with our ArchedWalls component. This unique UI element brings your digital environment to life through an array of animations including scaling and positional shifts. Tailored to engage and delight, the component features customizable variants for 'start' and 'rewind' animations, adding a layer of depth and interaction to your web page. 'Start' initiates a captivating scale transformation, expanding from a subtle presence to an engaging focal point, while 'rewind' reverses the journey, offering a different perspective. Integrated with Chakra UI and Framer Motion for a seamless and responsive user experience, ArchedWalls is perfect for sites seeking to create an immersive and visually striking interface. Whether greeting visitors with a welcoming message or adding a dynamic layer to your site, this component is designed to captivate and engage.",
+      image: "https://animation-store.vercel.app/archedWallBackground.png",
+      tags: ["all", "elegant"],
+      key: Math.random(),
+    },
+
     {
       name: "Flashlight Card",
       description:
