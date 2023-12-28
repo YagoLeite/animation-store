@@ -31,6 +31,7 @@ import StarTrail from "@/components/animations/StarTrail";
 import ArchedWalls from "@/components/animations/ArchedWalls";
 import ScrollAway from "@/components/animations/ScrollAway";
 import BrazilianFoods from "@/components/animations/BrazilianFoods";
+import CircleFillButton from "@/components/animations/CircleFillButton";
 
 // import dynamic from "next/dynamic";
 
@@ -276,4 +277,6 @@ export const test = {
   "Scroll Away": ScrollAway,
 
   "Brazilian Foods": BrazilianFoods,
+
+  "Circle Fill Button": CircleFillButton,
 };
