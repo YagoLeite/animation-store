@@ -205,10 +205,11 @@ export const tags = [
   "elegant",
   "carousel",
   "button",
+  "loader",
   "toggle",
   "sidebar",
   "3D",
-  "parallax",
+  "scroll",
 ];
 
 export const test = {
@@ -266,7 +267,7 @@ export const test = {
 
   "Dog Carousel": DogCarousel,
 
-  "Wavy Fill Circle": WavyFillCircle,
+  "Wavy Loader": WavyFillCircle,
 
   Parallax: Parallax,
 

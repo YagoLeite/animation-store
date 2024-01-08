@@ -111,7 +111,7 @@ export const getServerSideProps = async (context) => {
       description:
         "The Parallax component encapsulates a visually engaging, scroll-activated animation sequence crafted with Chakra UI and Framer Motion. It offers a multi-layered parallax effect that brings a dynamic depth to the user interface. With meticulously timed motion effects, the component presents an immersive experience where elements such as text and images move at different speeds, creating a sense of depth and focus. It's an ideal feature for modern web applications that aim to capture user attention and convey content in a memorable, interactive format.",
       image: "https://animation-store.vercel.app/parallaxImage.png",
-      tags: ["all", "parallax", "elegant"],
+      tags: ["all", "scroll", "elegant"],
       key: Math.random(),
     },
     {
@@ -128,6 +128,14 @@ export const getServerSideProps = async (context) => {
         "Explore the rich flavors of Brazil with our interactive BrazilianFoods component, featuring a captivating showcase of traditional dishes, complete with stunning visuals and engaging animations.",
       image: "https://animation-store.vercel.app/overlayCardImage.png",
       tags: ["all", "carousel", "new", "elegant"],
+      key: Math.random(),
+    },
+    {
+      name: "Wavy Loader",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["all", "loader", "fun", "new"],
       key: Math.random(),
     },
     {
@@ -176,7 +184,7 @@ export const getServerSideProps = async (context) => {
       description:
         "Enhance your application's loading experience with the BouncingLoader, a React component utilizing Chakra UI for styling and Framer Motion for fluid animations. This loader provides an engaging visual cue with its bounce and scale animations, which are controlled through a sophisticated variant system. The loader’s interactive features, including reset and rewind controls, engage users during wait times. Its responsive design ensures compatibility across devices, making it an excellent choice for developers aiming to maintain user interest and minimize perceived wait durations.",
       image: "https://animation-store.vercel.app/bouncingLoadereImage.png",
-      tags: ["card", "all", "fun"],
+      tags: ["loader", "all", "fun"],
       key: Math.random(),
     },
     {
@@ -324,14 +332,6 @@ export const getServerSideProps = async (context) => {
     },
     {
       name: "Scroll Away",
-      description:
-        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-      image: "https://animation-store.vercel.app/overlayCardImage.png",
-      tags: ["hidden"],
-      key: Math.random(),
-    },
-    {
-      name: "Wavy Fill Circle",
       description:
         "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
       image: "https://animation-store.vercel.app/overlayCardImage.png",
