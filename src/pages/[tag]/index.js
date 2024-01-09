@@ -123,6 +123,14 @@ export const getServerSideProps = async (context) => {
       key: Math.random(),
     },
     {
+      name: "Scroll Away",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["all", "scroll", "card"],
+      key: Math.random(),
+    },
+    {
       name: "Brazilian Foods",
       description:
         "Explore the rich flavors of Brazil with our interactive BrazilianFoods component, featuring a captivating showcase of traditional dishes, complete with stunning visuals and engaging animations.",
@@ -130,6 +138,7 @@ export const getServerSideProps = async (context) => {
       tags: ["all", "carousel", "new", "elegant"],
       key: Math.random(),
     },
+
     {
       name: "Wavy Loader",
       description:
@@ -138,20 +147,21 @@ export const getServerSideProps = async (context) => {
       tags: ["all", "loader", "fun", "new"],
       key: Math.random(),
     },
-    {
-      name: "Circle Fill Button",
-      description:
-        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-      image: "https://animation-store.vercel.app/overlayCardImage.png",
-      tags: ["all", "new", "button"],
-      key: Math.random(),
-    },
+
     {
       name: "Moving Background Card",
       description:
         "Immerse yourself in the kinetic elegance of our MovingBackgroundCard component, where motion meets motivation. Infused with a mesmerizing background animation that gently cycles in an infinite loop, this component offers a captivating visual treat with a central message designed to inspire. Using Chakra UI for structured layouts and Framer Motion for seamless animations, this card is perfect for delivering powerful quotes or messages atop a dynamic, abstract art-inspired backdrop. Elevate your website's visual storytelling with this artful blend of design and inspiration.",
       image: "https://animation-store.vercel.app/movingBackgroundCardImage.png",
       tags: ["card", "fun", "all"],
+      key: Math.random(),
+    },
+    {
+      name: "Circle Fill Button",
+      description:
+        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
+      image: "https://animation-store.vercel.app/overlayCardImage.png",
+      tags: ["all", "new", "button"],
       key: Math.random(),
     },
     {
@@ -324,14 +334,6 @@ export const getServerSideProps = async (context) => {
 
     {
       name: "Overlay Card",
-      description:
-        "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
-      image: "https://animation-store.vercel.app/overlayCardImage.png",
-      tags: ["hidden"],
-      key: Math.random(),
-    },
-    {
-      name: "Scroll Away",
       description:
         "Discover an interactive card experience with our OverlayCard component, designed for seamless integration into modern web interfaces. Crafted using Chakra UI for sleek, responsive layouts and Framer Motion for fluid, intuitive animations, this component captivates with hover-triggered overlays that reveal additional content. Elevate your website with this dynamic, animated card that responds to user interaction, perfect for showcasing images with engaging informational overlays.",
       image: "https://animation-store.vercel.app/overlayCardImage.png",
